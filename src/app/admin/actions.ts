@@ -19,7 +19,7 @@ export async function createStayLink(_prev: LinkResult, form: FormData): Promise
   const name = String(form.get("name") ?? "").trim().slice(0, 40);
   const arrive = String(form.get("arrive") ?? "");
   const depart = String(form.get("depart") ?? "");
-  const code = String(form.get("code") ?? "").trim().slice(0, 20);
+  const code = (String(form.get("code") ?? "").trim() || process.env.DOOR_CODE || "").slice(0, 20);
   const langRaw = String(form.get("lang") ?? "en");
   const lang: Locale = isLocale(langRaw) ? langRaw : "en";
 

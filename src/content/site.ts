@@ -17,7 +17,7 @@ export const site = {
 
   /** When the door code is shown on the stay page, and check-out time. 24h, Norwegian time. */
   stay: {
-    checkIn: "15:00",
+    checkIn: "16:00",
     checkOut: "11:00",
   },
 

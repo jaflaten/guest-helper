@@ -37,11 +37,11 @@ export const arrival: StepPage = {
 export const checkout: StepPage = {
   title: { en: "Before you leave", no: "Før du reiser", de: "Vor der Abreise", fr: "Avant de partir", zh: "离开前" },
   intro: {
-    en: "[Check-out time]. Thank you for staying with us!",
-    no: "[Utsjekkingstid]. Takk for besøket!",
-    de: "[Abreisezeit]. Danke für Ihren Aufenthalt!",
-    fr: "[Heure de départ]. Merci pour votre séjour !",
-    zh: "[退房时间]。感谢您的入住！",
+    en: "Check-out is by 11:00. Thank you for staying with us!",
+    no: "Utsjekk innen kl. 11:00. Takk for besøket!",
+    de: "Abreise bis 11:00 Uhr. Danke für Ihren Aufenthalt!",
+    fr: "Départ avant 11h00. Merci pour votre séjour !",
+    zh: "请于 11:00 前退房。感谢您的入住！",
   },
   steps: [
     { title: { en: "Dishes", no: "Oppvask", de: "Geschirr", fr: "Vaisselle", zh: "餐具" }, body: { en: "[Run the dishwasher / leave dishes clean]" } },

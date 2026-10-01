@@ -6,12 +6,20 @@ import { createStayLink, type LinkResult } from "./actions";
 
 const field = "mt-1 h-12 w-full rounded-xl border border-line bg-white px-3 text-base";
 
-export function StayLinkForm() {
+export function StayLinkForm({
+  arrive = "",
+  depart = "",
+  hasDefaultCode = false,
+}: {
+  arrive?: string;
+  depart?: string;
+  hasDefaultCode?: boolean;
+}) {
   const [result, action, pending] = useActionState<LinkResult, FormData>(createStayLink, null);
 
   return (
     <div className="flex flex-col gap-5">
-      <form action={action} className="flex flex-col gap-4 rounded-[18px] bg-white p-5">
+      <form id="create" action={action} className="flex scroll-mt-4 flex-col gap-4 rounded-[18px] bg-white p-5">
         <label className="text-sm font-semibold">
           Guest first name <span className="font-normal text-muted">(optional)</span>
           <input name="name" autoComplete="off" className={field} />
@@ -19,16 +27,16 @@ export function StayLinkForm() {
         <div className="grid grid-cols-2 gap-3">
           <label className="text-sm font-semibold">
             Arrival
-            <input name="arrive" type="date" required className={field} />
+            <input name="arrive" type="date" required defaultValue={arrive} className={field} />
           </label>
           <label className="text-sm font-semibold">
             Departure
-            <input name="depart" type="date" required className={field} />
+            <input name="depart" type="date" required defaultValue={depart} className={field} />
           </label>
         </div>
         <label className="text-sm font-semibold">
-          Key-box code
-          <input name="code" required autoComplete="off" inputMode="numeric" className={`${field} font-mono`} />
+          Key-box code {hasDefaultCode && <span className="font-normal text-muted">(empty = your usual code)</span>}
+          <input name="code" required={!hasDefaultCode} autoComplete="off" inputMode="numeric" className={`${field} font-mono`} />
         </label>
         <label className="text-sm font-semibold">
           Guest language
