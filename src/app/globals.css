@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-paper: #f7f2eb;
+  --color-sand: #efe7dc;
+  --color-sand-deep: #ede5da;
+  --color-line: #e4dacd;
+  --color-ink: #2b2420;
+  --color-ink-soft: #4a3f37;
+  --color-muted: #6b5f55;
+  --color-pine: #2e5a4c;
+  --color-pine-dark: #1f4036;
+  --color-pine-soft: #e6eeea;
+  --color-clay: #a35a2a;
+  --color-clay-soft: #f4e6d8;
+  --color-alert: #a3352a;
+  --color-alert-soft: #f6e1de;
+
+  --font-sans: "Figtree Variable", system-ui, sans-serif;
+  --font-serif: "Newsreader Variable", Georgia, serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Room list item a marker jumps to: briefly highlighted. */
+.room-item:target {
+  outline: 3px solid var(--color-pine);
+  outline-offset: -3px;
+  background: var(--color-pine-soft);
+}
+
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details[open] .toggle-sign {
+  transform: rotate(45deg);
 }
