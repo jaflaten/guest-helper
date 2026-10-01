@@ -3,7 +3,7 @@ import type { Photo } from "./types";
 
 // Everything in [brackets] is a placeholder for Jorn to fill in.
 export const site = {
-  name: "[Apartment name]",
+  name: "Fossvegen 7",
   hero: {
     alt: { en: "The living room", no: "Stuen", de: "Das Wohnzimmer", fr: "Le salon", zh: "客厅" },
     placeholder: "[Photo: living room or view]",
@@ -23,9 +23,9 @@ export const site = {
 
   contact: {
     /** Full international number, digits only, no + or spaces. Used for the WhatsApp link. */
-    whatsapp: "47XXXXXXXX",
-    phone: "+47 XXX XX XXX",
-    email: "[your@email.com]",
+    whatsapp: "4746811470",
+    phone: "+47 46 81 14 70",
+    email: "[rent@jaflaten.com]",
   },
 
   area: {
