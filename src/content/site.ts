@@ -10,9 +10,9 @@ export const site = {
   } satisfies Photo,
 
   wifi: {
-    // Only the network name is public. The password is set as the WIFI_PASSWORD
-    // environment variable in Vercel and shown only on a guest's stay page.
-    network: "[Network name]",
+    // Set in Vercel: WIFI_NAME (public, on the home page) and WIFI_PASSWORD
+    // (shown only on a guest's stay page during their stay).
+    network: process.env.WIFI_NAME ?? "[Network name]",
   },
 
   /** When the door code is shown on the stay page, and check-out time. 24h, Norwegian time. */
