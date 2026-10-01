@@ -93,6 +93,7 @@ export default async function GuidePage({ params }: PageProps<"/[lang]/guides/[g
             commentPrompt: d.commentPrompt,
             send: d.send,
             sent: d.sent,
+            needHelpNow: d.needHelpNow,
           }}
           contact={<ContactCard lang={lang} />}
         />

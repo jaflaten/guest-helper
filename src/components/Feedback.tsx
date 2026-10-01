@@ -13,11 +13,12 @@ type Labels = {
   commentPrompt: string;
   send: string;
   sent: string;
+  needHelpNow: string;
 };
 
 /**
- * "Did this help?" A "No" is sent to Jorn's Slack right away, offers an optional
- * comment, and shows the contact card.
+ * "Did this help?" A "No" is sent to Jorn's Slack right away and asks what was missing,
+ * to improve the guide. Urgent help is pointed to the contact card, not this form.
  */
 export function Feedback({
   guide,
@@ -67,6 +68,7 @@ export function Feedback({
             </form>
           )}
         </div>
+        <p className="px-1 pt-2 text-[15px] font-semibold">{labels.needHelpNow}</p>
         {contact}
       </div>
     );

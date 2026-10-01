@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { getDictionary, isLocale, locales } from "@/i18n";
 import { Header } from "@/components/Header";
 import { FeedbackForm } from "@/components/FeedbackForm";
+import { ContactCard } from "@/components/ContactCard";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -30,6 +31,9 @@ export default async function FeedbackPage({ params }: PageProps<"/[lang]/feedba
           lang={lang}
           labels={{ name: d.nameLabel, message: d.messageLabel, send: d.send, thanks: d.feedbackThanks, error: d.feedbackError }}
         />
+      </section>
+      <section className="px-5 pt-8">
+        <ContactCard lang={lang} />
       </section>
     </main>
   );
