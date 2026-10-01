@@ -355,6 +355,13 @@ export const guides: Guide[] = [
       fr: "Les capsules sont dans le troisième tiroir entre le lave-vaisselle et le congélateur. Vérifiez qu’il y a de l’eau dans le réservoir, mettez une capsule côté bombé vers le bas, fermez et verrouillez le haut, puis appuyez sur le bouton.",
       zh: "胶囊在洗碗机和冰柜之间的第三个抽屉里。确认水箱有水，将胶囊圆顶朝下放入，合上并锁好顶盖，然后按按钮。",
     },
+    note: {
+      en: "If any water spills, please wipe it up around and under the machine when you're done.",
+      no: "Søler du vann, vennligst tørk opp rundt og under maskinen når du er ferdig.",
+      de: "Falls Wasser verschüttet wird, wischen Sie es bitte rund um und unter der Maschine auf.",
+      fr: "Si de l’eau a coulé, merci de l’essuyer autour et sous la machine une fois terminé.",
+      zh: "如有洒水，用完后请把咖啡机周围和下方擦干。",
+    },
     cover: { alt: { en: "The Nespresso machine" }, placeholder: "[Photo: the coffee machine]" },
     steps: [
       {
