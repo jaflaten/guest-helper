@@ -325,6 +325,118 @@ export const guides: Guide[] = [
     related: ["water-guard"],
   },
   {
+    slug: "coffee-machine",
+    room: "kitchen",
+    title: {
+      en: "Coffee machine (Nespresso Vertuo)",
+      no: "Kaffemaskin (Nespresso Vertuo)",
+      de: "Kaffeemaschine (Nespresso Vertuo)",
+      fr: "Machine à café (Nespresso Vertuo)",
+      zh: "咖啡机（Nespresso Vertuo）",
+    },
+    faq: {
+      en: "How do I make coffee?",
+      no: "Hvordan lager jeg kaffe?",
+      de: "Wie mache ich Kaffee?",
+      fr: "Comment faire un café ?",
+      zh: "怎么做咖啡？",
+    },
+    intro: {
+      en: "The machine takes Nespresso Vertuo capsules. Tea, sugar and hot chocolate are in the same drawer as the capsules.",
+      no: "Maskinen bruker Nespresso Vertuo-kapsler. Te, sukker og kakao ligger i samme skuff som kapslene.",
+      de: "Die Maschine verwendet Nespresso-Vertuo-Kapseln. Tee, Zucker und Kakao sind in derselben Schublade wie die Kapseln.",
+      fr: "La machine utilise des capsules Nespresso Vertuo. Le thé, le sucre et le chocolat chaud sont dans le même tiroir que les capsules.",
+      zh: "这台咖啡机使用 Nespresso Vertuo 胶囊。茶、糖和热可可与胶囊放在同一个抽屉里。",
+    },
+    short: {
+      en: "Capsules are in the third drawer between the dishwasher and the freezer. Check there is water in the tank, put a capsule in dome side down, close and lock the top, then press the button.",
+      no: "Kapslene ligger i den tredje skuffen mellom oppvaskmaskinen og fryseren. Sjekk at det er vann i tanken, legg i en kapsel med den buede siden ned, lukk og lås toppen, og trykk på knappen.",
+      de: "Die Kapseln sind in der dritten Schublade zwischen Spülmaschine und Gefrierschrank. Prüfen Sie den Wassertank, legen Sie eine Kapsel mit der gewölbten Seite nach unten ein, Deckel schließen und verriegeln, dann die Taste drücken.",
+      fr: "Les capsules sont dans le troisième tiroir entre le lave-vaisselle et le congélateur. Vérifiez qu’il y a de l’eau dans le réservoir, mettez une capsule côté bombé vers le bas, fermez et verrouillez le haut, puis appuyez sur le bouton.",
+      zh: "胶囊在洗碗机和冰柜之间的第三个抽屉里。确认水箱有水，将胶囊圆顶朝下放入，合上并锁好顶盖，然后按按钮。",
+    },
+    cover: { alt: { en: "The Nespresso machine" }, placeholder: "[Photo: the coffee machine]" },
+    steps: [
+      {
+        title: { en: "Get a capsule", no: "Hent en kapsel", de: "Kapsel holen", fr: "Prendre une capsule", zh: "取一颗胶囊" },
+        body: {
+          en: "Capsules are in the third drawer between the dishwasher and the freezer, together with tea, sugar and hot chocolate.",
+          no: "Kapslene ligger i den tredje skuffen mellom oppvaskmaskinen og fryseren, sammen med te, sukker og kakao.",
+          de: "Die Kapseln liegen in der dritten Schublade zwischen Spülmaschine und Gefrierschrank, zusammen mit Tee, Zucker und Kakao.",
+          fr: "Les capsules sont dans le troisième tiroir entre le lave-vaisselle et le congélateur, avec le thé, le sucre et le chocolat chaud.",
+          zh: "胶囊放在洗碗机和冰柜之间的第三个抽屉里，茶、糖和热可可也在那里。",
+        },
+        photo: { alt: { en: "The capsule drawer" }, placeholder: "[Photo: capsule drawer]" },
+      },
+      {
+        title: { en: "Check the water", no: "Sjekk vannet", de: "Wasser prüfen", fr: "Vérifier l’eau", zh: "检查水量" },
+        body: {
+          en: "The water tank is at the back of the machine. If it's low, fill it with cold water and put it back firmly.",
+          no: "Vanntanken sitter bak på maskinen. Er det lite vann, fyll den med kaldt vann og sett den godt på plass igjen.",
+          de: "Der Wassertank ist hinten an der Maschine. Ist er fast leer, mit kaltem Wasser füllen und fest wieder einsetzen.",
+          fr: "Le réservoir d’eau est à l’arrière de la machine. S’il est presque vide, remplissez-le d’eau froide et remettez-le bien en place.",
+          zh: "水箱在咖啡机背面。如果水不多，请加入冷水并将水箱装回到位。",
+        },
+        photo: { alt: { en: "The water tank" }, placeholder: "[Photo: water tank at the back]" },
+      },
+      {
+        title: { en: "Insert the capsule", no: "Legg i kapselen", de: "Kapsel einlegen", fr: "Insérer la capsule", zh: "放入胶囊" },
+        body: {
+          en: "Unlock the lever on top and lift the head. Put the capsule in with the dome side down, then close the head and lock the lever.",
+          no: "Lås opp hendelen på toppen og løft opp hodet. Legg i kapselen med den buede siden ned, lukk hodet og lås hendelen.",
+          de: "Entriegeln Sie den Hebel oben und heben Sie den Kopf an. Kapsel mit der gewölbten Seite nach unten einlegen, Kopf schließen und Hebel verriegeln.",
+          fr: "Déverrouillez le levier sur le dessus et soulevez la tête. Placez la capsule côté bombé vers le bas, refermez la tête et verrouillez le levier.",
+          zh: "解锁顶部的拉杆并抬起机头。将胶囊圆顶朝下放入，然后合上机头并锁好拉杆。",
+        },
+        photo: { alt: { en: "Capsule in the open machine" }, placeholder: "[Photo: capsule inserted, head open]" },
+      },
+      {
+        title: { en: "Press the button", no: "Trykk på knappen", de: "Taste drücken", fr: "Appuyer sur le bouton", zh: "按下按钮" },
+        body: {
+          en: "Put a cup under the spout and press the button on top. The machine reads the capsule and makes the right amount by itself.",
+          no: "Sett en kopp under tuten og trykk på knappen på toppen. Maskinen leser kapselen og lager riktig mengde av seg selv.",
+          de: "Tasse unter den Auslauf stellen und die Taste oben drücken. Die Maschine erkennt die Kapsel und bereitet automatisch die richtige Menge zu.",
+          fr: "Placez une tasse sous la buse et appuyez sur le bouton du dessus. La machine lit la capsule et prépare automatiquement la bonne quantité.",
+          zh: "把杯子放在出水口下方，按顶部的按钮。咖啡机会识别胶囊并自动冲出合适的量。",
+        },
+        photo: { alt: { en: "The button on top" }, placeholder: "[Photo: the button on top]" },
+      },
+      {
+        title: { en: "Remove the capsule", no: "Fjern kapselen", de: "Kapsel entfernen", fr: "Retirer la capsule", zh: "取出胶囊" },
+        body: {
+          en: "When it's done, unlock and open the head: the used capsule drops into the container inside. Empty the container if it's full.",
+          no: "Når den er ferdig, lås opp og åpne hodet: den brukte kapselen faller ned i beholderen. Tøm beholderen hvis den er full.",
+          de: "Danach entriegeln und den Kopf öffnen: Die gebrauchte Kapsel fällt in den Behälter. Leeren Sie den Behälter, wenn er voll ist.",
+          fr: "Une fois terminé, déverrouillez et ouvrez la tête : la capsule usagée tombe dans le bac. Videz le bac s’il est plein.",
+          zh: "完成后，解锁并打开机头，用过的胶囊会落入内部的收集盒。收集盒满了请倒空。",
+        },
+      },
+    ],
+    troubles: [
+      {
+        problem: { en: "Nothing happens when I press the button", no: "Ingenting skjer når jeg trykker", de: "Beim Drücken passiert nichts", fr: "Rien ne se passe quand j’appuie", zh: "按按钮后没有反应" },
+        fix: {
+          en: "Check that the head is fully closed and the lever locked, and that the water tank has water and sits firmly in place.",
+          no: "Sjekk at hodet er helt lukket og hendelen låst, og at vanntanken har vann og sitter godt på plass.",
+          de: "Prüfen Sie, ob der Kopf ganz geschlossen und der Hebel verriegelt ist und ob der Wassertank gefüllt und richtig eingesetzt ist.",
+          fr: "Vérifiez que la tête est bien fermée et le levier verrouillé, et que le réservoir contient de l’eau et est bien en place.",
+          zh: "请确认机头已完全合上并锁好拉杆，水箱有水且安装到位。",
+        },
+      },
+      {
+        problem: { en: "The coffee overflows the cup", no: "Kaffen renner over koppen", de: "Der Kaffee läuft über", fr: "Le café déborde de la tasse", zh: "咖啡溢出杯子" },
+        fix: {
+          en: "The capsule decides the size: large capsules make a full mug. Use a big mug, and remove the cup stand so it fits underneath.",
+          no: "Kapselen bestemmer mengden: store kapsler gir en full krus. Bruk et stort krus, og ta bort koppstøtten så det får plass.",
+          de: "Die Kapsel bestimmt die Menge: Große Kapseln ergeben einen ganzen Becher. Nehmen Sie einen großen Becher und entfernen Sie die Tassenablage, damit er passt.",
+          fr: "C’est la capsule qui détermine la quantité : les grandes capsules remplissent un mug. Utilisez un grand mug et retirez le support de tasse pour qu’il passe.",
+          zh: "出杯量由胶囊决定，大号胶囊会冲满一大杯。请使用大马克杯，并取下杯托以便放得下。",
+        },
+      },
+    ],
+    related: ["dishwasher"],
+  },
+  {
     slug: "washing-machine",
     room: "bathroom",
     title: { en: "Washing machine", no: "Vaskemaskin", de: "Waschmaschine", fr: "Lave-linge", zh: "洗衣机" },

@@ -6,7 +6,7 @@ import { getGuide, getRoom, rooms } from "@/content";
 import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
 import { PhotoBox } from "@/components/PhotoBox";
-import { MarkedPhoto, type MarkerMode } from "@/components/MarkedPhoto";
+import { MarkedPhoto } from "@/components/MarkedPhoto";
 import { ContactCard } from "@/components/ContactCard";
 
 export function generateStaticParams() {
@@ -19,14 +19,12 @@ export async function generateMetadata({ params }: PageProps<"/[lang]/rooms/[roo
   return r && isLocale(lang) ? { title: t(r.name, lang) } : {};
 }
 
-export default async function RoomPage({ params, searchParams }: PageProps<"/[lang]/rooms/[room]">) {
+export default async function RoomPage({ params }: PageProps<"/[lang]/rooms/[room]">) {
   const { lang, room: slug } = await params;
   const room = getRoom(slug);
   if (!isLocale(lang) || !room) notFound();
   const d = getDictionary(lang);
 
-  // Two marker behaviours to compare: /rooms/kitchen (jump) vs /rooms/kitchen?markers=popover
-  const mode: MarkerMode = (await searchParams).markers === "popover" ? "popover" : "jump";
   const labels = Object.fromEntries(room.items.map((i) => [i.n, t(i.name, lang)]));
 
   return (
@@ -42,10 +40,8 @@ export default async function RoomPage({ params, searchParams }: PageProps<"/[la
         {room.photos.map((photo, i) => (
           <MarkedPhoto
             key={i}
-            mode={mode}
             markers={photo.markers}
             labels={labels}
-            seeInList={d.seeInList}
             photo={<PhotoBox photo={photo} lang={lang} priority={i === 0} />}
           />
         ))}

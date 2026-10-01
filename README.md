@@ -64,11 +64,7 @@ Put photos in `public/photos/` and set `src: "/photos/kitchen.jpg"` on the photo
 
 Each room photo has `markers: [{ n, x, y }]`, where `x`/`y` are percentages from the top-left corner. `n` matches the item number in the list below the photo. An item with `guide: "slug"` links to that appliance guide.
 
-Two marker behaviours are built so we can compare them on a real phone:
-- `/en/rooms/kitchen` — tapping a number jumps to the list item
-- `/en/rooms/kitchen?markers=popover` — tapping shows the name on the photo
-
-Pick one, then delete the other mode from `src/components/MarkedPhoto.tsx`.
+Tapping a number on the photo jumps to that item in the list below and highlights it.
 
 ### Languages
 
@@ -86,6 +82,5 @@ Supported: English, Norsk, Deutsch, Français, 中文 (Simplified). Every conten
 ## Next steps
 
 1. Fill in real content and photos (start with arrival and the top guest questions).
-2. Choose the marker behaviour and remove the other.
-3. Print the QR stickers (`/admin/qr`) once the site has its own domain.
-4. Later: a chatbot over the guide content.
+2. Print the QR stickers (`/admin/qr`) once the site has its own domain.
+3. Later: a chatbot over the guide content.
