@@ -16,8 +16,9 @@
   --color-alert: #a3352a;
   --color-alert-soft: #f6e1de;
 
-  --font-sans: "Figtree Variable", system-ui, sans-serif;
-  --font-serif: "Newsreader Variable", Georgia, serif;
+  /* Chinese falls back to the phone's own CJK fonts (no extra download). */
+  --font-sans: "Figtree Variable", system-ui, "PingFang SC", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-serif: "Newsreader Variable", Georgia, "Songti SC", "Noto Serif SC", serif;
 }
 
 html {

@@ -5,7 +5,6 @@ import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
 import { PhotoBox } from "@/components/PhotoBox";
 import { Search } from "@/components/Search";
-import { CopyButton } from "@/components/CopyButton";
 import { ContactCard } from "@/components/ContactCard";
 import { notFound } from "next/navigation";
 
@@ -43,15 +42,12 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
       <section className="grid grid-cols-2 gap-3 px-5 pt-4">
         <QuickCard href={`/${lang}/arrival`} icon="pin" title={d.arrival} sub={d.arrivalSub} iconClass="bg-pine-soft text-pine" />
         <div className="flex min-h-[108px] flex-col gap-2.5 rounded-[18px] bg-pine p-4 text-white">
-          <div className="flex items-center justify-between">
-            <Icon name="wifi" size={22} />
-            <CopyButton value={site.wifi.password} label={d.copy} doneLabel={d.copied} />
-          </div>
+          <Icon name="wifi" size={22} />
           <p className="text-[15px] font-semibold">{d.wifi}</p>
-          <p className="-mt-1.5 break-all text-xs leading-snug opacity-90">
+          <p className="-mt-1.5 break-words text-xs leading-snug opacity-90">
             {site.wifi.network}
             <br />
-            {site.wifi.password}
+            {d.wifiPasswordNote}
           </p>
         </div>
         <QuickCard href={`/${lang}/checkout`} icon="check" title={d.checkout} sub={d.checkoutSub} iconClass="bg-clay-soft text-clay" />

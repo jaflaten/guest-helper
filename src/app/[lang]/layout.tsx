@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
-import { isLocale, locales } from "@/i18n/config";
+import { htmlLang, isLocale, locales } from "@/i18n/config";
 import { site } from "@/content";
 // Fonts are self-hosted (bundled with the site), so they also work offline.
 import "@fontsource-variable/figtree";
@@ -24,7 +24,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
   if (!isLocale(lang)) notFound();
 
   return (
-    <html lang={lang}>
+    <html lang={htmlLang[lang]}>
       <body className="font-sans antialiased">
         <div className="mx-auto min-h-dvh max-w-xl">{children}</div>
       </body>

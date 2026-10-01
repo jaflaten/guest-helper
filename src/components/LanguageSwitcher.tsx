@@ -1,35 +1,43 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { locales, type Locale } from "@/i18n/config";
+import { usePathname, useRouter } from "next/navigation";
+import { localeNames, locales, type Locale } from "@/i18n/config";
 
-/** EN / NO / DE pills. Keeps the guest on the same page and remembers the choice. */
+/**
+ * Language picker. A native <select> scales to any number of languages and
+ * opens the phone's own picker. Keeps the guest on the same page and remembers the choice.
+ */
 export function LanguageSwitcher({ lang, label }: { lang: Locale; label: string }) {
   const pathname = usePathname();
+  const router = useRouter();
   const rest = pathname.replace(/^\/[^/]+/, "");
 
   return (
-    <nav aria-label={label} className="flex gap-0.5 rounded-full bg-sand-deep p-[3px]">
-      {locales.map((code) => {
-        const active = code === lang;
-        return (
-          <Link
-            key={code}
-            href={`/${code}${rest}`}
-            hrefLang={code}
-            aria-current={active ? "true" : undefined}
-            onClick={() => {
-              document.cookie = `lang=${code}; path=/; max-age=31536000; samesite=lax`;
-            }}
-            className={`flex h-8 min-w-10 items-center justify-center rounded-full px-2 text-[13px] font-semibold ${
-              active ? "bg-white text-ink" : "text-muted"
-            }`}
-          >
-            {code.toUpperCase()}
-          </Link>
-        );
-      })}
-    </nav>
+    <label className="relative flex h-9 items-center rounded-full bg-sand-deep pl-3 pr-8 text-[13px] font-semibold text-ink">
+      <span className="sr-only">{label}</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true" className="mr-1.5 text-muted">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18" />
+      </svg>
+      <select
+        value={lang}
+        onChange={(e) => {
+          const code = e.target.value;
+          document.cookie = `lang=${code}; path=/; max-age=31536000; samesite=lax`;
+          router.push(`/${code}${rest}${window.location.search}`);
+        }}
+        className="absolute inset-0 cursor-pointer opacity-0"
+      >
+        {locales.map((code) => (
+          <option key={code} value={code}>
+            {localeNames[code]}
+          </option>
+        ))}
+      </select>
+      {localeNames[lang]}
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true" className="pointer-events-none absolute right-3 text-muted">
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </label>
   );
 }
