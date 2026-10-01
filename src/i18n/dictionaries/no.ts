@@ -57,6 +57,9 @@ const no: Dictionary = {
   stayCardSub: "Dørkode og Wi-Fi",
   keepLink: "Ta vare på denne lenken: den er din personlige side for oppholdet.",
   openGuide: "Åpne husguiden",
+  commentPrompt: "Hva var uklart? (valgfritt)",
+  send: "Send",
+  sent: "Takk, vi har fått meldingen.",
   language: "Språk",
 };
 

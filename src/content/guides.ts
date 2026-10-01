@@ -1,18 +1,12 @@
 import type { Guide } from "./types";
 
-// Appliance guides. The hob is a filled-in example; check the details against your model.
+// Appliance guides. Order matters: guides with a `faq` appear in "Guests often ask" in this order.
+// The induction hob is an unconfirmed example; check it against the real model.
 export const guides: Guide[] = [
   {
     slug: "induction-hob",
     room: "kitchen",
     title: { en: "Induction hob", no: "Induksjonstopp", de: "Induktionskochfeld", fr: "Plaque à induction", zh: "电磁炉" },
-    faq: {
-      en: "How do I unlock the induction hob?",
-      no: "Hvordan låser jeg opp induksjonstoppen?",
-      de: "Wie entsperre ich das Induktionskochfeld?",
-      fr: "Comment déverrouiller la plaque à induction ?",
-      zh: "如何解锁电磁炉？",
-    },
     intro: {
       en: "Fast and safe, but it only works with the magnetic pots in the drawer below it.",
       no: "Rask og trygg, men fungerer bare med de magnetiske kjelene i skuffen under.",
@@ -104,7 +98,186 @@ export const guides: Guide[] = [
         },
       },
     ],
-    related: ["washing-machine"],
+    related: ["dishwasher"],
+  },
+  {
+    slug: "water-guard",
+    room: "kitchen",
+    title: {
+      en: "Water guard (leak alarm)",
+      no: "Vannstopper (lekkasjevarsler)",
+      de: "Wasserstopp (Leckagewarner)",
+      fr: "Coupe-eau (détecteur de fuite)",
+      zh: "漏水保护器",
+    },
+    faq: {
+      en: "Something is beeping under the kitchen sink and there is no water",
+      no: "Noe piper under kjøkkenvasken og det kommer ikke vann",
+      de: "Unter der Küchenspüle piept es und es kommt kein Wasser",
+      fr: "Ça bipe sous l’évier et il n’y a plus d’eau",
+      zh: "厨房水槽下方在响，而且没有水",
+    },
+    intro: {
+      en: "The water guard protects the apartment from leaks. If it senses moisture on the floor, it beeps, shows a red light and shuts off the water.",
+      no: "Vannstopperen beskytter leiligheten mot lekkasjer. Merker den fuktighet på gulvet, piper den, lyser rødt og stenger vannet.",
+      de: "Der Wasserstopp schützt die Wohnung vor Wasserschäden. Erkennt er Feuchtigkeit am Boden, piept er, leuchtet rot und sperrt das Wasser ab.",
+      fr: "Le coupe-eau protège l’appartement des fuites. S’il détecte de l’humidité au sol, il bipe, s’allume en rouge et coupe l’eau.",
+      zh: "漏水保护器用于防止公寓漏水。一旦检测到地面潮湿，它会发出蜂鸣声、亮红灯并切断水源。",
+    },
+    short: {
+      en: "Usually a little water was spilled near the dishwasher. Dry the floor well, then unplug the water guard under the sink and plug it back in.",
+      no: "Som regel er det sølt litt vann ved oppvaskmaskinen. Tørk gulvet godt, og trekk så ut kontakten til vannstopperen under vasken og sett den inn igjen.",
+      de: "Meist wurde etwas Wasser neben der Spülmaschine verschüttet. Boden gründlich trocknen, dann den Stecker des Wasserstopps unter der Spüle ziehen und wieder einstecken.",
+      fr: "En général, un peu d’eau a été renversée près du lave-vaisselle. Séchez bien le sol, puis débranchez le coupe-eau sous l’évier et rebranchez-le.",
+      zh: "通常是洗碗机附近洒了一点水。请把地面彻底擦干，然后拔下水槽下方漏水保护器的电源插头，再重新插上。",
+    },
+    cover: { alt: { en: "The water guard under the kitchen sink" }, placeholder: "[Photo: water guard with red light]" },
+    steps: [
+      {
+        title: { en: "Find the water guard", no: "Finn vannstopperen", de: "Wasserstopp finden", fr: "Trouver le coupe-eau", zh: "找到漏水保护器" },
+        body: {
+          en: "Open the cupboard under the kitchen sink. The water guard is behind the rubbish bins: lift them out to reach it.",
+          no: "Åpne skapet under kjøkkenvasken. Vannstopperen står bak søppelbøttene: løft dem ut for å komme til.",
+          de: "Öffnen Sie den Schrank unter der Küchenspüle. Der Wasserstopp sitzt hinter den Mülleimern: Nehmen Sie diese heraus.",
+          fr: "Ouvrez le placard sous l’évier. Le coupe-eau se trouve derrière les poubelles : sortez-les pour y accéder.",
+          zh: "打开厨房水槽下方的柜子。漏水保护器在垃圾桶后面，把垃圾桶拿出来即可看到。",
+        },
+        photo: { alt: { en: "Cupboard under the sink with the bins removed" }, placeholder: "[Photo: under the sink, bins removed]" },
+      },
+      {
+        title: { en: "Dry the floor", no: "Tørk gulvet", de: "Boden trocknen", fr: "Sécher le sol", zh: "擦干地面" },
+        body: {
+          en: "Wipe the floor in front of and around the dishwasher thoroughly. The sensor sits behind the bottom panel and is very sensitive: even a small spill can set it off.",
+          no: "Tørk gulvet foran og rundt oppvaskmaskinen grundig. Sensoren sitter bak sokkelen og er svært følsom: selv litt søl kan utløse den.",
+          de: "Wischen Sie den Boden vor und um die Spülmaschine gründlich trocken. Der Sensor sitzt hinter der Sockelblende und ist sehr empfindlich: Schon wenig Wasser löst ihn aus.",
+          fr: "Essuyez soigneusement le sol devant et autour du lave-vaisselle. Le capteur se trouve derrière la plinthe et il est très sensible : une petite flaque suffit à le déclencher.",
+          zh: "把洗碗机前方及周围的地面彻底擦干。传感器位于底部踢脚板后面，非常灵敏，哪怕洒了一点水也会触发。",
+        },
+        photo: { alt: { en: "Floor in front of the dishwasher" }, placeholder: "[Photo: floor and panel by the dishwasher]" },
+      },
+      {
+        title: { en: "Reset it", no: "Tilbakestill", de: "Zurücksetzen", fr: "Le réinitialiser", zh: "重置" },
+        body: {
+          en: "Unplug the water guard's power plug, wait a few seconds and plug it back in. The red light goes out and the beeping stops.",
+          no: "Trekk ut strømkontakten til vannstopperen, vent noen sekunder og sett den inn igjen. Det røde lyset slukker og pipingen stopper.",
+          de: "Ziehen Sie den Netzstecker des Wasserstopps, warten Sie einige Sekunden und stecken Sie ihn wieder ein. Das rote Licht erlischt und das Piepen hört auf.",
+          fr: "Débranchez la prise du coupe-eau, attendez quelques secondes et rebranchez-la. La lumière rouge s’éteint et le bip s’arrête.",
+          zh: "拔下漏水保护器的电源插头，等几秒钟后重新插上。红灯会熄灭，蜂鸣声停止。",
+        },
+        photo: { alt: { en: "The water guard's power plug" }, placeholder: "[Photo: the power plug]" },
+      },
+      {
+        title: { en: "Check the water", no: "Sjekk vannet", de: "Wasser prüfen", fr: "Vérifier l’eau", zh: "检查水源" },
+        body: {
+          en: "Turn on the kitchen tap. If water runs, you're done. Put the bins back.",
+          no: "Skru på kjøkkenkranen. Kommer det vann, er du ferdig. Sett søppelbøttene tilbake.",
+          de: "Drehen Sie den Küchenhahn auf. Wenn Wasser kommt, sind Sie fertig. Stellen Sie die Mülleimer zurück.",
+          fr: "Ouvrez le robinet de la cuisine. Si l’eau coule, c’est réglé. Remettez les poubelles en place.",
+          zh: "打开厨房水龙头。如果有水流出，就完成了。把垃圾桶放回原处。",
+        },
+      },
+    ],
+    troubles: [
+      {
+        problem: { en: "It starts beeping again", no: "Den begynner å pipe igjen", de: "Es piept wieder", fr: "Il recommence à biper", zh: "又开始响了" },
+        fix: {
+          en: "The sensor is still damp. Dry the floor by the dishwasher again, wait a few minutes, then reset once more.",
+          no: "Sensoren er fortsatt fuktig. Tørk gulvet ved oppvaskmaskinen igjen, vent noen minutter og tilbakestill på nytt.",
+          de: "Der Sensor ist noch feucht. Boden an der Spülmaschine erneut trocknen, einige Minuten warten und nochmals zurücksetzen.",
+          fr: "Le capteur est encore humide. Séchez à nouveau le sol près du lave-vaisselle, attendez quelques minutes, puis réinitialisez.",
+          zh: "传感器仍然潮湿。请再次擦干洗碗机旁的地面，等几分钟后再重置一次。",
+        },
+      },
+      {
+        problem: { en: "Water keeps appearing on the floor", no: "Det kommer stadig vann på gulvet", de: "Es tritt immer wieder Wasser aus", fr: "De l’eau réapparaît sur le sol", zh: "地面上不断出现水" },
+        fix: {
+          en: "There may be a real leak. Don't reset the water guard: message us straight away.",
+          no: "Det kan være en ekte lekkasje. Ikke tilbakestill vannstopperen: send oss en melding med en gang.",
+          de: "Es könnte ein echtes Leck sein. Setzen Sie den Wasserstopp nicht zurück, sondern schreiben Sie uns sofort.",
+          fr: "Il peut s’agir d’une vraie fuite. Ne réinitialisez pas le coupe-eau : écrivez-nous immédiatement.",
+          zh: "可能确实存在漏水。请不要重置漏水保护器，立即联系我们。",
+        },
+      },
+    ],
+    related: ["dishwasher"],
+  },
+  {
+    slug: "dishwasher",
+    room: "kitchen",
+    title: { en: "Dishwasher", no: "Oppvaskmaskin", de: "Spülmaschine", fr: "Lave-vaisselle", zh: "洗碗机" },
+    faq: {
+      en: "The dishwasher won't start",
+      no: "Oppvaskmaskinen starter ikke",
+      de: "Die Spülmaschine startet nicht",
+      fr: "Le lave-vaisselle ne démarre pas",
+      zh: "洗碗机无法启动",
+    },
+    short: {
+      en: "Tablets are in the glass jar in the large bottom drawer between the dishwasher and the freezer. If it won't start, check that the small tap on the kitchen sink, left of the handle, points up.",
+      no: "Oppvasktablettene står i glasskrukken i den store nederste skuffen mellom oppvaskmaskinen og fryseren. Starter den ikke, sjekk at den lille kranen på kjøkkenbatteriet, til venstre for hendelen, peker opp.",
+      de: "Die Tabs sind im Glas in der großen unteren Schublade zwischen Spülmaschine und Gefrierschrank. Startet sie nicht, prüfen Sie, ob das kleine Ventil an der Küchenarmatur links vom Hebel nach oben zeigt.",
+      fr: "Les pastilles sont dans le bocal en verre, dans le grand tiroir du bas entre le lave-vaisselle et le congélateur. S’il ne démarre pas, vérifiez que le petit robinet sur le mitigeur, à gauche de la manette, est orienté vers le haut.",
+      zh: "洗碗块放在洗碗机和冰柜之间最下方大抽屉里的玻璃罐中。如果洗碗机无法启动，请检查厨房水龙头左侧的小阀门是否朝上。",
+    },
+    cover: { alt: { en: "The dishwasher" }, placeholder: "[Photo: the dishwasher]" },
+    steps: [
+      {
+        title: { en: "Get a tablet", no: "Hent en tablett", de: "Tab holen", fr: "Prendre une pastille", zh: "取一块洗碗块" },
+        body: {
+          en: "Dishwasher tablets are in a glass jar in the large bottom drawer between the dishwasher and the freezer.",
+          no: "Oppvasktablettene står i en glasskrukke i den store nederste skuffen mellom oppvaskmaskinen og fryseren.",
+          de: "Die Spülmaschinentabs stehen in einem Glas in der großen unteren Schublade zwischen Spülmaschine und Gefrierschrank.",
+          fr: "Les pastilles sont dans un bocal en verre, dans le grand tiroir du bas entre le lave-vaisselle et le congélateur.",
+          zh: "洗碗块放在洗碗机和冰柜之间最下方大抽屉里的玻璃罐中。",
+        },
+        photo: { alt: { en: "The glass jar in the bottom drawer" }, placeholder: "[Photo: jar in the bottom drawer]" },
+      },
+      {
+        title: { en: "Check the water tap", no: "Sjekk kranen", de: "Ventil prüfen", fr: "Vérifier le robinet", zh: "检查阀门" },
+        body: {
+          en: "On the kitchen sink, left of the tap handle, there is a small tap for the dishwasher. It must point up, otherwise the dishwasher gets no water and won't start.",
+          no: "På kjøkkenbatteriet, til venstre for hendelen, sitter en liten kran til oppvaskmaskinen. Den må peke opp, ellers får ikke maskinen vann og starter ikke.",
+          de: "An der Küchenarmatur, links vom Hebel, sitzt ein kleines Ventil für die Spülmaschine. Es muss nach oben zeigen, sonst bekommt die Maschine kein Wasser und startet nicht.",
+          fr: "Sur le mitigeur de l’évier, à gauche de la manette, se trouve un petit robinet pour le lave-vaisselle. Il doit être orienté vers le haut, sinon la machine n’a pas d’eau et ne démarre pas.",
+          zh: "厨房水龙头把手左侧有一个洗碗机专用的小阀门。它必须朝上，否则洗碗机没有进水，无法启动。",
+        },
+        photo: { alt: { en: "The small dishwasher tap pointing up" }, placeholder: "[Photo: small tap pointing up]" },
+      },
+      {
+        title: { en: "Start a programme", no: "Start et program", de: "Programm starten", fr: "Lancer un programme", zh: "启动程序" },
+        body: { en: "[Which button to press and which programme to use]" },
+        photo: { alt: { en: "Dishwasher buttons" }, placeholder: "[Photo: dishwasher buttons]" },
+      },
+    ],
+    troubles: [
+      {
+        problem: { en: "It won't start", no: "Den starter ikke", de: "Sie startet nicht", fr: "Il ne démarre pas", zh: "无法启动" },
+        fix: {
+          en: "Turn the small tap on the kitchen sink, left of the handle, so it points up. Then start again.",
+          no: "Vri den lille kranen på kjøkkenbatteriet, til venstre for hendelen, slik at den peker opp. Start så på nytt.",
+          de: "Drehen Sie das kleine Ventil an der Küchenarmatur links vom Hebel nach oben. Dann erneut starten.",
+          fr: "Tournez le petit robinet sur le mitigeur, à gauche de la manette, vers le haut. Puis relancez.",
+          zh: "把厨房水龙头左侧的小阀门转到朝上，然后重新启动。",
+        },
+      },
+      {
+        problem: {
+          en: "Beeping under the sink and no water",
+          no: "Piping under vasken og ikke vann",
+          de: "Piepen unter der Spüle und kein Wasser",
+          fr: "Ça bipe sous l’évier et plus d’eau",
+          zh: "水槽下方在响且没有水",
+        },
+        fix: {
+          en: "Water was spilled near the dishwasher and the water guard shut the water off. See the water guard guide below.",
+          no: "Det er sølt vann ved oppvaskmaskinen, og vannstopperen har stengt vannet. Se guiden for vannstopperen under.",
+          de: "Neben der Spülmaschine wurde Wasser verschüttet und der Wasserstopp hat das Wasser abgesperrt. Siehe die Anleitung zum Wasserstopp unten.",
+          fr: "De l’eau a été renversée près du lave-vaisselle et le coupe-eau a coupé l’eau. Voir le guide du coupe-eau ci-dessous.",
+          zh: "洗碗机附近洒了水，漏水保护器切断了水源。请查看下方的漏水保护器指南。",
+        },
+      },
+    ],
+    related: ["water-guard"],
   },
   {
     slug: "washing-machine",
@@ -117,11 +290,91 @@ export const guides: Guide[] = [
       fr: "Comment utiliser le lave-linge ?",
       zh: "如何使用洗衣机？",
     },
-    short: { en: "[One or two sentences that solve it for most guests]" },
+    short: {
+      en: "Detergent is in the glass jar in the tall bathroom cupboard. Turn the knob 2 clicks right for 40 °C or 3 for 60 °C, put detergent in the leftmost compartment and press the bottom-right button.",
+      no: "Vaskemiddel står i glasskrukken i det høye skapet på badet. Vri bryteren 2 klikk mot høyre for 40 °C eller 3 for 60 °C, ha vaskemiddel i rommet lengst til venstre og trykk på knappen nederst til høyre.",
+      de: "Waschmittel ist im Glas im hohen Badezimmerschrank. Drehknopf 2 Klicks nach rechts für 40 °C oder 3 für 60 °C, Waschmittel ins linke Fach geben und die Taste unten rechts drücken.",
+      fr: "La lessive est dans le bocal en verre de la grande armoire de la salle de bain. Tournez le bouton de 2 crans vers la droite pour 40 °C ou 3 pour 60 °C, mettez la lessive dans le compartiment le plus à gauche et appuyez sur le bouton en bas à droite.",
+      zh: "洗衣液在浴室高柜里的玻璃罐中。旋钮向右转 2 格为 40 °C，转 3 格为 60 °C；把洗衣液放进最左边的格子，然后按右下角的按钮。",
+    },
+    cover: { alt: { en: "The washing machine" }, placeholder: "[Photo: the washing machine]" },
     steps: [
-      { title: { en: "[Step 1]" }, body: { en: "[What to do]" } },
-      { title: { en: "[Step 2]" }, body: { en: "[What to do]" } },
+      {
+        title: { en: "Get the detergent", no: "Hent vaskemiddel", de: "Waschmittel holen", fr: "Prendre la lessive", zh: "取洗衣液" },
+        body: {
+          en: "Detergent is in a glass jar in the tall cupboard in the bathroom, next to the shower.",
+          no: "Vaskemiddelet står i en glasskrukke i det høye skapet på badet, ved siden av dusjkabinettet.",
+          de: "Das Waschmittel steht in einem Glas im hohen Schrank im Bad, neben der Dusche.",
+          fr: "La lessive est dans un bocal en verre, dans la grande armoire de la salle de bain, à côté de la douche.",
+          zh: "洗衣液放在浴室淋浴间旁边高柜里的玻璃罐中。",
+        },
+        photo: { alt: { en: "The detergent jar in the tall cupboard" }, placeholder: "[Photo: detergent jar in the cupboard]" },
+      },
+      {
+        title: { en: "Load the laundry", no: "Legg inn tøyet", de: "Wäsche einfüllen", fr: "Charger le linge", zh: "放入衣物" },
+        body: {
+          en: "Put the laundry in the drum and close the door until it clicks.",
+          no: "Legg tøyet i trommelen og lukk døren til det klikker.",
+          de: "Wäsche in die Trommel geben und die Tür schließen, bis sie einrastet.",
+          fr: "Mettez le linge dans le tambour et fermez la porte jusqu’au clic.",
+          zh: "把衣物放进滚筒，关上机门直到听到“咔嗒”声。",
+        },
+      },
+      {
+        title: { en: "Choose the temperature", no: "Velg temperatur", de: "Temperatur wählen", fr: "Choisir la température", zh: "选择温度" },
+        body: {
+          en: "Turn the knob to the right: 2 clicks for 40 °C (everyday laundry) or 3 clicks for 60 °C (towels and bedding).",
+          no: "Vri bryteren mot høyre: 2 klikk for 40 °C (vanlig tøy) eller 3 klikk for 60 °C (håndklær og sengetøy).",
+          de: "Drehknopf nach rechts drehen: 2 Klicks für 40 °C (Alltagswäsche) oder 3 Klicks für 60 °C (Handtücher und Bettwäsche).",
+          fr: "Tournez le bouton vers la droite : 2 crans pour 40 °C (linge courant) ou 3 crans pour 60 °C (serviettes et draps).",
+          zh: "将旋钮向右转：转 2 格为 40 °C（日常衣物），转 3 格为 60 °C（毛巾和床品）。",
+        },
+        photo: { alt: { en: "The programme knob" }, placeholder: "[Photo: the knob]" },
+      },
+      {
+        title: { en: "Add detergent", no: "Fyll på vaskemiddel", de: "Waschmittel einfüllen", fr: "Ajouter la lessive", zh: "加入洗衣液" },
+        body: {
+          en: "Pull out the drawer on the left side of the machine and put the detergent in the leftmost compartment.",
+          no: "Trekk ut skuffen på venstre side av maskinen og ha vaskemiddelet i rommet lengst til venstre.",
+          de: "Ziehen Sie die Schublade links an der Maschine heraus und geben Sie das Waschmittel ins linke Fach.",
+          fr: "Tirez le bac à gauche de la machine et versez la lessive dans le compartiment le plus à gauche.",
+          zh: "拉出洗衣机左侧的抽屉，把洗衣液放进最左边的格子。",
+        },
+        photo: { alt: { en: "The detergent drawer" }, placeholder: "[Photo: detergent drawer, leftmost compartment]" },
+      },
+      {
+        title: { en: "Press start", no: "Trykk start", de: "Start drücken", fr: "Appuyer sur départ", zh: "按启动" },
+        body: {
+          en: "Press the bottom-right button. The machine starts after a moment.",
+          no: "Trykk på knappen nederst til høyre. Maskinen starter etter et øyeblikk.",
+          de: "Drücken Sie die Taste unten rechts. Die Maschine startet nach einem Moment.",
+          fr: "Appuyez sur le bouton en bas à droite. La machine démarre après un instant.",
+          zh: "按右下角的按钮，洗衣机稍后就会启动。",
+        },
+        photo: { alt: { en: "The start button" }, placeholder: "[Photo: start button, bottom right]" },
+      },
     ],
-    related: ["induction-hob"],
+    troubles: [
+      {
+        problem: { en: "Nothing happens when I press start", no: "Ingenting skjer når jeg trykker start", de: "Beim Drücken auf Start passiert nichts", fr: "Rien ne se passe quand j’appuie sur départ", zh: "按启动后没有反应" },
+        fix: {
+          en: "Check that the door is shut properly (push until it clicks) and that the knob is on a programme, not off.",
+          no: "Sjekk at døren er ordentlig lukket (trykk til det klikker) og at bryteren står på et program, ikke av.",
+          de: "Prüfen Sie, ob die Tür richtig geschlossen ist (bis sie einrastet) und der Knopf auf einem Programm steht, nicht auf Aus.",
+          fr: "Vérifiez que la porte est bien fermée (jusqu’au clic) et que le bouton est sur un programme, pas sur arrêt.",
+          zh: "请确认机门已关紧（直到听到咔嗒声），并且旋钮停在某个程序上而不是关闭档。",
+        },
+      },
+      {
+        problem: { en: "The door won't open after washing", no: "Døren åpner seg ikke etter vask", de: "Die Tür geht nach dem Waschen nicht auf", fr: "La porte ne s’ouvre pas après le lavage", zh: "洗完后机门打不开" },
+        fix: {
+          en: "The door stays locked for a minute or two after the programme ends. Wait a moment and try again.",
+          no: "Døren er låst et minutt eller to etter at programmet er ferdig. Vent litt og prøv igjen.",
+          de: "Die Tür bleibt nach Programmende ein bis zwei Minuten verriegelt. Kurz warten und erneut versuchen.",
+          fr: "La porte reste verrouillée une ou deux minutes après la fin du programme. Patientez un instant et réessayez.",
+          zh: "程序结束后机门会锁定一两分钟。请稍等片刻再试。",
+        },
+      },
+    ],
   },
 ];

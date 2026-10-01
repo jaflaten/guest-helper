@@ -1,7 +1,7 @@
 import type { Room } from "./types";
 
 // One file for all rooms. The marker numbers on each photo match the item numbers.
-// Example items below are placeholders showing the format.
+// Marker positions (x/y in % from top-left) are placeholders until the real photos are in.
 export const rooms: Room[] = [
   {
     slug: "kitchen",
@@ -19,33 +19,46 @@ export const rooms: Room[] = [
         alt: { en: "The kitchen seen from the doorway", no: "Kjøkkenet sett fra døren", de: "Die Küche von der Tür aus", fr: "La cuisine vue depuis la porte", zh: "从门口看厨房" },
         placeholder: "[Wide photo: whole kitchen]",
         markers: [
-          { n: 1, x: 22, y: 70 },
-          { n: 2, x: 48, y: 30 },
-          { n: 3, x: 64, y: 72 },
-          { n: 4, x: 82, y: 40 },
+          { n: 1, x: 30, y: 82 },
+          { n: 2, x: 45, y: 68 },
+          { n: 3, x: 62, y: 72 },
+          { n: 4, x: 78, y: 45 },
         ],
       },
     ],
     items: [
       {
         n: 1,
-        name: { en: "Pots & pans", no: "Kjeler og panner", de: "Töpfe & Pfannen", fr: "Casseroles et poêles", zh: "锅具" },
-        where: { en: "Drawer under the hob", no: "Skuffen under platetoppen", de: "Schublade unter dem Kochfeld", fr: "Tiroir sous la plaque de cuisson", zh: "灶台下方的抽屉" },
+        name: { en: "Dishwasher tablets", no: "Oppvasktabletter", de: "Spülmaschinentabs", fr: "Pastilles lave-vaisselle", zh: "洗碗块" },
+        where: {
+          en: "Glass jar in the large bottom drawer, between the dishwasher and the freezer",
+          no: "Glasskrukke i den store nederste skuffen, mellom oppvaskmaskinen og fryseren",
+          de: "Glas in der großen unteren Schublade, zwischen Spülmaschine und Gefrierschrank",
+          fr: "Bocal en verre dans le grand tiroir du bas, entre le lave-vaisselle et le congélateur",
+          zh: "洗碗机和冰柜之间最下方大抽屉里的玻璃罐中",
+        },
       },
       {
         n: 2,
-        name: { en: "Plates & glasses", no: "Tallerkener og glass", de: "Teller & Gläser", fr: "Assiettes et verres", zh: "盘子和杯子" },
-        where: { en: "Upper cabinet, left of the window", no: "Overskap, til venstre for vinduet", de: "Oberschrank links vom Fenster", fr: "Placard du haut, à gauche de la fenêtre", zh: "窗户左侧的吊柜" },
+        name: { en: "Dishwasher", no: "Oppvaskmaskin", de: "Spülmaschine", fr: "Lave-vaisselle", zh: "洗碗机" },
+        guide: "dishwasher",
       },
       {
         n: 3,
-        name: { en: "Induction hob", no: "Induksjonstopp", de: "Induktionskochfeld", fr: "Plaque à induction", zh: "电磁炉" },
-        guide: "induction-hob",
+        name: { en: "Water guard (leak alarm)", no: "Vannstopper", de: "Wasserstopp", fr: "Coupe-eau", zh: "漏水保护器" },
+        where: {
+          en: "Under the sink, behind the rubbish bins",
+          no: "Under vasken, bak søppelbøttene",
+          de: "Unter der Spüle, hinter den Mülleimern",
+          fr: "Sous l’évier, derrière les poubelles",
+          zh: "水槽下方，垃圾桶后面",
+        },
+        guide: "water-guard",
       },
       {
         n: 4,
-        name: { en: "Dishwasher tablets", no: "Oppvasktabletter", de: "Spülmaschinentabs", fr: "Pastilles lave-vaisselle", zh: "洗碗机洗涤块" },
-        where: { en: "Under the sink, left", no: "Under vasken, til venstre", de: "Unter der Spüle, links", fr: "Sous l’évier, à gauche", zh: "水槽下方左侧" },
+        name: { en: "Induction hob", no: "Induksjonstopp", de: "Induktionskochfeld", fr: "Plaque à induction", zh: "电磁炉" },
+        guide: "induction-hob",
       },
     ],
   },
@@ -59,28 +72,24 @@ export const rooms: Room[] = [
         placeholder: "[Wide photo: bathroom]",
         markers: [
           { n: 1, x: 30, y: 45 },
-          { n: 2, x: 70, y: 60 },
+          { n: 2, x: 65, y: 65 },
         ],
-      },
-      {
-        alt: { en: "Laundry corner" },
-        placeholder: "[Photo: washing machine corner]",
-        markers: [{ n: 3, x: 50, y: 55 }],
       },
     ],
     items: [
       {
         n: 1,
-        name: { en: "Extra towels", no: "Ekstra håndklær", de: "Extra Handtücher", fr: "Serviettes supplémentaires", zh: "备用毛巾" },
-        where: { en: "Cabinet above the sink", no: "Skapet over vasken", de: "Schrank über dem Waschbecken", fr: "Placard au-dessus du lavabo", zh: "洗手池上方的柜子" },
+        name: { en: "Laundry detergent", no: "Vaskemiddel", de: "Waschmittel", fr: "Lessive", zh: "洗衣液" },
+        where: {
+          en: "Glass jar in the tall cupboard, next to the shower",
+          no: "Glasskrukke i det høye skapet, ved siden av dusjkabinettet",
+          de: "Glas im hohen Schrank, neben der Dusche",
+          fr: "Bocal en verre dans la grande armoire, à côté de la douche",
+          zh: "淋浴间旁边高柜里的玻璃罐中",
+        },
       },
       {
         n: 2,
-        name: { en: "Hair dryer", no: "Hårføner", de: "Föhn", fr: "Sèche-cheveux", zh: "吹风机" },
-        where: { en: "Top drawer", no: "Øverste skuff", de: "Oberste Schublade", fr: "Tiroir du haut", zh: "最上层抽屉" },
-      },
-      {
-        n: 3,
         name: { en: "Washing machine", no: "Vaskemaskin", de: "Waschmaschine", fr: "Lave-linge", zh: "洗衣机" },
         guide: "washing-machine",
       },

@@ -82,7 +82,18 @@ export default async function GuidePage({ params }: PageProps<"/[lang]/guides/[g
 
       <section className="px-5 pt-7">
         <Feedback
-          labels={{ question: d.didThisHelp, yes: d.yes, no: d.no, thanks: d.thanks, sorry: d.sorry }}
+          guide={guide.slug}
+          lang={lang}
+          labels={{
+            question: d.didThisHelp,
+            yes: d.yes,
+            no: d.no,
+            thanks: d.thanks,
+            sorry: d.sorry,
+            commentPrompt: d.commentPrompt,
+            send: d.send,
+            sent: d.sent,
+          }}
           contact={<ContactCard lang={lang} />}
         />
       </section>

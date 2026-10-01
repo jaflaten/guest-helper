@@ -57,6 +57,9 @@ const de: Dictionary = {
   stayCardSub: "Türcode & WLAN",
   keepLink: "Bewahren Sie diesen Link auf: Es ist Ihre persönliche Seite für den Aufenthalt.",
   openGuide: "Hausführer öffnen",
+  commentPrompt: "Was war unklar? (optional)",
+  send: "Senden",
+  sent: "Danke, Ihre Nachricht ist angekommen.",
   language: "Sprache",
 };
 

@@ -19,6 +19,7 @@ npm run dev        # http://localhost:3000 → redirects to /en, /no or /de
 | `TOKEN_SECRET` | Random text, at least 16 characters. Encrypts guest links. Changing it invalidates every link already sent |
 | `WIFI_NAME` | Wi-Fi network name, shown on the home page |
 | `WIFI_PASSWORD` | Shown to guests on their stay page during the stay |
+| `SLACK_WEBHOOK_URL` | Optional. Slack incoming-webhook URL; guides answered "No" (and guest comments) are posted there |
 | `DOOR_CODE` | Optional. Your usual key-box code, used when the code field is left empty |
 | `AIRBNB_ICAL_URL`, `BOOKING_ICAL_URL` | Optional. Each listing's "Export calendar" link (same as rental-helper). Lists upcoming bookings in `/admin` |
 
@@ -87,5 +88,4 @@ Supported: English, Norsk, Deutsch, Français, 中文 (Simplified). Every conten
 1. Fill in real content and photos (start with arrival and the top guest questions).
 2. Choose the marker behaviour and remove the other.
 3. Print the QR stickers (`/admin/qr`) once the site has its own domain.
-4. Store "Did this help?" answers (needs a small store, e.g. Supabase) to see which guides need work.
-5. Later: a chatbot over the guide content.
+4. Later: a chatbot over the guide content.

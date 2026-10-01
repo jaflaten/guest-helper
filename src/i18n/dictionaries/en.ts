@@ -56,6 +56,9 @@ const en = {
   stayCardSub: "Door code & Wi-Fi",
   keepLink: "Keep this link: it is your personal page for this stay.",
   openGuide: "Open the house guide",
+  commentPrompt: "What was unclear? (optional)",
+  send: "Send",
+  sent: "Thanks, we got your message.",
   language: "Language",
 };
 

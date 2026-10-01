@@ -58,6 +58,9 @@ const zh: Dictionary = {
   stayCardSub: "门锁密码与 Wi-Fi",
   keepLink: "请保存此链接：这是您本次入住的专属页面。",
   openGuide: "打开房屋指南",
+  commentPrompt: "哪里不清楚？（选填）",
+  send: "发送",
+  sent: "谢谢，我们已收到您的留言。",
   language: "语言",
 };
 
