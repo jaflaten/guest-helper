@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { notFound } from "next/navigation";
 import { htmlLang, isLocale, locales } from "@/i18n/config";
-import { site } from "@/content";
+import { guides, rooms, site } from "@/content";
+import { OfflineSupport } from "@/components/OfflineSupport";
 // Fonts are self-hosted (bundled with the site), so they also work offline.
 import "@fontsource-variable/figtree";
 import "@fontsource-variable/newsreader";
@@ -27,6 +28,16 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
     <html lang={htmlLang[lang]}>
       <body className="font-sans antialiased">
         <div className="mx-auto min-h-dvh max-w-xl">{children}</div>
+        <OfflineSupport
+          urls={[
+            `/${lang}`,
+            `/${lang}/arrival`,
+            `/${lang}/checkout`,
+            `/${lang}/help`,
+            ...rooms.map((r) => `/${lang}/rooms/${r.slug}`),
+            ...guides.map((g) => `/${lang}/guides/${g.slug}`),
+          ]}
+        />
       </body>
     </html>
   );

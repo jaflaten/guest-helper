@@ -1,8 +1,9 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { defaultLocale, locales, type Locale } from "@/i18n/config";
+import { adminAuthorized } from "@/lib/admin-auth";
 
 // Sends visitors without a language in the URL to their browser's language.
-// A stored choice (cookie set by the language switcher) wins over the browser.
+// A stored choice (cookie set by the language menu) wins over the browser.
 function pickLocale(request: NextRequest): Locale {
   const saved = request.cookies.get("lang")?.value;
   if (saved && (locales as readonly string[]).includes(saved)) return saved as Locale;
@@ -26,6 +27,21 @@ function pickLocale(request: NextRequest): Locale {
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // The admin pages sit behind a browser password prompt (ADMIN_PASSWORD).
+  if (pathname === "/admin" || pathname.startsWith("/admin/")) {
+    if (!process.env.ADMIN_PASSWORD) {
+      return new NextResponse("Admin is disabled: set ADMIN_PASSWORD in Vercel.", { status: 503 });
+    }
+    if (!adminAuthorized(request.headers.get("authorization"))) {
+      return new NextResponse("Password required", {
+        status: 401,
+        headers: { "WWW-Authenticate": 'Basic realm="Guest guide admin", charset="UTF-8"' },
+      });
+    }
+    return NextResponse.next({ headers: { "X-Robots-Tag": "noindex", "Cache-Control": "no-store" } });
+  }
+
   const hasLocale = locales.some((l) => pathname === `/${l}` || pathname.startsWith(`/${l}/`));
   if (hasLocale) return;
 
@@ -34,6 +50,6 @@ export function proxy(request: NextRequest) {
 }
 
 export const config = {
-  // Skip Next internals, API routes and files with an extension (images, manifest, icons).
+  // Skip Next internals, API routes and files with an extension (images, manifest, icons, sw.js).
   matcher: ["/((?!_next|api|.*\\..*).*)"],
 };

@@ -6,6 +6,7 @@ import { Icon } from "@/components/Icon";
 import { PhotoBox } from "@/components/PhotoBox";
 import { Search } from "@/components/Search";
 import { ContactCard } from "@/components/ContactCard";
+import { StayShortcut } from "@/components/StayLink";
 import { notFound } from "next/navigation";
 
 const tints = ["#e2d3bf", "#d3dfda", "#e6d8cc", "#ddd5e0", "#d6dde4"];
@@ -37,6 +38,10 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
       <section className="px-5 pt-4">
         <Search entries={searchIndex(lang)} placeholder={d.searchPlaceholder} empty={d.searchNoResults} />
+      </section>
+
+      <section className="px-5 pt-4 empty:hidden">
+        <StayShortcut lang={lang} title={d.stayTitle} sub={d.stayCardSub} />
       </section>
 
       <section className="grid grid-cols-2 gap-3 px-5 pt-4">

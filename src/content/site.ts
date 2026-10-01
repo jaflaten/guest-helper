@@ -10,9 +10,15 @@ export const site = {
   } satisfies Photo,
 
   wifi: {
-    // Only the network name is public. The password is sent in the booking
-    // message (later: behind the per-guest token link).
+    // Only the network name is public. The password is set as the WIFI_PASSWORD
+    // environment variable in Vercel and shown only on a guest's stay page.
     network: "[Network name]",
+  },
+
+  /** When the door code is shown on the stay page, and check-out time. 24h, Norwegian time. */
+  stay: {
+    checkIn: "15:00",
+    checkOut: "11:00",
   },
 
   contact: {

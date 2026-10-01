@@ -11,6 +11,34 @@ npm install
 npm run dev        # http://localhost:3000 → redirects to /en, /no or /de
 ```
 
+## Setup (Vercel → Settings → Environment Variables)
+
+| Variable | What |
+| --- | --- |
+| `ADMIN_PASSWORD` | Password for `/admin` (any username works in the browser prompt) |
+| `TOKEN_SECRET` | Random text, at least 16 characters. Encrypts guest links. Changing it invalidates every link already sent |
+| `WIFI_PASSWORD` | Shown to guests on their stay page during the stay |
+
+Redeploy after adding or changing them.
+
+## Guest links (`/admin`)
+
+Fill in name (optional), dates, key-box code and the guest's language → get a link and a ready-to-paste message.
+The guest's page (`/<lang>/stay/<token>`) shows the door code and Wi-Fi password from `site.stay.checkIn`
+on arrival day until the end of departure day, then says the stay has ended.
+
+Nothing is stored: the booking is encrypted inside the link (AES-256-GCM with `TOKEN_SECRET`), so it can't be
+read or forged. The trade-off: there is no list of bookings, and a link can't be revoked early (it expires itself).
+Copy the message right after creating it.
+
+`/admin/qr` is a printable sheet of QR stickers for every guide and room. The QR links have no language in them,
+so each guest lands in their own phone's language.
+
+## Offline
+
+`public/sw.js` saves the guide in the guest's language on their first visit (plus their stay page, on their own
+phone only), so it works without signal later. Bump `VERSION` in `sw.js` if cached pages ever look stale.
+
 ## Where things live
 
 | What | File |
@@ -53,10 +81,8 @@ Supported: English, Norsk, Deutsch, Français, 中文 (Simplified). Every conten
 
 ## Next steps
 
-1. Fill in real content and photos (start with arrival and the top guest questions), deploy to Vercel.
-2. **First feature after launch: per-booking token links.** Admin page to create a booking (dates, door code), which gives a link with a random token and a copy-ready message. The guest's link shows the door code and Wi-Fi password from arrival day only, looked up server-side (Supabase), never in the page source.
-3. Choose the marker behaviour and remove the other.
-4. Offline support: service worker that caches pages and photos on first visit, plus app icons for the manifest.
-5. QR stickers per appliance linking to `/guides/<slug>` (language is picked automatically).
-6. Store "Did this help?" answers to see which guides need work.
-7. Later: a chatbot over the guide content.
+1. Set the three environment variables, fill in real content and photos (start with arrival and the top guest questions).
+2. Choose the marker behaviour and remove the other.
+3. Print the QR stickers.
+4. Store "Did this help?" answers (needs a small store, e.g. Supabase) to see which guides need work.
+5. Later: a chatbot over the guide content.
