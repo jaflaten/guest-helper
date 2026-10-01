@@ -44,7 +44,7 @@ Supported: English, Norsk, Deutsch, Français, 中文 (Simplified). Every conten
 
 ## Decisions so far
 
-- The door/lockbox code and the Wi-Fi password are **never** on the public site. Only the Wi-Fi network name is shown; the password is on a card in the apartment and in the booking message.
+- The door/lockbox code and the Wi-Fi password are **never** on the public site. Only the Wi-Fi network name is shown; the password is sent in the booking message.
 - WhatsApp is the main contact button; email, phone and the booking apps are listed below it.
 - Room pages = "where is everything" (one or more photos with numbered markers + list). Appliances get their own guide pages.
 - Home screen loads one hero photo; everything else is light.

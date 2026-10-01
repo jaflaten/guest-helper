@@ -14,7 +14,7 @@ const zh: Dictionary = {
   helpSub: "紧急情况与故障",
   wifi: "Wi-Fi",
   wifiNetwork: "网络",
-  wifiPasswordNote: "密码：请查看公寓内的卡片或您的预订消息",
+  wifiPasswordNote: "密码：请查看您的预订消息",
   houseGuide: "房屋指南",
   guidesCount: "篇指南",
   guideOne: "篇指南",

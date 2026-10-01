@@ -12,7 +12,7 @@ const en = {
   helpSub: "Emergency & fixes",
   wifi: "Wi-Fi",
   wifiNetwork: "Network",
-  wifiPasswordNote: "Password: see the card in the apartment or your booking message",
+  wifiPasswordNote: "Password: in your booking message",
   houseGuide: "House guide",
   guidesCount: "guides",
   guideOne: "guide",

@@ -13,7 +13,7 @@ const de: Dictionary = {
   helpSub: "Notfall & Probleme",
   wifi: "WLAN",
   wifiNetwork: "Netzwerk",
-  wifiPasswordNote: "Passwort: siehe Karte in der Wohnung oder Buchungsnachricht",
+  wifiPasswordNote: "Passwort: in Ihrer Buchungsnachricht",
   houseGuide: "Hausführer",
   guidesCount: "Anleitungen",
   guideOne: "Anleitung",

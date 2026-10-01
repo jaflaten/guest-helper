@@ -10,8 +10,8 @@ export const site = {
   } satisfies Photo,
 
   wifi: {
-    // Only the network name is public. The password is on the card in the
-    // apartment and in the booking message (later: behind the per-guest token link).
+    // Only the network name is public. The password is sent in the booking
+    // message (later: behind the per-guest token link).
     network: "[Network name]",
   },
 

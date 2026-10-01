@@ -13,7 +13,7 @@ const no: Dictionary = {
   helpSub: "Nødhjelp og feilsøking",
   wifi: "Wi-Fi",
   wifiNetwork: "Nettverk",
-  wifiPasswordNote: "Passord: se kortet i leiligheten eller bookingmeldingen",
+  wifiPasswordNote: "Passord: står i bookingmeldingen",
   houseGuide: "Husguide",
   guidesCount: "guider",
   guideOne: "guide",
