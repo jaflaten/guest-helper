@@ -25,7 +25,7 @@ export const site = {
     /** Full international number, digits only, no + or spaces. Used for the WhatsApp link. */
     whatsapp: "4746811470",
     phone: "+47 46 81 14 70",
-    email: "[rent@jaflaten.com]",
+    email: "rent@jaflaten.com",
   },
 
   area: {
