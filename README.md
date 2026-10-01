@@ -19,7 +19,7 @@ npm run dev        # http://localhost:3000 → redirects to /en, /no or /de
 | `TOKEN_SECRET` | Random text, at least 16 characters. Encrypts guest links. Changing it invalidates every link already sent |
 | `WIFI_NAME` | Wi-Fi network name, shown on the home page |
 | `WIFI_PASSWORD` | Shown to guests on their stay page during the stay |
-| `SLACK_WEBHOOK_URL` | Optional. Slack incoming-webhook URL; guides answered "No" (and guest comments) are posted there |
+| `SLACK_WEBHOOK_URL` | Optional. Slack incoming-webhook URL. Receives guides answered "No" (plus comments) and the general feedback form (`/<lang>/feedback`, linked at the bottom of every page). Messages include the guest's stay dates and booking name if they opened their stay link on that phone |
 | `DOOR_CODE` | Optional. Your usual key-box code, used when the code field is left empty |
 | `AIRBNB_ICAL_URL`, `BOOKING_ICAL_URL` | Optional. Each listing's "Export calendar" link (same as rental-helper). Lists upcoming bookings in `/admin` |
 

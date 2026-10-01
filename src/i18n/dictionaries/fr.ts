@@ -60,6 +60,13 @@ const fr: Dictionary = {
   commentPrompt: "Qu’est-ce qui n’était pas clair ? (facultatif)",
   send: "Envoyer",
   sent: "Merci, nous avons reçu votre message.",
+  feedbackLink: "Donner votre avis",
+  feedbackTitle: "Votre avis",
+  feedbackIntro: "Quelque chose à améliorer, ou qui vous a plu ? Nous lisons chaque message.",
+  nameLabel: "Votre nom (facultatif)",
+  messageLabel: "Votre message",
+  feedbackThanks: "Merci ! Votre message a été envoyé.",
+  feedbackError: "Envoi impossible pour le moment. Vérifiez votre connexion et réessayez.",
   language: "Langue",
 };
 

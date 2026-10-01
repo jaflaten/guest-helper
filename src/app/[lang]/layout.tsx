@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import { htmlLang, isLocale, locales } from "@/i18n/config";
 import { guides, rooms, site } from "@/content";
 import { OfflineSupport } from "@/components/OfflineSupport";
+import { FeedbackFooter } from "@/components/FeedbackFooter";
+import { getDictionary } from "@/i18n";
 // Fonts are self-hosted (bundled with the site), so they also work offline.
 import "@fontsource-variable/figtree";
 import "@fontsource-variable/newsreader";
@@ -28,6 +30,7 @@ export default async function RootLayout({ children, params }: LayoutProps<"/[la
     <html lang={htmlLang[lang]}>
       <body className="font-sans antialiased">
         <div className="mx-auto min-h-dvh max-w-xl">{children}</div>
+        <FeedbackFooter lang={lang} label={getDictionary(lang).feedbackLink} />
         <OfflineSupport
           urls={[
             `/${lang}`,

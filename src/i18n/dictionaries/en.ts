@@ -59,6 +59,13 @@ const en = {
   commentPrompt: "What was unclear? (optional)",
   send: "Send",
   sent: "Thanks, we got your message.",
+  feedbackLink: "Send us feedback",
+  feedbackTitle: "Feedback",
+  feedbackIntro: "Anything we could do better, or something you liked? We read every message.",
+  nameLabel: "Your name (optional)",
+  messageLabel: "Your message",
+  feedbackThanks: "Thank you! Your message has been sent.",
+  feedbackError: "Couldn't send right now. Check your connection and try again.",
   language: "Language",
 };
 

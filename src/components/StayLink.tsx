@@ -16,6 +16,11 @@ function read(): Saved | null {
   }
 }
 
+/** The guest's stay token, if they opened their stay link on this phone. Sent along with feedback. */
+export function savedStayToken(): string | undefined {
+  return read()?.token;
+}
+
 /** On the stay page: remember the guest's link on this phone until departure. */
 export function RememberStay({ token, depart }: { token: string; depart: string }) {
   useEffect(() => {

@@ -61,6 +61,13 @@ const zh: Dictionary = {
   commentPrompt: "哪里不清楚？（选填）",
   send: "发送",
   sent: "谢谢，我们已收到您的留言。",
+  feedbackLink: "给我们反馈",
+  feedbackTitle: "意见反馈",
+  feedbackIntro: "有什么需要改进的地方，或者您喜欢的地方吗？每条留言我们都会认真阅读。",
+  nameLabel: "您的姓名（选填）",
+  messageLabel: "您的留言",
+  feedbackThanks: "谢谢！您的留言已发送。",
+  feedbackError: "暂时无法发送，请检查网络后重试。",
   language: "语言",
 };
 

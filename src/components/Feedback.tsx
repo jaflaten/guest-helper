@@ -2,6 +2,7 @@
 
 import { useState, type ReactNode } from "react";
 import { sendFeedback } from "@/lib/feedback";
+import { savedStayToken } from "./StayLink";
 
 type Labels = {
   question: string;
@@ -47,7 +48,7 @@ export function Feedback({
                 e.preventDefault();
                 if (!comment.trim()) return;
                 setCommentSent(true);
-                void sendFeedback({ guide, lang, comment });
+                void sendFeedback({ guide, lang, comment, stay: savedStayToken() });
               }}
             >
               <label className="text-sm text-muted">
@@ -90,7 +91,7 @@ export function Feedback({
               type="button"
               onClick={() => {
                 setVote("no");
-                void sendFeedback({ guide, lang });
+                void sendFeedback({ guide, lang, stay: savedStayToken() });
               }}
               className="h-11 min-w-24 cursor-pointer rounded-xl border border-line bg-paper text-[15px] font-semibold"
             >

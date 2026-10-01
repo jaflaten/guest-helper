@@ -60,6 +60,13 @@ const no: Dictionary = {
   commentPrompt: "Hva var uklart? (valgfritt)",
   send: "Send",
   sent: "Takk, vi har fått meldingen.",
+  feedbackLink: "Gi oss tilbakemelding",
+  feedbackTitle: "Tilbakemelding",
+  feedbackIntro: "Noe vi kan gjøre bedre, eller noe du likte? Vi leser alle meldinger.",
+  nameLabel: "Navnet ditt (valgfritt)",
+  messageLabel: "Meldingen din",
+  feedbackThanks: "Tusen takk! Meldingen er sendt.",
+  feedbackError: "Kunne ikke sende akkurat nå. Sjekk tilkoblingen og prøv igjen.",
   language: "Språk",
 };
 
