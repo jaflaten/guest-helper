@@ -51,6 +51,8 @@ export type Guide = {
   intro?: Localized;
   /** One or two sentences that solve the problem for most guests. */
   short: Localized;
+  /** Highlighted "please" note, e.g. what not to do with the appliance. */
+  note?: Localized;
   cover?: Photo;
   steps: GuideStep[];
   /** Path under /public or an external URL to a short clip. */

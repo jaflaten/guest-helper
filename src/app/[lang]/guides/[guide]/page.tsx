@@ -52,6 +52,12 @@ export default async function GuidePage({ params }: PageProps<"/[lang]/guides/[g
         </div>
       </section>
 
+      {guide.note && (
+        <section className="px-5 pt-3">
+          <p className="rounded-[18px] bg-clay-soft px-[18px] py-4 text-[15px] leading-relaxed text-ink">{t(guide.note, lang)}</p>
+        </section>
+      )}
+
       <section className="px-5 pt-7">
         <h2 className="mb-3.5 font-serif text-2xl">{d.stepByStep}</h2>
         <StepList steps={guide.steps} lang={lang} />
