@@ -21,4 +21,21 @@ export const answers: QuickAnswer[] = [
       zh: "可以！这里的自来水可以直接饮用，而且水质很好，无需购买瓶装水。",
     },
   },
+  {
+    id: "parking",
+    q: {
+      en: "Is parking free? Where do I park?",
+      no: "Er parkering gratis? Hvor parkerer jeg?",
+      de: "Ist das Parken kostenlos? Wo kann ich parken?",
+      fr: "Le parking est-il gratuit ? Où me garer ?",
+      zh: "停车免费吗？在哪里停车？",
+    },
+    a: {
+      en: "Yes, parking is free. Park right in front of the entrance door, next to the two flower pots.",
+      no: "Ja, parkering er gratis. Parker rett foran inngangsdøren, ved siden av de to blomsterpottene.",
+      de: "Ja, das Parken ist kostenlos. Parken Sie direkt vor der Eingangstür, neben den zwei Blumentöpfen.",
+      fr: "Oui, le parking est gratuit. Garez-vous juste devant la porte d’entrée, à côté des deux pots de fleurs.",
+      zh: "是的，停车免费。请把车停在入口门正前方，两个花盆旁边。",
+    },
+  },
 ];

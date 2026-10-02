@@ -13,8 +13,14 @@ export const arrival: StepPage = {
   steps: [
     {
       title: { en: "Parking", no: "Parkering", de: "Parken", fr: "Parking", zh: "停车" },
-      body: { en: "[Where to park, and how to recognise the spot]" },
-      photo: { alt: { en: "Parking" }, placeholder: "[Photo: parking spot]" },
+      body: {
+        en: "Parking is free. Park right in front of the entrance door, next to the two flower pots.",
+        no: "Parkering er gratis. Parker rett foran inngangsdøren, ved siden av de to blomsterpottene.",
+        de: "Parken ist kostenlos. Parken Sie direkt vor der Eingangstür, neben den zwei Blumentöpfen.",
+        fr: "Le parking est gratuit. Garez-vous juste devant la porte d’entrée, à côté des deux pots de fleurs.",
+        zh: "停车免费。请把车停在入口门正前方，两个花盆旁边。",
+      },
+      photo: { alt: { en: "Parking" }, placeholder: "[Photo: parking spot by the entrance and flower pots]" },
     },
     {
       title: { en: "Find the building", no: "Finn bygget", de: "Das Gebäude finden", fr: "Trouver le bâtiment", zh: "找到建筑" },
