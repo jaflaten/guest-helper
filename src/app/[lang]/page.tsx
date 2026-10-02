@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getDictionary, isLocale, t } from "@/i18n";
-import { guides, guidesInRoom, rooms, searchIndex, site } from "@/content";
+import { answers, guides, guidesInRoom, rooms, searchIndex, site } from "@/content";
 import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
 import { PhotoBox } from "@/components/PhotoBox";
@@ -20,7 +20,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
   const finds = rooms
     .flatMap((r) => r.items.filter((i) => i.where).map((i) => ({ room: r, item: i })))
     .slice(0, 5);
-  const faqs = guides.filter((g) => g.faq).slice(0, 4);
+  const faqs = guides.filter((g) => g.faq);
 
   return (
     <main className="pb-9">
@@ -93,11 +93,21 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 <Icon name="chevronRight" size={16} className="text-[#9a8c80]" />
               </Link>
             ))}
+            {answers.map((qa) => (
+              <details key={qa.id} id={`answer-${qa.id}`} className="scroll-mt-4 rounded-[14px] bg-sand">
+                <summary className="flex min-h-12 cursor-pointer items-center gap-3 px-4 py-3.5">
+                  <Icon name="question" size={18} className="shrink-0 text-pine" />
+                  <span className="grow text-[15px]">{t(qa.q, lang)}</span>
+                  <Icon name="plus" size={16} className="toggle-sign shrink-0 text-muted transition-transform" />
+                </summary>
+                <p className="px-4 pb-4 pl-[46px] text-[15px] leading-relaxed text-ink-soft">{t(qa.a, lang)}</p>
+              </details>
+            ))}
           </div>
         </section>
       )}
 
-      {faqs.length > 0 && (
+      {faqs.length + answers.length > 0 && (
         <section className="px-5 pt-6">
           <h2 className="mb-3 font-serif text-2xl">{d.guestsAsk}</h2>
           <div className="flex flex-col gap-2">

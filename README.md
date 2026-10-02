@@ -51,6 +51,7 @@ phone only), so it works without signal later. Bump `VERSION` in `sw.js` if cach
 | Rooms: photos, numbered markers, "where to find it" items | `src/content/rooms.ts` |
 | Appliance guides: short version, steps, troubleshooting, FAQ question | `src/content/guides.ts` |
 | Arrival and check-out steps | `src/content/pages.ts` |
+| Quick answers (one-line Q&A on the home page, e.g. tap water) | `src/content/answers.ts` |
 | Buttons and headings (UI text) per language | `src/i18n/dictionaries/*.ts` |
 | Language list | `src/i18n/config.ts` |
 

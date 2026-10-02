@@ -1,10 +1,12 @@
 import { t, type Locale } from "@/i18n/config";
 import { guides } from "./guides";
 import { rooms } from "./rooms";
+import { answers } from "./answers";
 
 export { site } from "./site";
 export { arrival, checkout } from "./pages";
-export { rooms, guides };
+export { rooms, guides, answers };
+export type { QuickAnswer } from "./answers";
 export * from "./types";
 
 export const getRoom = (slug: string) => rooms.find((r) => r.slug === slug);
@@ -28,6 +30,9 @@ export function searchIndex(lang: Locale): SearchEntry[] {
         href: item.guide ? `/${lang}/guides/${item.guide}` : `/${lang}/rooms/${r.slug}#item-${item.n}`,
       });
     }
+  }
+  for (const qa of answers) {
+    entries.push({ title: t(qa.q, lang), detail: t(qa.a, lang), href: `/${lang}#answer-${qa.id}` });
   }
   return entries;
 }
