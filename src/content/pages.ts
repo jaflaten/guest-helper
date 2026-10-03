@@ -14,11 +14,11 @@ export const arrival: StepPage = {
     {
       title: { en: "Find the house", no: "Finn huset", de: "Das Haus finden", fr: "Trouver la maison", zh: "找到房子" },
       body: {
-        en: "Look for the red house with a white ground floor. Your parking spot is the one with the black fence, in front of the entrance door (the red car in the photo). The photos are a few years old.",
-        no: "Se etter det røde huset med hvit underetasje. Parkeringsplassen din er den med svart gjerde, foran inngangsdøren (den røde bilen på bildet). Bildene er noen år gamle.",
-        de: "Suchen Sie das rote Haus mit dem weißen Erdgeschoss. Ihr Parkplatz ist der mit dem schwarzen Zaun vor der Eingangstür (das rote Auto im Foto). Die Fotos sind ein paar Jahre alt.",
-        fr: "Cherchez la maison rouge au rez-de-chaussée blanc. Votre place est celle entourée d’une clôture noire, devant la porte d’entrée (la voiture rouge sur la photo). Les photos datent de quelques années.",
-        zh: "找一栋一楼为白色的红色房子。您的停车位就是入口门前有黑色围栏的那个（照片中红色汽车的位置）。照片拍摄于几年前。",
+        en: "Look for the red house with a grey ground floor. Your parking spot is the one with the black fence, right in front of the entrance door. It's reserved for you, so it will be free when you arrive (the red car in the photo is just from when it was taken).",
+        no: "Se etter det røde huset med grå underetasje. Parkeringsplassen din er den med svart gjerde, rett foran inngangsdøren. Den er reservert for deg, så den er ledig når du kommer (den røde bilen på bildet sto der bare da bildet ble tatt).",
+        de: "Suchen Sie das rote Haus mit dem grauen Erdgeschoss. Ihr Parkplatz ist der mit dem schwarzen Zaun direkt vor der Eingangstür. Er ist für Sie reserviert und bei Ihrer Ankunft frei (das rote Auto stand nur beim Fotografieren dort).",
+        fr: "Cherchez la maison rouge au rez-de-chaussée gris. Votre place est celle entourée d’une clôture noire, juste devant la porte d’entrée. Elle vous est réservée et sera libre à votre arrivée (la voiture rouge était là seulement au moment de la photo).",
+        zh: "找一栋一楼为灰色的红色房子。您的停车位就是入口门正前方有黑色围栏的那个。该车位为您专用，到达时会空着（照片中的红色汽车只是拍照时停在那里）。",
       },
       photo: {
         src: "/photos/arrival-house-above.jpg",
@@ -34,20 +34,20 @@ export const arrival: StepPage = {
     {
       title: { en: "Parking", no: "Parkering", de: "Parken", fr: "Parking", zh: "停车" },
       body: {
-        en: "Parking is free. Park where the red car is in the photo: inside the black metal fence, right in front of the entrance door, next to the two flower pots. You'll recognise the spot by the black metal fence around the parking area and the heat pump to the right of the entrance door.",
-        no: "Parkering er gratis. Parker der den røde bilen står på bildet: innenfor det svarte metallgjerdet, rett foran inngangsdøren, ved siden av de to blomsterpottene. Du kjenner igjen plassen på det svarte metallgjerdet rundt parkeringsplassen og varmepumpen til høyre for inngangsdøren.",
-        de: "Parken ist kostenlos. Parken Sie dort, wo im Foto das rote Auto steht: innerhalb des schwarzen Metallzauns, direkt vor der Eingangstür, neben den zwei Blumentöpfen. Sie erkennen den Platz am schwarzen Metallzaun um den Parkplatz und an der Wärmepumpe rechts neben der Eingangstür.",
-        fr: "Le parking est gratuit. Garez-vous là où se trouve la voiture rouge sur la photo : à l’intérieur de la clôture en métal noir, juste devant la porte d’entrée, à côté des deux pots de fleurs. Vous reconnaîtrez l’endroit à la clôture en métal noir autour du parking et à la pompe à chaleur à droite de la porte d’entrée.",
-        zh: "停车免费。请停在照片中红色汽车的位置：黑色金属围栏内，入口门正前方，两个花盆旁边。停车场四周有黑色金属围栏，入口门右侧有一台空气源热泵，可据此辨认。",
+        en: "Parking is free and the spot is reserved for you: inside the black metal fence, right in front of the entrance door, next to the two flower pots (where the red car is in the photo). The heat pump is just to the right of the entrance door.",
+        no: "Parkering er gratis, og plassen er reservert for deg: innenfor det svarte metallgjerdet, rett foran inngangsdøren, ved siden av de to blomsterpottene (der den røde bilen står på bildet). Varmepumpen står rett til høyre for inngangsdøren.",
+        de: "Parken ist kostenlos und der Platz ist für Sie reserviert: innerhalb des schwarzen Metallzauns, direkt vor der Eingangstür, neben den zwei Blumentöpfen (wo im Foto das rote Auto steht). Die Wärmepumpe steht rechts neben der Eingangstür.",
+        fr: "Le parking est gratuit et la place vous est réservée : à l’intérieur de la clôture en métal noir, juste devant la porte d’entrée, à côté des deux pots de fleurs (là où est la voiture rouge sur la photo). La pompe à chaleur est juste à droite de la porte d’entrée.",
+        zh: "停车免费，车位为您专用：在黑色金属围栏内，入口门正前方，两个花盆旁边（照片中红色汽车的位置）。入口门右侧是空气源热泵。",
       },
       photo: {
         src: "/photos/arrival-parking.jpg",
         alt: {
-          en: "Your parking spot: inside the black fence, where the red car is, right in front of the entrance door",
-          no: "Parkeringsplassen din: innenfor det svarte gjerdet, der den røde bilen står, rett foran inngangsdøren",
-          de: "Ihr Parkplatz: innerhalb des schwarzen Zauns, wo das rote Auto steht, direkt vor der Eingangstür",
-          fr: "Votre place : à l’intérieur de la clôture noire, là où est la voiture rouge, juste devant la porte d’entrée",
-          zh: "您的停车位：黑色围栏内、照片中红色汽车的位置，就在入口门正前方",
+          en: "Your parking spot: inside the black fence, right in front of the entrance door",
+          no: "Parkeringsplassen din: innenfor det svarte gjerdet, rett foran inngangsdøren",
+          de: "Ihr Parkplatz: innerhalb des schwarzen Zauns, direkt vor der Eingangstür",
+          fr: "Votre place : à l’intérieur de la clôture noire, juste devant la porte d’entrée",
+          zh: "您的停车位：黑色围栏内，就在入口门正前方",
         },
       },
     },

@@ -6,7 +6,7 @@ export const site = {
   name: "Fossvegen 7",
   hero: {
     alt: { en: "The living room", no: "Stuen", de: "Das Wohnzimmer", fr: "Le salon", zh: "客厅" },
-    placeholder: "[Photo: living room or view]",
+    src: "/photos/living-room.jpg",
   } satisfies Photo,
 
   wifi: {
