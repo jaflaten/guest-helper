@@ -145,13 +145,13 @@ export const guides: Guide[] = [
       {
         title: { en: "Find the water guard", no: "Finn vannstopperen", de: "Wasserstopp finden", fr: "Trouver le coupe-eau", zh: "找到漏水保护器" },
         body: {
-          en: "Open the cupboard under the kitchen sink. The water guard is behind the rubbish bins: lift them out to reach it.",
-          no: "Åpne skapet under kjøkkenvasken. Vannstopperen står bak søppelbøttene: løft dem ut for å komme til.",
-          de: "Öffnen Sie den Schrank unter der Küchenspüle. Der Wasserstopp sitzt hinter den Mülleimern: Nehmen Sie diese heraus.",
-          fr: "Ouvrez le placard sous l’évier. Le coupe-eau se trouve derrière les poubelles : sortez-les pour y accéder.",
-          zh: "打开厨房水槽下方的柜子。漏水保护器在垃圾桶后面，把垃圾桶拿出来即可看到。",
+          en: "Open the cupboard under the kitchen sink and lift out the rubbish bins. The water guard is the small white box with a light: green means all is fine, red means it has shut off the water.",
+          no: "Åpne skapet under kjøkkenvasken og løft ut søppelbøttene. Vannstopperen er den lille hvite boksen med et lys: grønt betyr at alt er i orden, rødt betyr at den har stengt vannet.",
+          de: "Öffnen Sie den Schrank unter der Küchenspüle und nehmen Sie die Mülleimer heraus. Der Wasserstopp ist das kleine weiße Kästchen mit Licht: Grün heißt alles in Ordnung, Rot heißt, das Wasser wurde abgesperrt.",
+          fr: "Ouvrez le placard sous l’évier et sortez les poubelles. Le coupe-eau est le petit boîtier blanc avec un voyant : vert, tout va bien ; rouge, il a coupé l’eau.",
+          zh: "打开厨房水槽下方的柜子，把垃圾桶拿出来。漏水保护器是那个带指示灯的白色小盒子：绿灯表示一切正常，红灯表示已切断水源。",
         },
-        photo: { alt: { en: "Cupboard under the sink with the bins removed" }, placeholder: "[Photo: under the sink, bins removed]" },
+        photo: { src: "/photos/water-guard-overview.jpg", alt: { en: "Under the sink with the bins removed: the white water guard box with a green light", no: "Under vasken uten søppelbøtter: den hvite vannstopperen med grønt lys" } },
       },
       {
         title: { en: "Dry the floor", no: "Tørk gulvet", de: "Boden trocknen", fr: "Sécher le sol", zh: "擦干地面" },
@@ -167,13 +167,13 @@ export const guides: Guide[] = [
       {
         title: { en: "Reset it", no: "Tilbakestill", de: "Zurücksetzen", fr: "Le réinitialiser", zh: "重置" },
         body: {
-          en: "Unplug the water guard's power plug, wait a few seconds and plug it back in. The red light goes out and the beeping stops.",
-          no: "Trekk ut strømkontakten til vannstopperen, vent noen sekunder og sett den inn igjen. Det røde lyset slukker og pipingen stopper.",
-          de: "Ziehen Sie den Netzstecker des Wasserstopps, warten Sie einige Sekunden und stecken Sie ihn wieder ein. Das rote Licht erlischt und das Piepen hört auf.",
-          fr: "Débranchez la prise du coupe-eau, attendez quelques secondes et rebranchez-la. La lumière rouge s’éteint et le bip s’arrête.",
-          zh: "拔下漏水保护器的电源插头，等几秒钟后重新插上。红灯会熄灭，蜂鸣声停止。",
+          en: "Pull out the grey plug from the water guard, wait a few seconds and push it back in. The light turns green again, the beeping stops and the water comes back. See the short video below.",
+          no: "Trekk ut den grå kontakten fra vannstopperen, vent noen sekunder og sett den inn igjen. Lyset blir grønt igjen, pipingen stopper og vannet kommer tilbake. Se den korte videoen under.",
+          de: "Ziehen Sie den grauen Stecker aus dem Wasserstopp, warten Sie einige Sekunden und stecken Sie ihn wieder ein. Das Licht wird wieder grün, das Piepen hört auf und das Wasser kommt zurück. Siehe das kurze Video unten.",
+          fr: "Débranchez la fiche grise du coupe-eau, attendez quelques secondes et rebranchez-la. Le voyant redevient vert, le bip s’arrête et l’eau revient. Voir la courte vidéo ci-dessous.",
+          zh: "拔下漏水保护器上的灰色插头，等几秒钟后重新插上。指示灯会变回绿色，蜂鸣声停止，水恢复供应。请看下方的短视频。",
         },
-        photo: { alt: { en: "The water guard's power plug" }, placeholder: "[Photo: the power plug]" },
+        photo: { src: "/photos/water-guard-closeup.jpg", alt: { en: "Close-up of the water guard with the grey plug and green light", no: "Nærbilde av vannstopperen med den grå kontakten og grønt lys" } },
       },
       {
         title: { en: "Check the water", no: "Sjekk vannet", de: "Wasser prüfen", fr: "Vérifier l’eau", zh: "检查水源" },
@@ -186,6 +186,8 @@ export const guides: Guide[] = [
         },
       },
     ],
+    video: "/videos/water-guard-reset.mp4",
+    poster: "/videos/water-guard-reset.jpg",
     troubles: [
       {
         problem: { en: "It starts beeping again", no: "Den begynner å pipe igjen", de: "Es piept wieder", fr: "Il recommence à biper", zh: "又开始响了" },

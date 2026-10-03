@@ -59,7 +59,9 @@ Anything in `[brackets]` is a placeholder to replace.
 
 ### Photos
 
-Put photos in `public/photos/` and set `src: "/photos/kitchen.jpg"` on the photo. Without `src` a labelled placeholder is shown. Next.js resizes and compresses them automatically.
+Put photos in `public/photos/` and set `src: "/photos/kitchen.jpg"` on the photo. Without `src` a labelled placeholder is shown. Next.js resizes and compresses them automatically. Step photos are shown at 4:3 (landscape); room photos at 4:3 too.
+
+Short videos go in `public/videos/` as H.264 MP4 (about 540 px wide, no sound, under ~2 MB) with a `.jpg` poster frame; set `video` and `poster` on the guide.
 
 ### Room markers
 

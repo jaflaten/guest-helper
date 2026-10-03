@@ -57,6 +57,8 @@ export type Guide = {
   steps: GuideStep[];
   /** Path under /public or an external URL to a short clip. */
   video?: string;
+  /** Still image shown before the video plays. */
+  poster?: string;
   troubles?: Trouble[];
   related?: string[];
   /** Show this guide's question in "Guests often ask" on the home screen. */

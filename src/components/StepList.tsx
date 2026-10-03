@@ -11,7 +11,7 @@ export function StepList({ steps, lang }: { steps: GuideStep[]; lang: Locale }) 
       {steps.map((step, i) => (
         <li key={i} className="overflow-hidden rounded-[18px] bg-white">
           {step.photo && (
-            <div className="relative h-[170px]">
+            <div className="relative aspect-[4/3]">
               <PhotoBox photo={step.photo} lang={lang} tint={tints[i % tints.length]} />
             </div>
           )}

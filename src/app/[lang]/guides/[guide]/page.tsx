@@ -65,7 +65,15 @@ export default async function GuidePage({ params }: PageProps<"/[lang]/guides/[g
 
       {guide.video && (
         <section className="px-5 pt-5">
-          <video src={guide.video} controls playsInline preload="none" className="w-full rounded-[18px] bg-ink" />
+          <video
+            src={guide.video}
+            poster={guide.poster}
+            controls
+            muted
+            playsInline
+            preload="none"
+            className="mx-auto max-h-[75vh] w-full rounded-[18px] bg-ink object-contain"
+          />
         </section>
       )}
 
