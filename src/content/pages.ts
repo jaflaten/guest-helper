@@ -14,11 +14,11 @@ export const arrival: StepPage = {
     {
       title: { en: "Parking", no: "Parkering", de: "Parken", fr: "Parking", zh: "停车" },
       body: {
-        en: "Parking is free. Park right in front of the entrance door, next to the two flower pots.",
-        no: "Parkering er gratis. Parker rett foran inngangsdøren, ved siden av de to blomsterpottene.",
-        de: "Parken ist kostenlos. Parken Sie direkt vor der Eingangstür, neben den zwei Blumentöpfen.",
-        fr: "Le parking est gratuit. Garez-vous juste devant la porte d’entrée, à côté des deux pots de fleurs.",
-        zh: "停车免费。请把车停在入口门正前方，两个花盆旁边。",
+        en: "Parking is free. Park right in front of the entrance door, next to the two flower pots. You'll recognise the spot by the black metal fence around the parking area and the heat pump to the right of the entrance door.",
+        no: "Parkering er gratis. Parker rett foran inngangsdøren, ved siden av de to blomsterpottene. Du kjenner igjen plassen på det svarte metallgjerdet rundt parkeringsplassen og varmepumpen til høyre for inngangsdøren.",
+        de: "Parken ist kostenlos. Parken Sie direkt vor der Eingangstür, neben den zwei Blumentöpfen. Sie erkennen den Platz am schwarzen Metallzaun um den Parkplatz und an der Wärmepumpe rechts neben der Eingangstür.",
+        fr: "Le parking est gratuit. Garez-vous juste devant la porte d’entrée, à côté des deux pots de fleurs. Vous reconnaîtrez l’endroit à la clôture en métal noir autour du parking et à la pompe à chaleur à droite de la porte d’entrée.",
+        zh: "停车免费。请把车停在入口门正前方，两个花盆旁边。停车场四周有黑色金属围栏，入口门右侧有一台空气源热泵，可据此辨认。",
       },
       photo: { alt: { en: "Parking" }, placeholder: "[Photo: parking spot by the entrance and flower pots]" },
     },
