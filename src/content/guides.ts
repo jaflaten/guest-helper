@@ -131,7 +131,16 @@ export const guides: Guide[] = [
       fr: "En général, un peu d’eau a été renversée près du lave-vaisselle. Séchez bien le sol, puis débranchez le coupe-eau sous l’évier et rebranchez-le.",
       zh: "通常是洗碗机附近洒了一点水。请把地面彻底擦干，然后拔下水槽下方漏水保护器的电源插头，再重新插上。",
     },
-    cover: { alt: { en: "The water guard under the kitchen sink" }, placeholder: "[Photo: water guard with red light]" },
+    cover: {
+      src: "/photos/water-guard-red.jpg",
+      alt: {
+        en: "Under the kitchen sink: the water guard glowing red after it has shut off the water",
+        no: "Under kjøkkenvasken: vannstopperen lyser rødt etter at den har stengt vannet",
+        de: "Unter der Küchenspüle: Der Wasserstopp leuchtet rot, nachdem er das Wasser abgesperrt hat",
+        fr: "Sous l’évier : le coupe-eau allumé en rouge après avoir coupé l’eau",
+        zh: "厨房水槽下方：漏水保护器切断水源后亮起红灯",
+      },
+    },
     steps: [
       {
         title: { en: "Find the water guard", no: "Finn vannstopperen", de: "Wasserstopp finden", fr: "Trouver le coupe-eau", zh: "找到漏水保护器" },
