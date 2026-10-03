@@ -97,6 +97,8 @@ export const rooms: Room[] = [
         markers: [
           { n: 1, x: 30, y: 45 },
           { n: 2, x: 65, y: 65 },
+          { n: 3, x: 45, y: 55 },
+          { n: 4, x: 45, y: 72 },
         ],
       },
     ],
@@ -116,6 +118,28 @@ export const rooms: Room[] = [
         n: 2,
         name: { en: "Washing machine", no: "Vaskemaskin", de: "Waschmaschine", fr: "Lave-linge", zh: "洗衣机" },
         guide: "washing-machine",
+      },
+      {
+        n: 3,
+        name: { en: "Hair dryer", no: "Hårføner", de: "Föhn", fr: "Sèche-cheveux", zh: "吹风机" },
+        where: {
+          en: "Upper drawer under the bathroom sink",
+          no: "Øverste skuff under vasken på badet",
+          de: "Obere Schublade unter dem Waschbecken",
+          fr: "Tiroir du haut sous le lavabo",
+          zh: "浴室洗手池下方的上层抽屉",
+        },
+      },
+      {
+        n: 4,
+        name: { en: "Extra towels", no: "Ekstra håndklær", de: "Extra Handtücher", fr: "Serviettes supplémentaires", zh: "备用毛巾" },
+        where: {
+          en: "Your towels are put out for you. If you need more, extras are in the bottom drawer under the bathroom sink.",
+          no: "Håndklærne dine er lagt frem. Trenger du flere, ligger det ekstra i nederste skuff under vasken på badet.",
+          de: "Ihre Handtücher liegen bereit. Falls Sie mehr brauchen: Extra-Handtücher sind in der unteren Schublade unter dem Waschbecken.",
+          fr: "Vos serviettes sont déjà préparées. S’il vous en faut plus, il y en a dans le tiroir du bas sous le lavabo.",
+          zh: "毛巾已为您备好。如需更多，备用毛巾在浴室洗手池下方的底层抽屉里。",
+        },
       },
     ],
   },

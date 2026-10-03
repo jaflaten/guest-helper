@@ -162,7 +162,7 @@ export const guides: Guide[] = [
           fr: "Essuyez soigneusement le sol devant et autour du lave-vaisselle. Le capteur se trouve derrière la plinthe et il est très sensible : une petite flaque suffit à le déclencher.",
           zh: "把洗碗机前方及周围的地面彻底擦干。传感器位于底部踢脚板后面，非常灵敏，哪怕洒了一点水也会触发。",
         },
-        photo: { alt: { en: "Floor in front of the dishwasher" }, placeholder: "[Photo: floor and panel by the dishwasher]" },
+        photo: { src: "/photos/dishwasher-panel.jpg", alt: { en: "The dishwasher (middle door, right of the drawers) and the bottom panel where the sensor sits", no: "Oppvaskmaskinen (midterste dør, til høyre for skuffene) og sokkelen der sensoren sitter" } },
       },
       {
         title: { en: "Reset it", no: "Tilbakestill", de: "Zurücksetzen", fr: "Le réinitialiser", zh: "重置" },
@@ -237,7 +237,7 @@ export const guides: Guide[] = [
       fr: "Merci de ne pas mettre d’ustensiles en bois au lave-vaisselle : lavez-les à la main.",
       zh: "请不要将木制厨具放入洗碗机，请手洗。",
     },
-    cover: { alt: { en: "The dishwasher" }, placeholder: "[Photo: the dishwasher]" },
+    cover: { src: "/photos/dishwasher-panel.jpg", alt: { en: "The dishwasher: the middle door, right of the drawers", no: "Oppvaskmaskinen: den midterste døren, til høyre for skuffene" } },
     steps: [
       {
         title: { en: "Get a tablet", no: "Hent en tablett", de: "Tab holen", fr: "Prendre une pastille", zh: "取一块洗碗块" },
