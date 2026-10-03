@@ -31,11 +31,11 @@ export const answers: QuickAnswer[] = [
       zh: "停车免费吗？在哪里停车？",
     },
     a: {
-      en: "Yes, parking is free. Park right in front of the entrance door, next to the two flower pots. You'll recognise the spot by the black metal fence around the parking area and the heat pump to the right of the entrance door.",
-      no: "Ja, parkering er gratis. Parker rett foran inngangsdøren, ved siden av de to blomsterpottene. Du kjenner igjen plassen på det svarte metallgjerdet rundt parkeringsplassen og varmepumpen til høyre for inngangsdøren.",
-      de: "Ja, das Parken ist kostenlos. Parken Sie direkt vor der Eingangstür, neben den zwei Blumentöpfen. Sie erkennen den Platz am schwarzen Metallzaun um den Parkplatz und an der Wärmepumpe rechts neben der Eingangstür.",
-      fr: "Oui, le parking est gratuit. Garez-vous juste devant la porte d’entrée, à côté des deux pots de fleurs. Vous reconnaîtrez l’endroit à la clôture en métal noir autour du parking et à la pompe à chaleur à droite de la porte d’entrée.",
-      zh: "是的，停车免费。请把车停在入口门正前方，两个花盆旁边。停车场四周有黑色金属围栏，入口门右侧有一台空气源热泵，可据此辨认。",
+      en: "Yes, parking is free. Park inside the black metal fence, right in front of the entrance door, next to the two flower pots. There's a photo on the arrival page. You'll recognise the spot by the black metal fence around the parking area and the heat pump to the right of the entrance door.",
+      no: "Ja, parkering er gratis. Parker innenfor det svarte metallgjerdet, rett foran inngangsdøren, ved siden av de to blomsterpottene. Det er bilde på ankomstsiden. Du kjenner igjen plassen på det svarte metallgjerdet rundt parkeringsplassen og varmepumpen til høyre for inngangsdøren.",
+      de: "Ja, das Parken ist kostenlos. Parken Sie innerhalb des schwarzen Metallzauns, direkt vor der Eingangstür, neben den zwei Blumentöpfen. Ein Foto finden Sie auf der Anreise-Seite. Sie erkennen den Platz am schwarzen Metallzaun um den Parkplatz und an der Wärmepumpe rechts neben der Eingangstür.",
+      fr: "Oui, le parking est gratuit. Garez-vous à l’intérieur de la clôture en métal noir, juste devant la porte d’entrée, à côté des deux pots de fleurs. Une photo se trouve sur la page d’arrivée. Vous reconnaîtrez l’endroit à la clôture en métal noir autour du parking et à la pompe à chaleur à droite de la porte d’entrée.",
+      zh: "是的，停车免费。请停在黑色金属围栏内，入口门正前方，两个花盆旁边。到达页面上有照片。停车场四周有黑色金属围栏，入口门右侧有一台空气源热泵，可据此辨认。",
     },
   },
 ];
