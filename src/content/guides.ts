@@ -259,7 +259,16 @@ export const guides: Guide[] = [
           fr: "Sur le mitigeur de l’évier, à gauche de la manette, se trouve un petit robinet pour le lave-vaisselle. Il doit être orienté vers le haut, sinon la machine n’a pas d’eau et ne démarre pas.",
           zh: "厨房水龙头把手左侧有一个洗碗机专用的小阀门。它必须朝上，否则洗碗机没有进水，无法启动。",
         },
-        photo: { alt: { en: "The small dishwasher tap pointing up" }, placeholder: "[Photo: small tap pointing up]" },
+        photo: {
+          src: "/photos/dishwasher-tap-up.jpg",
+          alt: {
+            en: "Correct: the small knob left of the faucet points straight up",
+            no: "Riktig: den lille knotten til venstre på kranen peker rett opp",
+            de: "Richtig: Der kleine Knopf links an der Armatur zeigt nach oben",
+            fr: "Correct : le petit bouton à gauche du robinet est vers le haut",
+            zh: "正确：水龙头左侧的小旋钮朝上",
+          },
+        },
       },
       {
         title: { en: "Add the tablet", no: "Legg i tabletten", de: "Tab einlegen", fr: "Mettre la pastille", zh: "放入洗碗块" },
@@ -309,11 +318,21 @@ export const guides: Guide[] = [
       {
         problem: { en: "It won't start", no: "Den starter ikke", de: "Sie startet nicht", fr: "Il ne démarre pas", zh: "无法启动" },
         fix: {
-          en: "Turn the small tap on the kitchen sink, left of the handle, so it points up. Then start again.",
-          no: "Vri den lille kranen på kjøkkenbatteriet, til venstre for hendelen, slik at den peker opp. Start så på nytt.",
-          de: "Drehen Sie das kleine Ventil an der Küchenarmatur links vom Hebel nach oben. Dann erneut starten.",
-          fr: "Tournez le petit robinet sur le mitigeur, à gauche de la manette, vers le haut. Puis relancez.",
-          zh: "把厨房水龙头左侧的小阀门转到朝上，然后重新启动。",
+          en: "Look at the small knob on the kitchen faucet, left of the handle. If it points sideways like in the photo, the dishwasher gets no water. Turn it so it points straight up, then turn the dishwasher off and on again with the large button and start it again.",
+          no: "Se på den lille knotten på kjøkkenkranen, til venstre for hendelen. Peker den til siden som på bildet, får ikke oppvaskmaskinen vann. Vri den så den peker rett opp, slå oppvaskmaskinen av og på igjen med den store knappen, og start den på nytt.",
+          de: "Schauen Sie auf den kleinen Knopf an der Küchenarmatur links vom Hebel. Zeigt er wie im Foto zur Seite, bekommt die Spülmaschine kein Wasser. Drehen Sie ihn senkrecht nach oben, schalten Sie die Spülmaschine mit der großen Taste aus und wieder ein und starten Sie sie erneut.",
+          fr: "Regardez le petit bouton sur le robinet de la cuisine, à gauche de la manette. S’il est tourné sur le côté comme sur la photo, le lave-vaisselle n’a pas d’eau. Tournez-le vers le haut, puis éteignez et rallumez le lave-vaisselle avec le grand bouton et relancez-le.",
+          zh: "查看厨房水龙头把手左侧的小旋钮。如果它像照片中那样朝向侧面，洗碗机就没有进水。把它转到垂直朝上，然后用大按钮关闭再打开洗碗机，重新启动。",
+        },
+        photo: {
+          src: "/photos/dishwasher-tap-wrong.jpg",
+          alt: {
+            en: "Wrong: the small knob points sideways",
+            no: "Feil: den lille knotten peker til siden",
+            de: "Falsch: Der kleine Knopf zeigt zur Seite",
+            fr: "Incorrect : le petit bouton est tourné sur le côté",
+            zh: "错误：小旋钮朝向侧面",
+          },
         },
       },
       {
@@ -566,6 +585,114 @@ export const guides: Guide[] = [
           de: "Die Tür bleibt nach Programmende ein bis zwei Minuten verriegelt. Kurz warten und erneut versuchen.",
           fr: "La porte reste verrouillée une ou deux minutes après la fin du programme. Patientez un instant et réessayez.",
           zh: "程序结束后机门会锁定一两分钟。请稍等片刻再试。",
+        },
+      },
+    ],
+  },
+  {
+    slug: "tv",
+    room: "living-room",
+    title: { en: "TV & Apple TV", no: "TV og Apple TV", de: "Fernseher & Apple TV", fr: "Télévision et Apple TV", zh: "电视和 Apple TV" },
+    faq: {
+      en: "How do I use the TV?",
+      no: "Hvordan bruker jeg TV-en?",
+      de: "Wie benutze ich den Fernseher?",
+      fr: "Comment utiliser la télévision ?",
+      zh: "怎么使用电视？",
+    },
+    short: {
+      en: "Turn on the TV and the Apple TV starts by itself. No picture? Press the input button on the black remote and choose HDMI 1. Everything is already signed in, so you don’t need to log in.",
+      no: "Slå på TV-en, så starter Apple TV av seg selv. Ikke bilde? Trykk på inngangsknappen på den svarte fjernkontrollen og velg HDMI 1. Alt er allerede logget inn, så du trenger ikke logge inn.",
+      de: "Schalten Sie den Fernseher ein, Apple TV startet von selbst. Kein Bild? Drücken Sie die Eingangstaste auf der schwarzen Fernbedienung und wählen Sie HDMI 1. Alles ist bereits angemeldet, Sie müssen sich nicht einloggen.",
+      fr: "Allumez la télévision : l’Apple TV démarre toute seule. Pas d’image ? Appuyez sur le bouton source de la télécommande noire et choisissez HDMI 1. Tout est déjà connecté, inutile de vous identifier.",
+      zh: "打开电视，Apple TV 会自动启动。没有画面？按黑色遥控器上的信号源按钮，选择 HDMI 1。所有账号都已登录，无需登录。",
+    },
+    note: {
+      en: "The streaming apps are already signed in for you. Please don’t sign out.",
+      no: "Strømmeappene er allerede logget inn for deg. Vennligst ikke logg ut.",
+      de: "Die Streaming-Apps sind bereits für Sie angemeldet. Bitte melden Sie sich nicht ab.",
+      fr: "Les applications de streaming sont déjà connectées pour vous. Merci de ne pas vous déconnecter.",
+      zh: "流媒体应用已为您登录，请不要退出登录。",
+    },
+    cover: {
+      src: "/photos/tv-remotes.jpg",
+      alt: {
+        en: "The two remotes: silver for the Apple TV, black for the TV",
+        no: "De to fjernkontrollene: sølv til Apple TV, svart til TV-en",
+        de: "Die zwei Fernbedienungen: silber für Apple TV, schwarz für den Fernseher",
+        fr: "Les deux télécommandes : argentée pour l’Apple TV, noire pour la télévision",
+        zh: "两个遥控器：银色的控制 Apple TV，黑色的控制电视",
+      },
+    },
+    steps: [
+      {
+        title: { en: "Turn on the TV", no: "Slå på TV-en", de: "Fernseher einschalten", fr: "Allumer la télévision", zh: "打开电视" },
+        body: {
+          en: "Press the red power button on the black remote (or the power button at the top of the silver remote). The Apple TV usually starts by itself.",
+          no: "Trykk på den røde av/på-knappen på den svarte fjernkontrollen (eller av/på-knappen øverst på den sølvfargede). Apple TV starter vanligvis av seg selv.",
+          de: "Drücken Sie die rote Ein/Aus-Taste auf der schwarzen Fernbedienung (oder die Ein/Aus-Taste oben auf der silbernen). Apple TV startet meist von selbst.",
+          fr: "Appuyez sur le bouton rouge de la télécommande noire (ou sur le bouton marche en haut de la télécommande argentée). L’Apple TV démarre en général toute seule.",
+          zh: "按黑色遥控器上的红色电源键（或银色遥控器顶部的电源键）。Apple TV 通常会自动启动。",
+        },
+      },
+      {
+        title: { en: "No picture? Choose HDMI 1", no: "Ikke bilde? Velg HDMI 1", de: "Kein Bild? HDMI 1 wählen", fr: "Pas d’image ? Choisir HDMI 1", zh: "没有画面？选择 HDMI 1" },
+        body: {
+          en: "Press the input button at the top left of the black remote (a box with an arrow) and choose HDMI 1.",
+          no: "Trykk på inngangsknappen øverst til venstre på den svarte fjernkontrollen (en boks med en pil) og velg HDMI 1.",
+          de: "Drücken Sie die Eingangstaste oben links auf der schwarzen Fernbedienung (ein Kästchen mit Pfeil) und wählen Sie HDMI 1.",
+          fr: "Appuyez sur le bouton source en haut à gauche de la télécommande noire (un carré avec une flèche) et choisissez HDMI 1.",
+          zh: "按黑色遥控器左上角的信号源按钮（方框加箭头图标），选择 HDMI 1。",
+        },
+        photo: {
+          src: "/photos/tv-input-button.jpg",
+          alt: { en: "Input button, top left on the black remote", no: "Inngangsknappen øverst til venstre på den svarte fjernkontrollen" },
+        },
+      },
+      {
+        title: { en: "Use the silver remote", no: "Bruk den sølvfargede fjernkontrollen", de: "Die silberne Fernbedienung", fr: "Utiliser la télécommande argentée", zh: "使用银色遥控器" },
+        body: {
+          en: "Press the edges of the round pad to move, and the middle to select. ‹ goes back, the TV button takes you to the home screen, and + / − change the volume.",
+          no: "Trykk på kantene av den runde knappen for å flytte deg, og i midten for å velge. ‹ går tilbake, TV-knappen tar deg til hjemskjermen, og + / − endrer volumet.",
+          de: "Drücken Sie auf den Rand des runden Felds, um sich zu bewegen, und in die Mitte, um auszuwählen. ‹ geht zurück, die TV-Taste führt zum Home-Bildschirm, + / − ändern die Lautstärke.",
+          fr: "Appuyez sur les bords du pavé rond pour vous déplacer, et au centre pour valider. ‹ revient en arrière, le bouton TV ramène à l’écran d’accueil, + / − règlent le volume.",
+          zh: "按圆形触控板的边缘移动，按中间确认。‹ 返回，电视按钮回到主屏幕，+ / − 调节音量。",
+        },
+        photo: {
+          src: "/photos/tv-apple-remote.jpg",
+          alt: { en: "The silver Apple TV remote", no: "Den sølvfargede Apple TV-fjernkontrollen" },
+        },
+      },
+      {
+        title: { en: "Open an app", no: "Åpne en app", de: "Eine App öffnen", fr: "Ouvrir une application", zh: "打开应用" },
+        body: {
+          en: "Choose an app on the home screen and start watching. You don’t need to log in or pay: it’s already set up.",
+          no: "Velg en app på hjemskjermen og begynn å se. Du trenger ikke logge inn eller betale: alt er satt opp.",
+          de: "Wählen Sie eine App auf dem Home-Bildschirm und legen Sie los. Kein Login und keine Kosten: Es ist alles eingerichtet.",
+          fr: "Choisissez une application sur l’écran d’accueil et regardez. Pas besoin de vous connecter ni de payer : tout est prêt.",
+          zh: "在主屏幕上选择一个应用即可观看。无需登录或付费，一切都已设置好。",
+        },
+      },
+      {
+        title: { en: "Turn it off", no: "Slå av", de: "Ausschalten", fr: "Éteindre", zh: "关闭" },
+        body: {
+          en: "Press the red power button on the black remote. The Apple TV goes to sleep by itself.",
+          no: "Trykk på den røde av/på-knappen på den svarte fjernkontrollen. Apple TV går i dvale av seg selv.",
+          de: "Drücken Sie die rote Ein/Aus-Taste auf der schwarzen Fernbedienung. Apple TV geht von selbst in den Ruhezustand.",
+          fr: "Appuyez sur le bouton rouge de la télécommande noire. L’Apple TV se met en veille toute seule.",
+          zh: "按黑色遥控器上的红色电源键。Apple TV 会自动进入睡眠。",
+        },
+      },
+    ],
+    troubles: [
+      {
+        problem: { en: "“No signal” on the screen", no: "«Ingen signal» på skjermen", de: "„Kein Signal“ auf dem Bildschirm", fr: "« Pas de signal » à l’écran", zh: "屏幕显示“无信号”" },
+        fix: {
+          en: "Press the input button at the top left of the black remote and choose HDMI 1. If it’s still black, press the TV button on the silver remote to wake the Apple TV.",
+          no: "Trykk på inngangsknappen øverst til venstre på den svarte fjernkontrollen og velg HDMI 1. Er det fortsatt svart, trykk på TV-knappen på den sølvfargede for å vekke Apple TV.",
+          de: "Drücken Sie die Eingangstaste oben links auf der schwarzen Fernbedienung und wählen Sie HDMI 1. Bleibt es schwarz, drücken Sie die TV-Taste auf der silbernen Fernbedienung, um Apple TV zu wecken.",
+          fr: "Appuyez sur le bouton source en haut à gauche de la télécommande noire et choisissez HDMI 1. Si l’écran reste noir, appuyez sur le bouton TV de la télécommande argentée pour réveiller l’Apple TV.",
+          zh: "按黑色遥控器左上角的信号源按钮，选择 HDMI 1。如果仍然黑屏，按银色遥控器上的电视按钮唤醒 Apple TV。",
         },
       },
     ],

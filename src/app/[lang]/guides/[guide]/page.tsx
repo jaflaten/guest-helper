@@ -88,6 +88,11 @@ export default async function GuidePage({ params }: PageProps<"/[lang]/guides/[g
                   <Icon name="plus" size={18} className="toggle-sign text-muted transition-transform" />
                 </summary>
                 <p className="px-4 pb-4 text-[15px] leading-relaxed text-ink-soft">{t(tr.fix, lang)}</p>
+                {tr.photo && (
+                  <div className="relative mx-4 mb-4 aspect-[4/3] overflow-hidden rounded-xl">
+                    <PhotoBox photo={tr.photo} lang={lang} />
+                  </div>
+                )}
               </details>
             ))}
           </div>

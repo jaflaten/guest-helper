@@ -44,7 +44,7 @@ export type GuideStep = {
   poster?: string;
 };
 
-export type Trouble = { problem: Localized; fix: Localized };
+export type Trouble = { problem: Localized; fix: Localized; photo?: Photo };
 
 /** An appliance or "how does this work" page. */
 export type Guide = {
