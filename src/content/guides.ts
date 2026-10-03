@@ -118,11 +118,11 @@ export const guides: Guide[] = [
       zh: "厨房水槽下方在响，而且没有水",
     },
     intro: {
-      en: "The water guard protects the apartment from leaks. If it senses moisture on the floor, it beeps, shows a red light and shuts off the water.",
-      no: "Vannstopperen beskytter leiligheten mot lekkasjer. Merker den fuktighet på gulvet, piper den, lyser rødt og stenger vannet.",
-      de: "Der Wasserstopp schützt die Wohnung vor Wasserschäden. Erkennt er Feuchtigkeit am Boden, piept er, leuchtet rot und sperrt das Wasser ab.",
-      fr: "Le coupe-eau protège l’appartement des fuites. S’il détecte de l’humidité au sol, il bipe, s’allume en rouge et coupe l’eau.",
-      zh: "漏水保护器用于防止公寓漏水。一旦检测到地面潮湿，它会发出蜂鸣声、亮红灯并切断水源。",
+      en: "Hear beeping from under the kitchen sink? Then follow the steps below. The water guard protects the apartment from leaks. If it senses moisture on the floor, it beeps, shows a red light and shuts off the water.",
+      no: "Hører du en pipelyd fra under kjøkkenvasken? Da må du sjekke stegene under. Vannstopperen beskytter leiligheten mot lekkasjer. Merker den fuktighet på gulvet, piper den, lyser rødt og stenger vannet.",
+      de: "Hören Sie ein Piepen unter der Küchenspüle? Dann folgen Sie den Schritten unten. Der Wasserstopp schützt die Wohnung vor Wasserschäden. Erkennt er Feuchtigkeit am Boden, piept er, leuchtet rot und sperrt das Wasser ab.",
+      fr: "Vous entendez un bip sous l’évier de la cuisine ? Suivez alors les étapes ci-dessous. Le coupe-eau protège l’appartement des fuites. S’il détecte de l’humidité au sol, il bipe, s’allume en rouge et coupe l’eau.",
+      zh: "如果听到厨房水槽下方传来蜂鸣声，请按照下面的步骤操作。漏水保护器用于防止公寓漏水。一旦检测到地面潮湿，它会发出蜂鸣声、亮红灯并切断水源。",
     },
     short: {
       en: "Usually a little water was spilled near the dishwasher. Dry the floor well, then unplug the water guard under the sink and plug it back in.",
@@ -132,7 +132,7 @@ export const guides: Guide[] = [
       zh: "通常是洗碗机附近洒了一点水。请把地面彻底擦干，然后拔下水槽下方漏水保护器的电源插头，再重新插上。",
     },
     cover: {
-      src: "/photos/water-guard-red.jpg",
+      src: "/photos/water-guard-alarm.jpg",
       alt: {
         en: "Under the kitchen sink: the water guard glowing red after it has shut off the water",
         no: "Under kjøkkenvasken: vannstopperen lyser rødt etter at den har stengt vannet",
