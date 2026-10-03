@@ -65,11 +65,11 @@ export const rooms: Room[] = [
       {
         n: 5,
         name: {
-          en: "Coffee capsules, tea, sugar & hot chocolate",
-          no: "Kaffekapsler, te, sukker og kakao",
-          de: "Kaffeekapseln, Tee, Zucker & Kakao",
-          fr: "Capsules de café, thé, sucre et chocolat chaud",
-          zh: "咖啡胶囊、茶、糖和热可可",
+          en: "Coffee capsules, instant coffee, tea, sugar & hot chocolate",
+          no: "Kaffekapsler, pulverkaffe, te, sukker og kakao",
+          de: "Kaffeekapseln, Instantkaffee, Tee, Zucker & Kakao",
+          fr: "Capsules de café, café soluble, thé, sucre et chocolat chaud",
+          zh: "咖啡胶囊、速溶咖啡、茶、糖和热可可",
         },
         where: {
           en: "Third drawer, between the dishwasher and the freezer",
