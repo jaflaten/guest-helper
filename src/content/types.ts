@@ -39,6 +39,9 @@ export type GuideStep = {
   title: Localized;
   body: Localized;
   photo?: Photo;
+  /** Short clip shown instead of the photo (the photo-style poster image shows before playing). */
+  video?: string;
+  poster?: string;
 };
 
 export type Trouble = { problem: Localized; fix: Localized };

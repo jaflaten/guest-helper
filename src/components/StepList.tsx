@@ -10,7 +10,17 @@ export function StepList({ steps, lang }: { steps: GuideStep[]; lang: Locale }) 
     <ol className="flex flex-col gap-3.5">
       {steps.map((step, i) => (
         <li key={i} className="overflow-hidden rounded-[18px] bg-white">
-          {step.photo && (
+          {step.video ? (
+            <video
+              src={step.video}
+              poster={step.poster}
+              controls
+              muted
+              playsInline
+              preload="none"
+              className="max-h-[70vh] w-full bg-ink object-contain"
+            />
+          ) : step.photo && (
             <div className="relative aspect-[4/3]">
               <PhotoBox photo={step.photo} lang={lang} tint={tints[i % tints.length]} />
             </div>

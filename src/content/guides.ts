@@ -485,7 +485,7 @@ export const guides: Guide[] = [
       fr: "La lessive est dans le bocal en verre de la grande armoire de la salle de bain. Tournez le bouton de 2 crans vers la droite pour 40 °C ou 3 pour 60 °C, mettez la lessive dans le compartiment le plus à gauche et appuyez sur le bouton en bas à droite.",
       zh: "洗衣液在浴室高柜里的玻璃罐中。旋钮向右转 2 格为 40 °C，转 3 格为 60 °C；把洗衣液放进最左边的格子，然后按右下角的按钮。",
     },
-    cover: { alt: { en: "The washing machine" }, placeholder: "[Photo: the washing machine]" },
+    cover: { src: "/photos/washing-machine.jpg", alt: { en: "The washing machine", no: "Vaskemaskinen" } },
     steps: [
       {
         title: { en: "Get the detergent", no: "Hent vaskemiddel", de: "Waschmittel holen", fr: "Prendre la lessive", zh: "取洗衣液" },
@@ -496,7 +496,9 @@ export const guides: Guide[] = [
           fr: "La lessive est dans un bocal en verre, dans la grande armoire de la salle de bain, à côté de la douche.",
           zh: "洗衣液放在浴室淋浴间旁边高柜里的玻璃罐中。",
         },
-        photo: { alt: { en: "The detergent jar in the tall cupboard" }, placeholder: "[Photo: detergent jar in the cupboard]" },
+        photo: { src: "/photos/bathroom-cupboard.jpg", alt: { en: "The tall bathroom cupboard with the detergent jar", no: "Det høye skapet på badet med vaskemiddelkrukken" } },
+        video: "/videos/laundry-detergent.mp4",
+        poster: "/photos/bathroom-cupboard.jpg",
       },
       {
         title: { en: "Load the laundry", no: "Legg inn tøyet", de: "Wäsche einfüllen", fr: "Charger le linge", zh: "放入衣物" },
@@ -507,17 +509,7 @@ export const guides: Guide[] = [
           fr: "Mettez le linge dans le tambour et fermez la porte jusqu’au clic.",
           zh: "把衣物放进滚筒，关上机门直到听到“咔嗒”声。",
         },
-      },
-      {
-        title: { en: "Choose the temperature", no: "Velg temperatur", de: "Temperatur wählen", fr: "Choisir la température", zh: "选择温度" },
-        body: {
-          en: "Turn the knob to the right: 2 clicks for 40 °C (everyday laundry) or 3 clicks for 60 °C (towels and bedding).",
-          no: "Vri bryteren mot høyre: 2 klikk for 40 °C (vanlig tøy) eller 3 klikk for 60 °C (håndklær og sengetøy).",
-          de: "Drehknopf nach rechts drehen: 2 Klicks für 40 °C (Alltagswäsche) oder 3 Klicks für 60 °C (Handtücher und Bettwäsche).",
-          fr: "Tournez le bouton vers la droite : 2 crans pour 40 °C (linge courant) ou 3 crans pour 60 °C (serviettes et draps).",
-          zh: "将旋钮向右转：转 2 格为 40 °C（日常衣物），转 3 格为 60 °C（毛巾和床品）。",
-        },
-        photo: { alt: { en: "The programme knob" }, placeholder: "[Photo: the knob]" },
+        photo: { src: "/photos/washing-door.jpg", alt: { en: "Laundry in the drum with the door closed", no: "Tøy i trommelen med døren lukket" } },
       },
       {
         title: { en: "Add detergent", no: "Fyll på vaskemiddel", de: "Waschmittel einfüllen", fr: "Ajouter la lessive", zh: "加入洗衣液" },
@@ -528,7 +520,18 @@ export const guides: Guide[] = [
           fr: "Tirez le bac à gauche de la machine et versez la lessive dans le compartiment le plus à gauche.",
           zh: "拉出洗衣机左侧的抽屉，把洗衣液放进最左边的格子。",
         },
-        photo: { alt: { en: "The detergent drawer" }, placeholder: "[Photo: detergent drawer, leftmost compartment]" },
+        photo: { src: "/photos/washing-detergent-drawer.jpg", alt: { en: "The leftmost compartment of the detergent drawer", no: "Rommet lengst til venstre i vaskemiddelskuffen" } },
+      },
+      {
+        title: { en: "Choose the temperature", no: "Velg temperatur", de: "Temperatur wählen", fr: "Choisir la température", zh: "选择温度" },
+        body: {
+          en: "Turn the knob to the right: 2 clicks for 40 °C (everyday laundry) or 3 clicks for 60 °C (towels and bedding).",
+          no: "Vri bryteren mot høyre: 2 klikk for 40 °C (vanlig tøy) eller 3 klikk for 60 °C (håndklær og sengetøy).",
+          de: "Drehknopf nach rechts drehen: 2 Klicks für 40 °C (Alltagswäsche) oder 3 Klicks für 60 °C (Handtücher und Bettwäsche).",
+          fr: "Tournez le bouton vers la droite : 2 crans pour 40 °C (linge courant) ou 3 crans pour 60 °C (serviettes et draps).",
+          zh: "将旋钮向右转：转 2 格为 40 °C（日常衣物），转 3 格为 60 °C（毛巾和床品）。",
+        },
+        photo: { src: "/photos/washing-knob.jpg", alt: { en: "Turning the programme knob", no: "Programbryteren vris" } },
       },
       {
         title: { en: "Press start", no: "Trykk start", de: "Start drücken", fr: "Appuyer sur départ", zh: "按启动" },
@@ -539,9 +542,11 @@ export const guides: Guide[] = [
           fr: "Appuyez sur le bouton en bas à droite. La machine démarre après un instant.",
           zh: "按右下角的按钮，洗衣机稍后就会启动。",
         },
-        photo: { alt: { en: "The start button" }, placeholder: "[Photo: start button, bottom right]" },
+        photo: { src: "/photos/washing-start.jpg", alt: { en: "Pressing the start button", no: "Startknappen trykkes" } },
       },
     ],
+    video: "/videos/washing-machine.mp4",
+    poster: "/videos/washing-machine.jpg",
     troubles: [
       {
         problem: { en: "Nothing happens when I press start", no: "Ingenting skjer når jeg trykker start", de: "Beim Drücken auf Start passiert nichts", fr: "Rien ne se passe quand j’appuie sur départ", zh: "按启动后没有反应" },
