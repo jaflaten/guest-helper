@@ -1,7 +1,7 @@
 "use server";
 
 import { isLocale, localeNames, t } from "@/i18n/config";
-import { getGuide } from "@/content";
+import { getGuide, getRoom } from "@/content";
 import { decodeStay } from "@/lib/stay";
 import { formatDate } from "@/lib/format";
 
@@ -15,6 +15,22 @@ function stayLine(token: string | undefined): string {
   const nights = Math.round((Date.parse(stay.depart) - Date.parse(stay.arrive)) / 86_400_000);
   const who = stay.name ? ` · booked as ${esc(stay.name)}` : "";
   return `Stay: ${formatDate(stay.arrive, "en")} → ${formatDate(stay.depart, "en")} (${nights} night${nights === 1 ? "" : "s"})${who}`;
+}
+
+/** Which page the guest opened the feedback form from, in plain words. */
+function pageLine(from: string | undefined): string {
+  if (!from || !from.startsWith("/")) return "_Opened from: unknown page_";
+  const [, , section, slug] = from.slice(0, 200).split("/");
+  let where: string;
+  if (!section) where = "home page";
+  else if (section === "rooms" && slug) where = `${t(getRoom(slug)?.name ?? { en: slug }, "en")} (room page)`;
+  else if (section === "guides" && slug) where = `${t(getGuide(slug)?.title ?? { en: slug }, "en")} guide`;
+  else if (section === "stay") where = "their stay page (door code / Wi-Fi)";
+  else if (section === "arrival") where = "arrival page";
+  else if (section === "checkout") where = "check-out page";
+  else if (section === "help") where = "help page";
+  else where = from;
+  return `Opened from: ${esc(where)}`;
 }
 
 async function post(text: string): Promise<boolean> {
@@ -54,6 +70,8 @@ export async function sendGeneralFeedback(input: {
   name?: string;
   message: string;
   lang: string;
+  /** Path of the page the guest was on when they tapped "Send us feedback". */
+  from?: string;
   stay?: string;
 }): Promise<boolean> {
   const message = input.message.trim().slice(0, 1000);
@@ -65,5 +83,5 @@ export async function sendGeneralFeedback(input: {
     .split("\n")
     .map((l) => `> ${l}`)
     .join("\n");
-  return post(`📝 Guest feedback${from} (${localeNames[input.lang]})\n${quoted}\n${stayLine(input.stay)}`);
+  return post(`📝 Guest feedback${from} (${localeNames[input.lang]})\n${quoted}\n${pageLine(input.from)}\n${stayLine(input.stay)}`);
 }

@@ -25,7 +25,8 @@ export function FeedbackForm({ lang, labels }: { lang: string; labels: Labels })
         if (!message.trim()) return;
         setState("sending");
         try {
-          const ok = await sendGeneralFeedback({ name, message, lang, stay: savedStayToken() });
+          const from = new URLSearchParams(window.location.search).get("from") ?? undefined;
+          const ok = await sendGeneralFeedback({ name, message, lang, from, stay: savedStayToken() });
           setState(ok ? "sent" : "error");
         } catch {
           setState("error");

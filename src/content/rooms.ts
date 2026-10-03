@@ -1,4 +1,13 @@
+import type { Localized } from "@/i18n/config";
 import type { Room } from "./types";
+
+const tallCupboard: Localized = {
+  en: "Tall cupboard next to the shower",
+  no: "Det høye skapet ved siden av dusjkabinettet",
+  de: "Hoher Schrank neben der Dusche",
+  fr: "Grande armoire à côté de la douche",
+  zh: "淋浴间旁边的高柜里",
+};
 
 // One file for all rooms. The marker numbers on each photo match the item numbers.
 // Marker positions (x/y in % from top-left) are placeholders until the real photos are in.
@@ -99,6 +108,11 @@ export const rooms: Room[] = [
           { n: 2, x: 65, y: 65 },
           { n: 3, x: 45, y: 55 },
           { n: 4, x: 45, y: 72 },
+          { n: 5, x: 22, y: 30 },
+          { n: 6, x: 30, y: 30 },
+          { n: 7, x: 22, y: 38 },
+          { n: 8, x: 30, y: 60 },
+          { n: 9, x: 22, y: 52 },
         ],
       },
     ],
@@ -140,6 +154,32 @@ export const rooms: Room[] = [
           fr: "Vos serviettes sont déjà préparées. S’il vous en faut plus, il y en a dans le tiroir du bas sous le lavabo.",
           zh: "毛巾已为您备好。如需更多，备用毛巾在浴室洗手池下方的底层抽屉里。",
         },
+      },
+      // Items 5–9 all live in the tall cupboard next to the shower (same as the detergent).
+      {
+        n: 5,
+        name: { en: "Extra toilet paper", no: "Ekstra toalettpapir", de: "Extra Toilettenpapier", fr: "Papier toilette supplémentaire", zh: "备用卫生纸" },
+        where: tallCupboard,
+      },
+      {
+        n: 6,
+        name: { en: "Sanitary pads & tampons", no: "Bind og tamponger", de: "Binden & Tampons", fr: "Serviettes hygiéniques et tampons", zh: "卫生巾和卫生棉条" },
+        where: tallCupboard,
+      },
+      {
+        n: 7,
+        name: { en: "Cotton buds (Q-tips)", no: "Bomullspinner", de: "Wattestäbchen", fr: "Cotons-tiges", zh: "棉签" },
+        where: tallCupboard,
+      },
+      {
+        n: 8,
+        name: { en: "First aid kit", no: "Førstehjelpsskrin", de: "Erste-Hilfe-Set", fr: "Trousse de premiers secours", zh: "急救箱" },
+        where: tallCupboard,
+      },
+      {
+        n: 9,
+        name: { en: "Needle and thread", no: "Nål og tråd", de: "Nadel und Faden", fr: "Aiguille et fil", zh: "针线" },
+        where: tallCupboard,
       },
     ],
   },
