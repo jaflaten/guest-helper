@@ -167,11 +167,11 @@ export const guides: Guide[] = [
       {
         title: { en: "Reset it", no: "Tilbakestill", de: "Zurücksetzen", fr: "Le réinitialiser", zh: "重置" },
         body: {
-          en: "Pull out the grey plug from the water guard, wait a few seconds and push it back in. The light turns green again, the beeping stops and the water comes back. See the short video below.",
-          no: "Trekk ut den grå kontakten fra vannstopperen, vent noen sekunder og sett den inn igjen. Lyset blir grønt igjen, pipingen stopper og vannet kommer tilbake. Se den korte videoen under.",
-          de: "Ziehen Sie den grauen Stecker aus dem Wasserstopp, warten Sie einige Sekunden und stecken Sie ihn wieder ein. Das Licht wird wieder grün, das Piepen hört auf und das Wasser kommt zurück. Siehe das kurze Video unten.",
-          fr: "Débranchez la fiche grise du coupe-eau, attendez quelques secondes et rebranchez-la. Le voyant redevient vert, le bip s’arrête et l’eau revient. Voir la courte vidéo ci-dessous.",
-          zh: "拔下漏水保护器上的灰色插头，等几秒钟后重新插上。指示灯会变回绿色，蜂鸣声停止，水恢复供应。请看下方的短视频。",
+          en: "Pull out the grey plug from the water guard (or unplug the whole water guard from the wall socket), wait a few seconds and plug it back in. The light turns green again, the beeping stops and the water comes back. See the short video below.",
+          no: "Trekk ut den grå kontakten fra vannstopperen (eller trekk hele vannstopperen ut av stikkontakten), vent noen sekunder og sett den inn igjen. Lyset blir grønt igjen, pipingen stopper og vannet kommer tilbake. Se den korte videoen under.",
+          de: "Ziehen Sie den grauen Stecker aus dem Wasserstopp (oder den ganzen Wasserstopp aus der Steckdose), warten Sie einige Sekunden und stecken Sie ihn wieder ein. Das Licht wird wieder grün, das Piepen hört auf und das Wasser kommt zurück. Siehe das kurze Video unten.",
+          fr: "Débranchez la fiche grise du coupe-eau (ou débranchez tout le coupe-eau de la prise murale), attendez quelques secondes et rebranchez. Le voyant redevient vert, le bip s’arrête et l’eau revient. Voir la courte vidéo ci-dessous.",
+          zh: "拔下漏水保护器上的灰色插头（或将整个漏水保护器从墙上插座拔下），等几秒钟后重新插上。指示灯会变回绿色，蜂鸣声停止，水恢复供应。请看下方的短视频。",
         },
         photo: { src: "/photos/water-guard-closeup.jpg", alt: { en: "Close-up of the water guard with the grey plug and green light", no: "Nærbilde av vannstopperen med den grå kontakten og grønt lys" } },
       },
