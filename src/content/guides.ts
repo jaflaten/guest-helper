@@ -397,11 +397,11 @@ export const guides: Guide[] = [
       {
         title: { en: "Get a capsule", no: "Hent en kapsel", de: "Kapsel holen", fr: "Prendre une capsule", zh: "取一颗胶囊" },
         body: {
-          en: "Capsules are in the basket in the third drawer between the dishwasher and the freezer, together with instant coffee, tea, sugar and hot chocolate.",
-          no: "Kapslene ligger i kurven i den tredje skuffen mellom oppvaskmaskinen og fryseren, sammen med pulverkaffe, te, sukker og kakao.",
-          de: "Die Kapseln liegen im Körbchen in der dritten Schublade zwischen Spülmaschine und Gefrierschrank, zusammen mit Instantkaffee, Tee, Zucker und Kakao.",
-          fr: "Les capsules sont dans le petit panier du troisième tiroir entre le lave-vaisselle et le congélateur, avec le café soluble, le thé, le sucre et le chocolat chaud.",
-          zh: "胶囊放在洗碗机和冰柜之间第三个抽屉里的小篮子中，速溶咖啡、茶、糖和热可可也在那里。",
+          en: "Capsules are in the basket in the third drawer down (counting from the top), between the dishwasher and the freezer, together with instant coffee, tea, sugar and hot chocolate.",
+          no: "Kapslene ligger i kurven i den tredje skuffen ovenfra, mellom oppvaskmaskinen og fryseren, sammen med pulverkaffe, te, sukker og kakao.",
+          de: "Die Kapseln liegen im Körbchen in der dritten Schublade von oben, zwischen Spülmaschine und Gefrierschrank, zusammen mit Instantkaffee, Tee, Zucker und Kakao.",
+          fr: "Les capsules sont dans le petit panier du troisième tiroir en partant du haut, entre le lave-vaisselle et le congélateur, avec le café soluble, le thé, le sucre et le chocolat chaud.",
+          zh: "胶囊放在洗碗机和冰柜之间从上往下数第三个抽屉里的小篮子中，速溶咖啡、茶、糖和热可可也在那里。",
         },
         photo: { src: "/photos/coffee-drawer.jpg", alt: { en: "The drawer with capsules, tea, sugar, instant coffee and hot chocolate", no: "Skuffen med kapsler, te, sukker, pulverkaffe og kakao" } },
       },
