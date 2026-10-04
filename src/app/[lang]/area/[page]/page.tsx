@@ -64,9 +64,14 @@ function PlaceCard({ place, lang }: { place: Place; lang: Locale }) {
     <li className="rounded-[18px] bg-white p-4">
       <div className="flex items-start justify-between gap-3">
         <h3 className="text-[17px] font-semibold leading-snug">{place.name}</h3>
-        {place.season && (
-          <span className="shrink-0 rounded-full bg-pine-soft px-2.5 py-1 text-[12px] font-semibold text-pine-dark">{t(place.season, lang)}</span>
-        )}
+        <div className="flex shrink-0 flex-col items-end gap-1">
+          {place.tip && (
+            <span className="rounded-full bg-[#f6e2b8] px-2.5 py-1 text-[12px] font-semibold text-[#7a4f0e]">★ {t(areaUi.tip, lang)}</span>
+          )}
+          {place.season && (
+            <span className="rounded-full bg-pine-soft px-2.5 py-1 text-[12px] font-semibold text-pine-dark">{t(place.season, lang)}</span>
+          )}
+        </div>
       </div>
       <p className="mt-0.5 text-[15px] font-medium text-ink-soft">{t(place.type, lang)}</p>
       {meta.length > 0 && <p className="mt-1 text-[13px] text-muted">{meta.join(" · ")}</p>}

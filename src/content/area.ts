@@ -24,6 +24,8 @@ export type Place = {
   map?: false;
   /** Overrides the Google Maps search text. */
   mapQuery?: string;
+  /** Jorn's own recommendation: shows an "Our tip" badge. */
+  tip?: boolean;
 };
 
 export type AreaSection = { title: Localized; intro?: Localized; places: Place[] };
@@ -41,6 +43,7 @@ export type AreaPage = {
 
 export const areaUi = {
   maps: { en: "Open in Google Maps", no: "Åpne i Google Maps", de: "In Google Maps öffnen", fr: "Ouvrir dans Google Maps", zh: "在谷歌地图中打开" } as Localized,
+  tip: { en: "Our tip", no: "Vårt tips", de: "Unser Tipp", fr: "Notre conseil", zh: "房东推荐" } as Localized,
   website: { en: "Website", no: "Nettside", de: "Website", fr: "Site web", zh: "网站" } as Localized,
   inTown: { en: "In town", no: "I sentrum", de: "Im Ort", fr: "En ville", zh: "镇上" } as Localized,
   minDrive: { en: "min drive", no: "min med bil", de: "Min. Fahrt", fr: "min en voiture", zh: "分钟车程" } as Localized,
@@ -89,15 +92,33 @@ export const areaPages: AreaPage[] = [
             town: "Sogndal",
             type: { en: "Café and bakery", no: "Kafé og bakeri", de: "Café und Bäckerei", fr: "Café et boulangerie", zh: "咖啡馆和烘焙店" },
             text: {
-              en: "Breakfast, lunch and pastries baked from scratch, with coffee from a local roastery.",
-              no: "Frokost, lunsj og hjemmebakst, med kaffe fra et lokalt brenneri.",
-              de: "Frühstück, Mittagessen und hausgemachtes Gebäck, dazu Kaffee aus einer lokalen Rösterei.",
-              fr: "Petit-déjeuner, déjeuner et pâtisseries maison, avec du café d’une torréfaction locale.",
-              zh: "早餐、午餐和现烤糕点，咖啡来自当地烘焙坊。",
+              en: "A cosy café in a yellow wooden house. Breakfast, lunch and pastries baked from scratch, with coffee from a local roastery.",
+              no: "En koselig kafé i et gult trehus. Frokost, lunsj og hjemmebakst, med kaffe fra et lokalt brenneri.",
+              de: "Ein gemütliches Café in einem gelben Holzhaus. Frühstück, Mittagessen und hausgemachtes Gebäck, dazu Kaffee aus einer lokalen Rösterei.",
+              fr: "Un café chaleureux dans une maison en bois jaune. Petit-déjeuner, déjeuner et pâtisseries maison, avec du café d’une torréfaction locale.",
+              zh: "一家温馨的黄色木屋咖啡馆。早餐、午餐和现烤糕点，咖啡来自当地烘焙坊。",
             },
             price: 1,
             drive: 0,
+            tip: true,
             url: "https://www.gulehuset.com/en",
+          },
+          {
+            name: "Lustrabui",
+            town: "Sogndal",
+            mapQuery: "Lustrabui Sogndal",
+            type: { en: "Bakery", no: "Bakeri", de: "Bäckerei", fr: "Boulangerie", zh: "面包店" },
+            text: {
+              en: "Fresh bread, cinnamon buns and other pastries. Try the pizza buns: our personal favourite! The main bakery is by the Lustrafjord, with a shop in Sogndal centre.",
+              no: "Ferskt brød, kanelboller og annet bakst. Prøv pizzabollene: vår personlige favoritt! Hovedbakeriet ligger ved Lustrafjorden, og de har en butikk i Sogndal sentrum.",
+              de: "Frisches Brot, Zimtschnecken und anderes Gebäck. Probieren Sie die Pizzabrötchen: unser persönlicher Favorit! Die Hauptbäckerei liegt am Lustrafjord, dazu ein Laden im Zentrum von Sogndal.",
+              fr: "Pain frais, brioches à la cannelle et autres viennoiseries. Goûtez les petits pains pizza : notre préféré ! La boulangerie principale est au bord du Lustrafjord, avec une boutique au centre de Sogndal.",
+              zh: "新鲜面包、肉桂卷等糕点。一定要尝尝披萨面包——我们的最爱！总店在吕斯特峡湾边，索根达尔镇中心也有门店。",
+            },
+            price: 1,
+            drive: 0,
+            tip: true,
+            url: "https://lustrabui.com",
           },
           {
             name: "Dampskipskaien",
@@ -174,6 +195,44 @@ export const areaPages: AreaPage[] = [
             price: 2,
             drive: 0,
             url: "https://www.strawberryhotels.com/restaurant/norway/sogndal/",
+          },
+          {
+            name: "Pizzabakeren",
+            town: "Sogndal",
+            mapQuery: "Pizzabakeren Sogndal",
+            type: { en: "Pizza, takeaway and delivery", no: "Pizza, takeaway og levering", de: "Pizza zum Mitnehmen und Lieferservice", fr: "Pizzas à emporter et en livraison", zh: "披萨，外带和外送" },
+            price: 2,
+            drive: 0,
+          },
+          {
+            name: "Peppes Pizza",
+            town: "Sogndal",
+            mapQuery: "Peppes Pizza Sogndal",
+            type: { en: "Pizza restaurant", no: "Pizzarestaurant", de: "Pizzarestaurant", fr: "Pizzeria", zh: "披萨餐厅" },
+            text: {
+              en: "Norway’s classic pizza chain, good for families. Eat in or take away.",
+              no: "Norges klassiske pizzakjede, fint for familier. Spis der eller ta med.",
+              de: "Norwegens klassische Pizzakette, gut für Familien. Vor Ort oder zum Mitnehmen.",
+              fr: "La chaîne de pizzas classique de Norvège, idéale en famille. Sur place ou à emporter.",
+              zh: "挪威经典披萨连锁店，适合家庭。可堂食或外带。",
+            },
+            price: 2,
+            drive: 0,
+          },
+          {
+            name: "Food trucks at Sjøkanten",
+            town: "Sogndal",
+            mapQuery: "Coop Extra Sjøkanten, Sogndal",
+            type: { en: "Street food", no: "Gatemat", de: "Streetfood", fr: "Street food", zh: "街头小吃" },
+            text: {
+              en: "Food trucks by the Extra supermarket at Sjøkanten, a quick and easy meal.",
+              no: "Matvogner ved Extra på Sjøkanten, et raskt og enkelt måltid.",
+              de: "Foodtrucks beim Extra-Supermarkt an der Sjøkanten, schnell und unkompliziert.",
+              fr: "Des food trucks près du supermarché Extra à Sjøkanten, pour un repas rapide.",
+              zh: "Sjøkanten 的 Extra 超市旁有餐车，快捷方便。",
+            },
+            price: 1,
+            drive: 0,
           },
           {
             name: "Cafe Sogningen",
@@ -312,6 +371,22 @@ export const areaPages: AreaPage[] = [
             season: { en: "May–early Oct", no: "mai–tidlig okt", de: "Mai–Anfang Okt", fr: "mai–début oct", zh: "5 月–10 月初" },
             url: "https://www.jostedal.com/en/visit-breheimsenteret/",
           },
+          {
+            name: "Borgund Vedovnsbakeri",
+            town: "Borgund",
+            mapQuery: "Borgund Vedovnsbakeri",
+            type: { en: "Wood-fired stone oven bakery", no: "Vedovnsbakeri", de: "Holzofenbäckerei", fr: "Boulangerie au feu de bois", zh: "柴火石炉面包店" },
+            text: {
+              en: "If you drive past Lærdal towards Hemsedal or Oslo, this bakery is well worth a stop. Borgund stave church is close by.",
+              no: "Kjører du forbi Lærdal mot Hemsedal eller Oslo, er dette bakeriet vel verdt en stopp. Borgund stavkyrkje ligger like ved.",
+              de: "Wer über Lærdal Richtung Hemsedal oder Oslo fährt, sollte hier unbedingt anhalten. Die Stabkirche Borgund ist ganz in der Nähe.",
+              fr: "Si vous passez par Lærdal en direction de Hemsedal ou d’Oslo, cette boulangerie vaut vraiment l’arrêt. L’église en bois debout de Borgund est tout près.",
+              zh: "如果经 Lærdal 前往 Hemsedal 或奥斯陆，非常值得在这家面包店停一下。博尔贡木板教堂就在附近。",
+            },
+            price: 1,
+            drive: 75,
+            tip: true,
+          },
         ],
       },
     ],
@@ -354,6 +429,7 @@ export const areaPages: AreaPage[] = [
             },
             drive: 0,
             season: allYear,
+            tip: true,
           },
           {
             name: "Stedjestova",
@@ -399,6 +475,43 @@ export const areaPages: AreaPage[] = [
             },
             drive: 20,
             season: summer,
+          },
+        ],
+      },
+      {
+        title: { en: "Swimming", no: "Bading", de: "Baden", fr: "Baignade", zh: "游泳" },
+        places: [
+          {
+            name: "Swimming in the fjord at Sjøkanten",
+            town: "Sogndal",
+            mapQuery: "Sjøkanten, Sogndal",
+            type: { en: "Fjord swimming in town", no: "Bading i fjorden i sentrum", de: "Baden im Fjord, mitten im Ort", fr: "Baignade dans le fjord, en ville", zh: "镇上的峡湾游泳" },
+            text: {
+              en: "Take a dip in the Sognefjord right by Sjøkanten. The water is fresh, even in summer!",
+              no: "Ta et bad i Sognefjorden rett ved Sjøkanten. Vannet er friskt, selv om sommeren!",
+              de: "Ein Bad im Sognefjord direkt an der Sjøkanten. Das Wasser ist frisch, auch im Sommer!",
+              fr: "Une baignade dans le Sognefjord, juste à Sjøkanten. L’eau est fraîche, même en été !",
+              zh: "在 Sjøkanten 旁的松恩峡湾游泳。即使夏天水也很凉！",
+            },
+            drive: 0,
+            season: summer,
+            tip: true,
+          },
+          {
+            name: "Lustrabadet",
+            town: "Gaupne",
+            type: { en: "Indoor swimming pool with slides", no: "Badeanlegg med sklier", de: "Hallenbad mit Rutschen", fr: "Piscine couverte avec toboggans", zh: "带滑梯的室内游泳馆" },
+            text: {
+              en: "One of Norway’s most beautiful indoor pools: a 65 m slide, diving tower, climbing wall, warm pools, a children’s pool and an outdoor cold plunge. Café on site. Great on a rainy day.",
+              no: "Et av Norges vakreste badeanlegg: 65 m sklie, stupetårn, klatrevegg, varme basseng, barnebasseng og kaldtbasseng ute. Kafé på stedet. Perfekt på en regnværsdag.",
+              de: "Eines der schönsten Hallenbäder Norwegens: 65-m-Rutsche, Sprungturm, Kletterwand, warme Becken, Kinderbecken und Kaltwasserbecken draußen. Mit Café. Ideal bei Regen.",
+              fr: "L’une des plus belles piscines couvertes de Norvège : toboggan de 65 m, plongeoir, mur d’escalade, bassins chauds, bassin enfants et bain froid extérieur. Café sur place. Parfait par temps de pluie.",
+              zh: "挪威最美的室内游泳馆之一：65 米滑梯、跳台、攀岩墙、温水池、儿童池和户外冷水池。馆内有咖啡馆。下雨天的好去处。",
+            },
+            drive: 40,
+            season: allYear,
+            tip: true,
+            url: "https://www.lustrabadet.no",
           },
         ],
       },
