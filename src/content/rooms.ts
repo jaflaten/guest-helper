@@ -194,22 +194,13 @@ export const rooms: Room[] = [
   {
     slug: "bathroom",
     name: { en: "Bathroom", no: "Bad", de: "Bad", fr: "Salle de bain", zh: "浴室" },
-    cover: { alt: { en: "Bathroom" }, placeholder: "[Photo: bathroom]" },
+    cover: { src: "/photos/bathroom.jpg", alt: { en: "Bathroom", no: "Bad", de: "Bad", fr: "Salle de bain", zh: "浴室" } },
     photos: [
       {
-        alt: { en: "The bathroom" },
-        placeholder: "[Wide photo: bathroom]",
-        markers: [
-          { n: 1, x: 30, y: 45 },
-          { n: 2, x: 65, y: 65 },
-          { n: 3, x: 45, y: 55 },
-          { n: 4, x: 45, y: 72 },
-          { n: 5, x: 22, y: 30 },
-          { n: 6, x: 30, y: 30 },
-          { n: 7, x: 22, y: 38 },
-          { n: 8, x: 30, y: 60 },
-          { n: 9, x: 22, y: 52 },
-        ],
+        src: "/photos/bathroom.jpg",
+        alt: { en: "The bathroom sink", no: "Vasken på badet", de: "Das Waschbecken im Bad", fr: "Le lavabo de la salle de bain", zh: "浴室洗手池" },
+        // No markers: the items (tall cupboard, drawers) are outside this photo.
+        markers: [],
       },
     ],
     items: [
