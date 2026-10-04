@@ -35,6 +35,7 @@ export const rooms: Room[] = [
           { n: 5, x: 32, y: 62 },
           { n: 6, x: 66, y: 49 },
           { n: 7, x: 21, y: 42 },
+          { n: 12, x: 58, y: 56 },
         ],
       },
       {
@@ -175,6 +176,17 @@ export const rooms: Room[] = [
           de: "Auf der Arbeitsplatte, rechts neben der Mikrowelle",
           fr: "Sur le plan de travail, à droite du micro-ondes",
           zh: "台面上，微波炉右边",
+        },
+      },
+      {
+        n: 12,
+        name: { en: "Washing-up liquid", no: "Oppvasksåpe", de: "Spülmittel", fr: "Liquide vaisselle", zh: "洗洁精" },
+        where: {
+          en: "By the sink, next to the dish brush in the glass jar",
+          no: "Ved vasken, ved siden av oppvaskbørsten i glasskrukken",
+          de: "An der Spüle, neben der Spülbürste im Glas",
+          fr: "Près de l’évier, à côté de la brosse à vaisselle dans le bocal en verre",
+          zh: "水槽旁，玻璃罐里的洗碗刷旁边",
         },
       },
     ],
