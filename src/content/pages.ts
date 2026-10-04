@@ -67,15 +67,72 @@ export const arrival: StepPage = {
 export const checkout: StepPage = {
   title: { en: "Before you leave", no: "Før du reiser", de: "Vor der Abreise", fr: "Avant de partir", zh: "离开前" },
   intro: {
-    en: "Check-out is by 11:00. Thank you for staying with us!",
-    no: "Utsjekk innen kl. 11:00. Takk for besøket!",
-    de: "Abreise bis 11:00 Uhr. Danke für Ihren Aufenthalt!",
-    fr: "Départ avant 11h00. Merci pour votre séjour !",
-    zh: "请于 11:00 前退房。感谢您的入住！",
+    en: "Check-out is by 11:00. Need a later check-out? It may be possible, just ask. Leaving earlier? Please let us know so we can plan the cleaning. Thank you for staying with us!",
+    no: "Utsjekk er innen kl. 11:00. Trenger du senere utsjekk? Det kan gå an, bare spør. Reiser du tidligere? Gi oss gjerne beskjed, så vi kan planlegge rengjøringen. Takk for besøket!",
+    de: "Check-out ist bis 11:00 Uhr. Brauchen Sie einen späteren Check-out? Das ist eventuell möglich, fragen Sie einfach. Reisen Sie früher ab? Bitte sagen Sie uns Bescheid, damit wir die Reinigung planen können. Danke für Ihren Aufenthalt!",
+    fr: "Le départ se fait avant 11h00. Besoin de partir plus tard ? C’est peut-être possible, demandez-nous. Vous partez plus tôt ? Prévenez-nous pour que nous puissions organiser le ménage. Merci pour votre séjour !",
+    zh: "请于 11:00 前退房。需要延迟退房？也许可以，请直接问我们。如果提前离开，请告诉我们，方便我们安排清洁。感谢您的入住！",
   },
   steps: [
-    { title: { en: "Dishes", no: "Oppvask", de: "Geschirr", fr: "Vaisselle", zh: "餐具" }, body: { en: "[Run the dishwasher / leave dishes clean]" } },
-    { title: { en: "Rubbish", no: "Søppel", de: "Müll", fr: "Déchets", zh: "垃圾" }, body: { en: "[Where the bins are and how to sort]" } },
-    { title: { en: "Keys", no: "Nøkler", de: "Schlüssel", fr: "Clés", zh: "钥匙" }, body: { en: "[Put the key back in the key box and scramble the code]" } },
+    {
+      title: { en: "Towels", no: "Håndklær", de: "Handtücher", fr: "Serviettes", zh: "毛巾" },
+      body: {
+        en: "Gather the used towels and leave them in the bathroom.",
+        no: "Samle de brukte håndklærne og legg dem på badet.",
+        de: "Sammeln Sie die benutzten Handtücher und legen Sie sie ins Bad.",
+        fr: "Rassemblez les serviettes utilisées et laissez-les dans la salle de bain.",
+        zh: "把用过的毛巾收好，放在浴室里。",
+      },
+    },
+    {
+      title: { en: "Strip the bed", no: "Ta av sengetøyet", de: "Bett abziehen", fr: "Défaire le lit", zh: "拆下床品" },
+      body: {
+        en: "Please take off all the bed linen: the covers on the duvets and pillows, and the sheet on the mattress. Leave it in the bathroom. The duvets and pillows themselves stay on the bed.",
+        no: "Ta av alt sengetøyet: dynetrekk, putevar og lakenet på madrassen. Legg det på badet. Selve dynene og putene blir liggende i sengen.",
+        de: "Bitte ziehen Sie die gesamte Bettwäsche ab: die Bezüge von Decken und Kissen und das Laken auf der Matratze. Legen Sie alles ins Bad. Die Decken und Kissen selbst bleiben im Bett.",
+        fr: "Retirez tout le linge de lit : les housses de couette, les taies d’oreiller et le drap sur le matelas. Laissez-le dans la salle de bain. Les couettes et les oreillers restent sur le lit.",
+        zh: "请拆下所有床品：被套、枕套以及床垫上的床单，放在浴室里。被子和枕头本身留在床上。",
+      },
+    },
+    {
+      title: { en: "Switch things off", no: "Slå av", de: "Geräte ausschalten", fr: "Tout éteindre", zh: "关闭电器" },
+      body: {
+        en: "Turn off the coffee machine, kettle, oven, TV and lights.",
+        no: "Slå av kaffemaskinen, vannkokeren, stekeovnen, TV-en og lysene.",
+        de: "Schalten Sie Kaffeemaschine, Wasserkocher, Backofen, Fernseher und Licht aus.",
+        fr: "Éteignez la machine à café, la bouilloire, le four, la télévision et les lumières.",
+        zh: "关闭咖啡机、电热水壶、烤箱、电视和灯。",
+      },
+    },
+    {
+      title: { en: "Start the dishwasher", no: "Start oppvaskmaskinen", de: "Spülmaschine starten", fr: "Lancer le lave-vaisselle", zh: "启动洗碗机" },
+      body: {
+        en: "Start the dishwasher before you leave. The tablets are in a glass jar in the large bottom drawer, between the dishwasher and the freezer.",
+        no: "Start oppvaskmaskinen før du drar. Tablettene står i en glasskrukke i den store nederste skuffen, mellom oppvaskmaskinen og fryseren.",
+        de: "Starten Sie die Spülmaschine, bevor Sie gehen. Die Tabs stehen in einem Glas in der großen unteren Schublade zwischen Spülmaschine und Gefrierschrank.",
+        fr: "Lancez le lave-vaisselle avant de partir. Les pastilles sont dans un bocal en verre, dans le grand tiroir du bas entre le lave-vaisselle et le congélateur.",
+        zh: "离开前请启动洗碗机。洗碗块在洗碗机和冰柜之间最下方大抽屉里的玻璃罐中。",
+      },
+    },
+    {
+      title: { en: "Take out the rubbish", no: "Kast søppelet", de: "Müll rausbringen", fr: "Sortir les poubelles", zh: "倒垃圾" },
+      body: {
+        en: "Take the rubbish out to the bins outside. The lid colours show what goes where: black for general waste, blue for paper, green for glass and metal, brown for food waste. Plastic can go in the paper bin under the sink, and we’ll sort it.",
+        no: "Ta søppelet ut til dunkene ute. Fargen på lokket viser hva som skal hvor: svart for restavfall, blått for papir, grønt for glass og metall, brunt for matavfall. Plast kan legges i papirbøtta under vasken, så sorterer vi det.",
+        de: "Bringen Sie den Müll zu den Tonnen draußen. Die Deckelfarbe zeigt, was wohin gehört: schwarz für Restmüll, blau für Papier, grün für Glas und Metall, braun für Bioabfall. Plastik können Sie in den Papiereimer unter der Spüle werfen, wir sortieren es.",
+        fr: "Sortez les déchets dans les poubelles dehors. La couleur du couvercle indique le tri : noir pour les ordures ménagères, bleu pour le papier, vert pour le verre et le métal, marron pour les déchets alimentaires. Le plastique peut aller dans la poubelle à papier sous l’évier, nous le trierons.",
+        zh: "请把垃圾拿到外面的垃圾桶。桶盖颜色表示分类：黑色为其他垃圾，蓝色为纸类，绿色为玻璃和金属，棕色为厨余垃圾。塑料可以放进水槽下的纸类垃圾桶，我们会来分类。",
+      },
+    },
+    {
+      title: { en: "Lock up", no: "Lås etter deg", de: "Abschließen", fr: "Fermer à clé", zh: "锁门" },
+      body: {
+        en: "Close the windows, lock the door and put the key back in the key box.",
+        no: "Lukk vinduene, lås døren og legg nøkkelen tilbake i nøkkelboksen.",
+        de: "Schließen Sie die Fenster, schließen Sie die Tür ab und legen Sie den Schlüssel zurück in die Schlüsselbox.",
+        fr: "Fermez les fenêtres, verrouillez la porte et remettez la clé dans la boîte à clés.",
+        zh: "关好窗户，锁上门，把钥匙放回钥匙盒。",
+      },
+    },
   ],
 };
