@@ -30,12 +30,5 @@ export const site = {
 
   area: {
     title: { en: "Around the area", no: "I nærområdet", de: "In der Umgebung", fr: "Dans les environs", zh: "周边" } as Localized,
-    body: {
-      en: "[Groceries, Sunday opening hours, hikes and food nearby]",
-      no: "[Butikker, søndagsåpent, turer og mat i nærheten]",
-      de: "[Einkaufen, Sonntagsöffnung, Wandern und Essen]",
-      fr: "[Courses, horaires du dimanche, randonnées et restaurants à proximité]",
-      zh: "[附近的超市、周日营业时间、徒步路线和餐厅]",
-    } as Localized,
   },
 };

@@ -2,10 +2,13 @@ import { t, type Locale } from "@/i18n/config";
 import { guides } from "./guides";
 import { rooms } from "./rooms";
 import { answers } from "./answers";
+import { areaPages } from "./area";
 
 export { site } from "./site";
 export { arrival, checkout } from "./pages";
-export { rooms, guides, answers };
+export { rooms, guides, answers, areaPages };
+export { areaUi, getAreaPage } from "./area";
+export type { AreaPage, Place } from "./area";
 export type { QuickAnswer } from "./answers";
 export * from "./types";
 
@@ -33,6 +36,14 @@ export function searchIndex(lang: Locale): SearchEntry[] {
   }
   for (const qa of answers) {
     entries.push({ title: t(qa.q, lang), detail: t(qa.a, lang), href: `/${lang}#answer-${qa.id}` });
+  }
+  for (const page of areaPages) {
+    entries.push({ title: t(page.title, lang), detail: t(page.faq, lang), href: `/${lang}/area/${page.slug}` });
+    for (const section of page.sections) {
+      for (const p of section.places) {
+        entries.push({ title: p.name, detail: `${t(p.type, lang)} · ${p.town}`, href: `/${lang}/area/${page.slug}` });
+      }
+    }
   }
   return entries;
 }

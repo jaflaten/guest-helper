@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { getDictionary, isLocale, t } from "@/i18n";
-import { answers, guides, guidesInRoom, rooms, searchIndex, site } from "@/content";
+import { answers, areaPages, guides, guidesInRoom, rooms, searchIndex, site } from "@/content";
 import { Header } from "@/components/Header";
 import { Icon } from "@/components/Icon";
 import { PhotoBox } from "@/components/PhotoBox";
@@ -121,14 +121,36 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 <span className="text-[15px]">{g.faq && t(g.faq, lang)}</span>
               </Link>
             ))}
+            {areaPages.map((p) => (
+              <Link
+                key={p.slug}
+                href={`/${lang}/area/${p.slug}`}
+                className="flex min-h-12 items-center gap-3 rounded-[14px] bg-sand px-4 py-3.5 text-ink no-underline"
+              >
+                <Icon name="question" size={18} className="shrink-0 text-pine" />
+                <span className="text-[15px]">{t(p.faq, lang)}</span>
+              </Link>
+            ))}
           </div>
         </section>
       )}
 
       <section className="px-5 pt-6">
-        <div className="rounded-[18px] bg-white p-4">
-          <h2 className="text-[15px] font-semibold">{t(site.area.title, lang)}</h2>
-          <p className="mt-0.5 text-[13px] leading-relaxed text-muted">{t(site.area.body, lang)}</p>
+        <h2 className="mb-3 font-serif text-2xl">{t(site.area.title, lang)}</h2>
+        <div className="overflow-hidden rounded-[18px] bg-white">
+          {areaPages.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/${lang}/area/${p.slug}`}
+              className="flex min-h-[60px] items-center gap-3 border-t border-sand px-4 py-3.5 text-ink no-underline first:border-t-0"
+            >
+              <div className="grow">
+                <p className="text-[15px] font-semibold">{t(p.title, lang)}</p>
+                <p className="text-[13px] text-muted">{t(p.short, lang)}</p>
+              </div>
+              <Icon name="chevronRight" size={16} className="text-[#9a8c80]" />
+            </Link>
+          ))}
         </div>
       </section>
 
