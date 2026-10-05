@@ -34,7 +34,7 @@ export default async function AreaPage({ params }: PageProps<"/[lang]/area/[page
       </section>
 
       {page.sections.map((section, i) => (
-        <section key={i} className="px-5 pt-7">
+        <section key={i} id={section.id} className="scroll-mt-4 px-5 pt-7">
           <h2 className="font-serif text-2xl">{t(section.title, lang)}</h2>
           {section.intro && <p className="mt-1 text-[15px] leading-relaxed text-ink-soft">{t(section.intro, lang)}</p>}
           <ul className="mt-3 flex flex-col gap-3">

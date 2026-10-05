@@ -5,7 +5,7 @@ export type QuickAnswer = {
   id: string;
   q: Localized;
   a: Localized;
-  /** Optional "read more" link to another page, e.g. { path: "area/practical", label }. */
+  /** Optional "read more" link to another page, e.g. { path: "area/practical#ev-charging", label }. */
   more?: { path: string; label: Localized };
 };
 
@@ -61,7 +61,7 @@ export const answers: QuickAnswer[] = [
       zh: "索根达尔有快充站：Sjøkanten 的 Eviny、Circle K 以及 Sogningen 停车场。最近的特斯拉超级充电站在北边约 15 分钟车程的 Hafslo，所有 CCS 车型均可使用。",
     },
     more: {
-      path: "area/practical",
+      path: "area/practical#ev-charging",
       label: { en: "Chargers on the map", no: "Ladere på kartet", de: "Ladestationen auf der Karte", fr: "Bornes sur la carte", zh: "在地图上查看充电站" },
     },
   },

@@ -28,7 +28,13 @@ export type Place = {
   tip?: boolean;
 };
 
-export type AreaSection = { title: Localized; intro?: Localized; places: Place[] };
+export type AreaSection = {
+  /** Anchor for links straight to this section, e.g. /area/practical#ev-charging. */
+  id?: string;
+  title: Localized;
+  intro?: Localized;
+  places: Place[];
+};
 
 export type AreaPage = {
   slug: "eat" | "do" | "practical";
@@ -479,6 +485,7 @@ export const areaPages: AreaPage[] = [
         ],
       },
       {
+        id: "swimming",
         title: { en: "Swimming", no: "Bading", de: "Baden", fr: "Baignade", zh: "游泳" },
         places: [
           {
@@ -516,6 +523,7 @@ export const areaPages: AreaPage[] = [
         ],
       },
       {
+        id: "hikes",
         title: { en: "Hikes", no: "Fjellturer", de: "Wanderungen", fr: "Randonnées", zh: "徒步登山" },
         intro: {
           en: "Bring water, warm clothes and good shoes, and check the weather (yr.no). Higher routes usually have snow until June.",
@@ -816,6 +824,7 @@ export const areaPages: AreaPage[] = [
     },
     sections: [
       {
+        id: "supermarkets",
         title: { en: "Supermarkets", no: "Matbutikker", de: "Supermärkte", fr: "Supermarchés", zh: "超市" },
         places: [
           {
@@ -892,6 +901,7 @@ export const areaPages: AreaPage[] = [
         ],
       },
       {
+        id: "ev-charging",
         title: { en: "Fuel and EV charging", no: "Drivstoff og elbillading", de: "Tanken und E-Laden", fr: "Carburant et recharge", zh: "加油和电动车充电" },
         places: [
           {
@@ -954,6 +964,7 @@ export const areaPages: AreaPage[] = [
         ],
       },
       {
+        id: "emergencies",
         title: { en: "Health and emergencies", no: "Helse og nødsituasjoner", de: "Gesundheit und Notfälle", fr: "Santé et urgences", zh: "医疗和紧急情况" },
         places: [
           {
@@ -978,6 +989,7 @@ export const areaPages: AreaPage[] = [
         ],
       },
       {
+        id: "transport",
         title: { en: "Getting around", no: "Transport", de: "Unterwegs", fr: "Se déplacer", zh: "交通" },
         places: [
           {
