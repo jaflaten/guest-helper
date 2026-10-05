@@ -292,8 +292,14 @@ export const rooms: Room[] = [
   {
     slug: "bedroom",
     name: { en: "Bedroom", no: "Soverom", de: "Schlafzimmer", fr: "Chambre", zh: "卧室" },
-    cover: { alt: { en: "Bedroom" }, placeholder: "[Photo: bedroom]" },
-    photos: [{ alt: { en: "The bedroom" }, placeholder: "[Wide photo: bedroom]", markers: [] }],
+    cover: { src: "/photos/bedroom.jpg", alt: { en: "Bedroom", no: "Soverom", de: "Schlafzimmer", fr: "Chambre", zh: "卧室" } },
+    photos: [
+      {
+        src: "/photos/bedroom.jpg",
+        alt: { en: "The bedroom", no: "Soverommet", de: "Das Schlafzimmer", fr: "La chambre", zh: "卧室" },
+        markers: [],
+      },
+    ],
     items: [],
   },
 ];

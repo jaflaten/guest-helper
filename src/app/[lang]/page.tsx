@@ -93,16 +93,6 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 <Icon name="chevronRight" size={16} className="text-[#9a8c80]" />
               </Link>
             ))}
-            {answers.map((qa) => (
-              <details key={qa.id} id={`answer-${qa.id}`} className="scroll-mt-4 rounded-[14px] bg-sand">
-                <summary className="flex min-h-12 cursor-pointer items-center gap-3 px-4 py-3.5">
-                  <Icon name="question" size={18} className="shrink-0 text-pine" />
-                  <span className="grow text-[15px]">{t(qa.q, lang)}</span>
-                  <Icon name="plus" size={16} className="toggle-sign shrink-0 text-muted transition-transform" />
-                </summary>
-                <p className="px-4 pb-4 pl-[46px] text-[15px] leading-relaxed text-ink-soft">{t(qa.a, lang)}</p>
-              </details>
-            ))}
           </div>
         </section>
       )}
@@ -130,6 +120,26 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
                 <Icon name="question" size={18} className="shrink-0 text-pine" />
                 <span className="text-[15px]">{t(p.faq, lang)}</span>
               </Link>
+            ))}
+            {answers.map((qa) => (
+              <details key={qa.id} id={`answer-${qa.id}`} className="scroll-mt-4 rounded-[14px] bg-sand">
+                <summary className="flex min-h-12 cursor-pointer items-center gap-3 px-4 py-3.5">
+                  <Icon name="question" size={18} className="shrink-0 text-pine" />
+                  <span className="grow text-[15px]">{t(qa.q, lang)}</span>
+                  <Icon name="plus" size={16} className="toggle-sign shrink-0 text-muted transition-transform" />
+                </summary>
+                <p className="px-4 pb-4 pl-[46px] text-[15px] leading-relaxed text-ink-soft">
+                  {t(qa.a, lang)}
+                  {qa.more && (
+                    <>
+                      {" "}
+                      <Link href={`/${lang}/${qa.more.path}`} className="font-semibold text-pine">
+                        {t(qa.more.label, lang)} →
+                      </Link>
+                    </>
+                  )}
+                </p>
+              </details>
             ))}
           </div>
         </section>
