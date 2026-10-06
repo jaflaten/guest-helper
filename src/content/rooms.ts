@@ -199,8 +199,8 @@ export const rooms: Room[] = [
       {
         src: "/photos/bathroom.jpg",
         alt: { en: "The bathroom sink", no: "Vasken på badet", de: "Das Waschbecken im Bad", fr: "Le lavabo de la salle de bain", zh: "浴室洗手池" },
-        // No markers: the items (tall cupboard, drawers) are outside this photo.
-        markers: [],
+        // Only the washing machine (left edge) is in this photo; the tall cupboard and drawers are not.
+        markers: [{ n: 2, x: 6, y: 72 }],
       },
     ],
     items: [
@@ -278,7 +278,10 @@ export const rooms: Room[] = [
       {
         src: "/photos/living-room-wide.jpg",
         alt: { en: "The living room", no: "Stuen", de: "Das Wohnzimmer", fr: "Le salon", zh: "客厅" },
-        markers: [{ n: 1, x: 90, y: 58 }],
+        markers: [
+          { n: 1, x: 90, y: 58 },
+          { n: 2, x: 12, y: 68 },
+        ],
       },
     ],
     items: [
@@ -286,6 +289,12 @@ export const rooms: Room[] = [
         n: 1,
         name: { en: "TV & Apple TV", no: "TV og Apple TV", de: "Fernseher & Apple TV", fr: "Télévision et Apple TV", zh: "电视和 Apple TV" },
         guide: "tv",
+      },
+      {
+        n: 2,
+        name: { en: "Sofa bed", no: "Sovesofa" },
+        where: { en: "Bedding is in the storage room to the left of the kitchen", no: "Sengetøy ligger i boden til venstre for kjøkkenet" },
+        guide: "sofa-bed",
       },
     ],
   },
@@ -301,5 +310,30 @@ export const rooms: Room[] = [
       },
     ],
     items: [],
+  },
+  {
+    slug: "storage",
+    name: { en: "Storage room", no: "Bod" },
+    intro: {
+      en: "The small storage room to the left of the kitchen.",
+      no: "Den lille boden til venstre for kjøkkenet.",
+    },
+    cover: { alt: { en: "Storage room", no: "Bod" } },
+    photos: [],
+    items: [
+      { n: 1, name: { en: "Fuse box", no: "Sikringsskap" } },
+      { n: 2, name: { en: "Fire extinguisher", no: "Brannslukningsapparat" } },
+      { n: 3, name: { en: "Drying rack", no: "Tørkestativ" } },
+      { n: 4, name: { en: "Iron and ironing board", no: "Strykejern og strykebrett" } },
+      { n: 5, name: { en: "Vacuum cleaner", no: "Støvsuger" } },
+      { n: 6, name: { en: "Broom and dustpan", no: "Kost og brett" } },
+      { n: 7, name: { en: "Board games and children’s toys", no: "Brettspill og leker" } },
+      {
+        n: 8,
+        name: { en: "Bedding for the sofa bed", no: "Sengetøy til sovesofaen" },
+        where: { en: "Sheet, duvet and pillows", no: "Laken, dyne og puter" },
+        guide: "sofa-bed",
+      },
+    ],
   },
 ];

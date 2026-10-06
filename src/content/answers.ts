@@ -45,6 +45,14 @@ export const answers: QuickAnswer[] = [
     },
   },
   {
+    id: "help-yourself",
+    q: { en: "Can we use the coffee, tea and fruit?", no: "Kan vi bruke kaffen, teen og frukten?" },
+    a: {
+      en: "Yes, please help yourselves to the fruit, coffee and tea in the apartment.",
+      no: "Ja, forsyn dere gjerne av frukten, kaffen og teen i leiligheten.",
+    },
+  },
+  {
     id: "ev-charging",
     q: {
       en: "Where can I charge my electric car?",

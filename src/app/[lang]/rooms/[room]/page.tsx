@@ -37,7 +37,7 @@ export default async function RoomPage({ params }: PageProps<"/[lang]/rooms/[roo
       </section>
 
       <section className="flex flex-col gap-4 px-5 pt-5">
-        {room.photos.map((photo, i) => (
+        {room.photos.filter((photo) => photo.src).map((photo, i) => (
           <MarkedPhoto
             key={i}
             markers={photo.markers}

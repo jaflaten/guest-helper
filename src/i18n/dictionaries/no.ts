@@ -41,7 +41,7 @@ const no: Dictionary = {
   inThisRoom: "I dette rommet",
   appliancesHere: "Apparater her",
   seeInList: "Se i listen",
-  codeNote: "Dørkoden sendes i bookingmeldingen på ankomstdagen.",
+  codeNote: "Koden til nøkkelboksen står på din personlige oppholdsside: lenken i bookingmeldingen.",
   emergency: "Nødnumre",
   emergencyNumbers: "Ambulanse 113 · Brann 110 · Politi 112",
   stayTitle: "Ditt opphold",

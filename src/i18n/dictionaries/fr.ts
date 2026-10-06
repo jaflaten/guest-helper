@@ -41,7 +41,7 @@ const fr: Dictionary = {
   inThisRoom: "Dans cette pièce",
   appliancesHere: "Appareils ici",
   seeInList: "Voir dans la liste",
-  codeNote: "Votre code d’accès est envoyé dans votre message de réservation le jour de l’arrivée.",
+  codeNote: "Le code de la boîte à clés se trouve sur votre page de séjour personnelle : le lien dans votre message de réservation.",
   emergency: "Numéros d’urgence",
   emergencyNumbers: "SAMU 113 · Pompiers 110 · Police 112",
   stayTitle: "Votre séjour",

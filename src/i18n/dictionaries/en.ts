@@ -40,7 +40,7 @@ const en = {
   inThisRoom: "In this room",
   appliancesHere: "Appliances here",
   seeInList: "See in list",
-  codeNote: "Your door code is sent in your booking message on the day of arrival.",
+  codeNote: "Your key box code is on your personal stay page: the link in your booking message.",
   emergency: "Emergency numbers",
   emergencyNumbers: "Medical 113 · Fire 110 · Police 112",
   stayTitle: "Your stay",

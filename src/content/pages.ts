@@ -14,8 +14,8 @@ export const arrival: StepPage = {
     {
       title: { en: "Find the house", no: "Finn huset", de: "Das Haus finden", fr: "Trouver la maison", zh: "找到房子" },
       body: {
-        en: "Look for the red house with a grey ground floor. Your parking spot is the one with the black fence, right in front of the entrance door. It's reserved for you, so it will be free when you arrive (the red car in the photo is just from when it was taken).",
-        no: "Se etter det røde huset med grå underetasje. Parkeringsplassen din er den med svart gjerde, rett foran inngangsdøren. Den er reservert for deg, så den er ledig når du kommer (den røde bilen på bildet sto der bare da bildet ble tatt).",
+        en: "The address is Fossvegen 7, 6857 Sogndal. Look for the red house with a grey ground floor, the building furthest up the hill. Your parking spot is the one with the black fence, right in front of the entrance door. It's reserved for you, so it will be free when you arrive (the red car in the photo is just from when it was taken).",
+        no: "Adressen er Fossvegen 7, 6857 Sogndal. Se etter det røde huset med grå underetasje, bygget lengst opp i bakken. Parkeringsplassen din er den med svart gjerde, rett foran inngangsdøren. Den er reservert for deg, så den er ledig når du kommer (den røde bilen på bildet sto der bare da bildet ble tatt).",
         de: "Suchen Sie das rote Haus mit dem grauen Erdgeschoss. Ihr Parkplatz ist der mit dem schwarzen Zaun direkt vor der Eingangstür. Er ist für Sie reserviert und bei Ihrer Ankunft frei (das rote Auto stand nur beim Fotografieren dort).",
         fr: "Cherchez la maison rouge au rez-de-chaussée gris. Votre place est celle entourée d’une clôture noire, juste devant la porte d’entrée. Elle vous est réservée et sera libre à votre arrivée (la voiture rouge était là seulement au moment de la photo).",
         zh: "找一栋一楼为灰色的红色房子。您的停车位就是入口门正前方有黑色围栏的那个。该车位为您专用，到达时会空着（照片中的红色汽车只是拍照时停在那里）。",
@@ -53,12 +53,18 @@ export const arrival: StepPage = {
     },
     {
       title: { en: "The key box", no: "Nøkkelboksen", de: "Die Schlüsselbox", fr: "La boîte à clés", zh: "钥匙盒" },
-      body: { en: "[Where the key box is and how to open it with your code]" },
+      body: {
+        en: "The key box is just to the right of the front door. Open it with the code on your stay page (the link in your booking message). Please put the key back in the box when you leave.",
+        no: "Nøkkelboksen henger rett til høyre for inngangsdøren. Åpne den med koden på oppholdssiden din (lenken i bookingmeldingen). Legg nøkkelen tilbake i boksen når du reiser.",
+      },
       photo: { alt: { en: "Key box" }, placeholder: "[Photo: key box]" },
     },
     {
       title: { en: "The door", no: "Døren", de: "Die Tür", fr: "La porte", zh: "入户门" },
-      body: { en: "[Which door, which floor]" },
+      body: {
+        en: "Your entrance is the door right by your parking spot, under the small red roof.",
+        no: "Inngangen din er døren rett ved parkeringsplassen, under det lille røde taket.",
+      },
       photo: { alt: { en: "Front door" }, placeholder: "[Photo: front door]" },
     },
   ],

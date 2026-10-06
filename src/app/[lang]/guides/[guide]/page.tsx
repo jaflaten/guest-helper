@@ -36,7 +36,7 @@ export default async function GuidePage({ params }: PageProps<"/[lang]/guides/[g
       />
 
       <section className="px-5 pt-1">
-        {guide.cover && (
+        {guide.cover?.src && (
           <div className="relative h-[200px] overflow-hidden rounded-[22px]">
             <PhotoBox photo={guide.cover} lang={lang} priority />
           </div>

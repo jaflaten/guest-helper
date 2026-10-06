@@ -1,100 +1,34 @@
 import type { Guide } from "./types";
 
 // Appliance guides. Order matters: guides with a `faq` appear in "Guests often ask" in this order.
-// The induction hob is an unconfirmed example; check it against the real model.
 export const guides: Guide[] = [
   {
     slug: "induction-hob",
     room: "kitchen",
     title: { en: "Induction hob", no: "Induksjonstopp", de: "Induktionskochfeld", fr: "Plaque à induction", zh: "电磁炉" },
     intro: {
-      en: "Fast and safe, but it only works with the magnetic pots in the drawer below it.",
-      no: "Rask og trygg, men fungerer bare med de magnetiske kjelene i skuffen under.",
-      de: "Schnell und sicher, funktioniert aber nur mit den magnetischen Töpfen in der Schublade darunter.",
-      fr: "Rapide et sûre, mais elle ne fonctionne qu’avec les casseroles magnétiques du tiroir en dessous.",
-      zh: "快速又安全，但只能使用下方抽屉里的磁性锅具。",
+      en: "Only pots and pans with a magnetic base work on induction.",
+      no: "Bare kjeler og panner med magnetisk bunn fungerer på induksjon.",
     },
     short: {
-      en: "Press power, tap a zone, slide to set the heat. If nothing happens, it is child-locked: hold the key symbol for 3 seconds.",
-      no: "Trykk på/av, velg sone, dra for å stille varmen. Skjer det ingenting, er den barnesikret: hold nøkkelsymbolet i 3 sekunder.",
-      de: "Ein/Aus drücken, Zone antippen, Hitze per Schieber wählen. Passiert nichts, ist die Kindersicherung aktiv: Schlüsselsymbol 3 Sekunden halten.",
-      fr: "Appuyez sur marche, touchez une zone, glissez pour régler la chaleur. Si rien ne se passe, la sécurité enfants est active : maintenez le symbole de clé 3 secondes.",
-      zh: "按电源键，点选一个炉区，滑动调节火力。如果没有反应，说明童锁已开启：长按钥匙图标 3 秒。",
+      en: "If the hob doesn’t react when you touch it, it is locked: press and hold the lock button for 3–5 seconds until it unlocks.",
+      no: "Reagerer ikke platetoppen når du trykker, er den låst: hold inne låseknappen i 3–5 sekunder til den låses opp.",
     },
-    cover: { alt: { en: "The induction hob" }, placeholder: "[Photo: the hob, seen from above]" },
     steps: [
       {
-        title: { en: "Turn it on", no: "Slå på", de: "Einschalten", fr: "Allumer", zh: "开机" },
+        title: { en: "Unlock if needed", no: "Lås opp ved behov" },
         body: {
-          en: "Press the power button for 1 second. A short beep confirms it is on.",
-          no: "Hold på/av-knappen i 1 sekund. Et kort pip bekrefter at den er på.",
-          de: "Ein/Aus-Taste 1 Sekunde drücken. Ein kurzer Piepton bestätigt es.",
-          fr: "Appuyez 1 seconde sur le bouton marche. Un bip court confirme la mise en marche.",
-          zh: "按住电源键 1 秒，听到短促的提示音即表示已开机。",
-        },
-        photo: { alt: { en: "Power button" }, placeholder: "[Photo: power button]" },
-      },
-      {
-        title: { en: "Unlock if needed", no: "Lås opp ved behov", de: "Bei Bedarf entsperren", fr: "Déverrouiller si besoin", zh: "如有需要，先解锁" },
-        body: {
-          en: "If a key symbol is lit, hold it for 3 seconds until it goes out.",
-          no: "Lyser et nøkkelsymbol, hold det inne i 3 sekunder til det slukker.",
-          de: "Leuchtet ein Schlüsselsymbol, 3 Sekunden halten, bis es erlischt.",
-          fr: "Si un symbole de clé est allumé, maintenez-le 3 secondes jusqu’à ce qu’il s’éteigne.",
-          zh: "如果钥匙图标亮着，长按 3 秒直到它熄灭。",
-        },
-        photo: { alt: { en: "Key symbol" }, placeholder: "[Photo: key symbol]" },
-      },
-      {
-        title: { en: "Choose a zone", no: "Velg sone", de: "Zone wählen", fr: "Choisir une zone", zh: "选择炉区" },
-        body: {
-          en: "Tap the zone you want. Its number starts blinking.",
-          no: "Trykk på sonen du vil bruke. Tallet begynner å blinke.",
-          de: "Gewünschte Zone antippen. Die Zahl beginnt zu blinken.",
-          fr: "Touchez la zone souhaitée. Son chiffre se met à clignoter.",
-          zh: "点选要使用的炉区，对应数字开始闪烁。",
-        },
-      },
-      {
-        title: { en: "Set the heat", no: "Still varmen", de: "Hitze einstellen", fr: "Régler la chaleur", zh: "调节火力" },
-        body: {
-          en: "Slide along the bar: 1–3 to simmer, 6–9 to fry, P to boil fast.",
-          no: "Dra langs linjen: 1–3 for småkok, 6–9 for steking, P for rask koking.",
-          de: "Über den Schieber streichen: 1–3 köcheln, 6–9 braten, P schnell kochen.",
-          fr: "Glissez le long de la barre : 1–3 pour mijoter, 6–9 pour saisir, P pour bouillir vite.",
-          zh: "沿滑条滑动：1–3 小火慢炖，6–9 煎炒，P 快速烧开。",
+          en: "If nothing happens when you touch the controls, press and hold the lock button for 3–5 seconds until it unlocks.",
+          no: "Skjer det ingenting når du trykker på knappene, hold inne låseknappen i 3–5 sekunder til den låses opp.",
         },
       },
     ],
     troubles: [
       {
-        problem: { en: "Nothing happens when I press", no: "Ingenting skjer når jeg trykker", de: "Beim Drücken passiert nichts", fr: "Rien ne se passe quand j’appuie", zh: "按了没有反应" },
+        problem: { en: "Nothing happens when I press", no: "Ingenting skjer når jeg trykker" },
         fix: {
-          en: "The child lock is on. Hold the key symbol for 3 seconds.",
-          no: "Barnesikringen er på. Hold nøkkelsymbolet i 3 sekunder.",
-          de: "Die Kindersicherung ist aktiv. Schlüsselsymbol 3 Sekunden halten.",
-          fr: "La sécurité enfants est active. Maintenez le symbole de clé 3 secondes.",
-          zh: "童锁已开启。长按钥匙图标 3 秒。",
-        },
-      },
-      {
-        problem: { en: "It beeps and the zone switches off", no: "Den piper og sonen slår seg av", de: "Es piept und die Zone geht aus", fr: "Ça bipe et la zone s’éteint", zh: "发出提示音后炉区自动关闭" },
-        fix: {
-          en: "The pot is not induction-compatible, or too small. Use a pot from the drawer below.",
-          no: "Kjelen passer ikke til induksjon, eller er for liten. Bruk en kjele fra skuffen under.",
-          de: "Der Topf ist nicht induktionsgeeignet oder zu klein. Einen Topf aus der Schublade nehmen.",
-          fr: "La casserole n’est pas compatible induction ou est trop petite. Utilisez une casserole du tiroir en dessous.",
-          zh: "锅具不适用于电磁炉或尺寸太小。请使用下方抽屉里的锅具。",
-        },
-      },
-      {
-        problem: { en: "An \"H\" is showing", no: "Det står «H» i displayet", de: "Im Display steht „H“", fr: "Un « H » s’affiche", zh: "显示屏上出现“H”" },
-        fix: {
-          en: "The surface is still hot. It disappears once it has cooled down.",
-          no: "Overflaten er fortsatt varm. Det forsvinner når den har kjølt seg ned.",
-          de: "Die Fläche ist noch heiß. Es verschwindet, sobald sie abgekühlt ist.",
-          fr: "La surface est encore chaude. Il disparaît une fois refroidie.",
-          zh: "表面仍然很烫，冷却后会自动消失。",
+          en: "The hob is locked. Press and hold the lock button for 3–5 seconds.",
+          no: "Platetoppen er låst. Hold inne låseknappen i 3–5 sekunder.",
         },
       },
     ],
@@ -504,6 +438,10 @@ export const guides: Guide[] = [
       fr: "La lessive est dans le bocal en verre de la grande armoire de la salle de bain. Tournez le bouton de 2 crans vers la droite pour 40 °C ou 3 pour 60 °C, mettez la lessive dans le compartiment le plus à gauche et appuyez sur le bouton en bas à droite.",
       zh: "洗衣液在浴室高柜里的玻璃罐中。旋钮向右转 2 格为 40 °C，转 3 格为 60 °C；把洗衣液放进最左边的格子，然后按右下角的按钮。",
     },
+    note: {
+      en: "Before washing, please take the decorations off the top of the machine so they don’t fall off during spinning. A drying rack is in the storage room to the left of the kitchen.",
+      no: "Før du vasker, ta pyntet av toppen av maskinen så det ikke faller ned under sentrifugeringen. Tørkestativ står i boden til venstre for kjøkkenet.",
+    },
     cover: { src: "/photos/washing-machine.jpg", alt: { en: "The washing machine", no: "Vaskemaskinen" } },
     steps: [
       {
@@ -590,6 +528,39 @@ export const guides: Guide[] = [
     ],
   },
   {
+    slug: "sofa-bed",
+    room: "living-room",
+    title: { en: "Sofa bed", no: "Sovesofa" },
+    faq: { en: "How do I set up the sofa bed?", no: "Hvordan slår jeg ut sovesofaen?" },
+    short: {
+      en: "Move the coffee table, pull the bottom of the sofa out and lift up the sleeping section. Bedding is in the storage room to the left of the kitchen.",
+      no: "Flytt stuebordet, dra ut bunnen av sofaen og løft opp soveseksjonen. Sengetøy ligger i boden til venstre for kjøkkenet.",
+    },
+    steps: [
+      {
+        title: { en: "Move the coffee table", no: "Flytt stuebordet" },
+        body: {
+          en: "Lift the plant off first. The tabletop lifts straight off the legs, so move them separately. The table is very light.",
+          no: "Løft av planten først. Bordplaten løftes rett av beina, så flytt dem hver for seg. Bordet er veldig lett.",
+        },
+      },
+      {
+        title: { en: "Pull out the bed", no: "Dra ut sengen" },
+        body: {
+          en: "Grab underneath the front of the sofa, pull the bottom part out, then lift up the sleeping section.",
+          no: "Ta tak under fronten av sofaen, dra ut den nederste delen, og løft så opp soveseksjonen.",
+        },
+      },
+      {
+        title: { en: "Make the bed", no: "Re opp sengen" },
+        body: {
+          en: "The sheet, duvet and pillows are in the storage room to the left of the kitchen. If you booked for more than 2, we have already put covers on the duvet and pillows, so you only need to put on the sheet.",
+          no: "Laken, dyne og puter ligger i boden til venstre for kjøkkenet. Har du booket for flere enn 2, har vi allerede trukket dyna og putene, så du trenger bare å legge på lakenet.",
+        },
+      },
+    ],
+  },
+  {
     slug: "tv",
     room: "living-room",
     title: { en: "TV & Apple TV", no: "TV og Apple TV", de: "Fernseher & Apple TV", fr: "Télévision et Apple TV", zh: "电视和 Apple TV" },
@@ -601,18 +572,18 @@ export const guides: Guide[] = [
       zh: "怎么使用电视？",
     },
     short: {
-      en: "Turn on the TV and the Apple TV starts by itself. No picture? Press the input button on the black remote and choose HDMI 1. Everything is already signed in, so you don’t need to log in.",
-      no: "Slå på TV-en, så starter Apple TV av seg selv. Ikke bilde? Trykk på inngangsknappen på den svarte fjernkontrollen og velg HDMI 1. Alt er allerede logget inn, så du trenger ikke logge inn.",
-      de: "Schalten Sie den Fernseher ein, Apple TV startet von selbst. Kein Bild? Drücken Sie die Eingangstaste auf der schwarzen Fernbedienung und wählen Sie HDMI 1. Alles ist bereits angemeldet, Sie müssen sich nicht einloggen.",
-      fr: "Allumez la télévision : l’Apple TV démarre toute seule. Pas d’image ? Appuyez sur le bouton source de la télécommande noire et choisissez HDMI 1. Tout est déjà connecté, inutile de vous identifier.",
-      zh: "打开电视，Apple TV 会自动启动。没有画面？按黑色遥控器上的信号源按钮，选择 HDMI 1。所有账号都已登录，无需登录。",
+      en: "Turn on the TV and the Apple TV starts by itself. No picture? Press the input button on the black remote and choose HDMI 1. Apple TV+ is included, so you can start watching right away.",
+      no: "Slå på TV-en, så starter Apple TV av seg selv. Ikke bilde? Trykk på inngangsknappen på den svarte fjernkontrollen og velg HDMI 1. Apple TV+ er inkludert, så du kan begynne å se med en gang.",
+      de: "Schalten Sie den Fernseher ein, Apple TV startet von selbst. Kein Bild? Drücken Sie die Eingangstaste auf der schwarzen Fernbedienung und wählen Sie HDMI 1. Apple TV+ ist inklusive, Sie können sofort loslegen.",
+      fr: "Allumez la télévision : l’Apple TV démarre toute seule. Pas d’image ? Appuyez sur le bouton source de la télécommande noire et choisissez HDMI 1. Apple TV+ est inclus, vous pouvez regarder tout de suite.",
+      zh: "打开电视，Apple TV 会自动启动。没有画面？按黑色遥控器上的信号源按钮，选择 HDMI 1。已包含 Apple TV+，可直接观看。",
     },
     note: {
-      en: "The streaming apps are already signed in for you. Please don’t sign out.",
-      no: "Strømmeappene er allerede logget inn for deg. Vennligst ikke logg ut.",
-      de: "Die Streaming-Apps sind bereits für Sie angemeldet. Bitte melden Sie sich nicht ab.",
-      fr: "Les applications de streaming sont déjà connectées pour vous. Merci de ne pas vous déconnecter.",
-      zh: "流媒体应用已为您登录，请不要退出登录。",
+      en: "Apple TV+ is included. For other streaming services, you can log in with your own account: please remember to log out before you leave.",
+      no: "Apple TV+ er inkludert. Andre strømmetjenester kan du logge inn på med din egen konto: husk å logge ut før du reiser.",
+      de: "Apple TV+ ist inklusive. Bei anderen Streamingdiensten können Sie sich mit Ihrem eigenen Konto anmelden: Bitte vor der Abreise wieder abmelden.",
+      fr: "Apple TV+ est inclus. Pour les autres services de streaming, connectez-vous avec votre propre compte et pensez à vous déconnecter avant de partir.",
+      zh: "已包含 Apple TV+。其他流媒体服务可用您自己的账号登录，离开前请记得退出。",
     },
     cover: {
       src: "/photos/tv-remotes.jpg",
@@ -666,11 +637,11 @@ export const guides: Guide[] = [
       {
         title: { en: "Open an app", no: "Åpne en app", de: "Eine App öffnen", fr: "Ouvrir une application", zh: "打开应用" },
         body: {
-          en: "Choose an app on the home screen and start watching. You don’t need to log in or pay: it’s already set up.",
-          no: "Velg en app på hjemskjermen og begynn å se. Du trenger ikke logge inn eller betale: alt er satt opp.",
-          de: "Wählen Sie eine App auf dem Home-Bildschirm und legen Sie los. Kein Login und keine Kosten: Es ist alles eingerichtet.",
-          fr: "Choisissez une application sur l’écran d’accueil et regardez. Pas besoin de vous connecter ni de payer : tout est prêt.",
-          zh: "在主屏幕上选择一个应用即可观看。无需登录或付费，一切都已设置好。",
+          en: "Choose an app on the home screen. Apple TV+ is ready to use. For other services, log in with your own account. Want to cast from your phone? Choose HDMI 2 for Chromecast.",
+          no: "Velg en app på hjemskjermen. Apple TV+ er klar til bruk. Andre tjenester logger du inn på med din egen konto. Vil du caste fra mobilen? Velg HDMI 2 for Chromecast.",
+          de: "Wählen Sie eine App auf dem Home-Bildschirm. Apple TV+ ist sofort nutzbar. Bei anderen Diensten melden Sie sich mit Ihrem eigenen Konto an. Vom Handy streamen? HDMI 2 für Chromecast wählen.",
+          fr: "Choisissez une application sur l’écran d’accueil. Apple TV+ est prêt à l’emploi. Pour les autres services, connectez-vous avec votre propre compte. Envie de caster depuis votre téléphone ? Choisissez HDMI 2 pour le Chromecast.",
+          zh: "在主屏幕上选择应用。Apple TV+ 可直接使用。其他服务请用您自己的账号登录。想从手机投屏？请选择 HDMI 2 使用 Chromecast。",
         },
       },
       {

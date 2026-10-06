@@ -20,7 +20,7 @@ export function StepList({ steps, lang }: { steps: GuideStep[]; lang: Locale }) 
               preload="none"
               className="max-h-[70vh] w-full bg-ink object-contain"
             />
-          ) : step.photo && (
+          ) : step.photo?.src && (
             <div className="relative aspect-[4/3]">
               <PhotoBox photo={step.photo} lang={lang} tint={tints[i % tints.length]} />
             </div>

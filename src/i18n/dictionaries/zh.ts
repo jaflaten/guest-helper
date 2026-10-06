@@ -42,7 +42,7 @@ const zh: Dictionary = {
   inThisRoom: "这个房间里",
   appliancesHere: "这里的电器",
   seeInList: "在列表中查看",
-  codeNote: "门锁密码会在入住当天通过预订消息发送给您。",
+  codeNote: "钥匙盒密码在您的专属入住页面上，即预订消息中的链接。",
   emergency: "紧急电话",
   emergencyNumbers: "急救 113 · 火警 110 · 报警 112",
   stayTitle: "您的入住",
