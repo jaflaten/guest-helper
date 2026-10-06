@@ -18,7 +18,8 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
 
   // "Where to find things": every room item that has a location, across rooms.
   const finds = rooms
-    .flatMap((r) => r.items.filter((i) => i.where).map((i) => ({ room: r, item: i })))
+    // Things to find, not appliances: items with their own guide (e.g. the water guard) belong in "Guests often ask".
+    .flatMap((r) => r.items.filter((i) => i.where && !i.guide).map((i) => ({ room: r, item: i })))
     .slice(0, 5);
   const faqs = guides.filter((g) => g.faq);
 
