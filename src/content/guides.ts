@@ -579,11 +579,11 @@ export const guides: Guide[] = [
       zh: "打开电视，Apple TV 会自动启动。没有画面？按黑色遥控器上的信号源按钮，选择 HDMI 1。已包含 Apple TV+，可直接观看。",
     },
     note: {
-      en: "Apple TV+ is included. For other streaming services, you can log in with your own account: please remember to log out before you leave.",
-      no: "Apple TV+ er inkludert. Andre strømmetjenester kan du logge inn på med din egen konto: husk å logge ut før du reiser.",
-      de: "Apple TV+ ist inklusive. Bei anderen Streamingdiensten können Sie sich mit Ihrem eigenen Konto anmelden: Bitte vor der Abreise wieder abmelden.",
-      fr: "Apple TV+ est inclus. Pour les autres services de streaming, connectez-vous avec votre propre compte et pensez à vous déconnecter avant de partir.",
-      zh: "已包含 Apple TV+。其他流媒体服务可用您自己的账号登录，离开前请记得退出。",
+      en: "The Apple TV is already signed in, with Apple TV+ included. Please don’t sign in or out, or change accounts on the Apple TV.",
+      no: "Apple TV-en er allerede logget inn, og Apple TV+ er inkludert. Vennligst ikke logg inn eller ut, eller bytt konto på Apple TV-en.",
+      de: "Das Apple TV ist bereits angemeldet, Apple TV+ ist inklusive. Bitte nicht an- oder abmelden und keine Konten wechseln.",
+      fr: "L’Apple TV est déjà connectée, Apple TV+ inclus. Merci de ne pas vous connecter, vous déconnecter ni changer de compte sur l’Apple TV.",
+      zh: "Apple TV 已登录，并包含 Apple TV+。请不要在 Apple TV 上登录、退出或切换账号。",
     },
     cover: {
       src: "/photos/tv-remotes.jpg",
@@ -637,11 +637,11 @@ export const guides: Guide[] = [
       {
         title: { en: "Open an app", no: "Åpne en app", de: "Eine App öffnen", fr: "Ouvrir une application", zh: "打开应用" },
         body: {
-          en: "Choose an app on the home screen. Apple TV+ is ready to use. For other services, log in with your own account. Want to cast from your phone? Choose HDMI 2 for Chromecast.",
-          no: "Velg en app på hjemskjermen. Apple TV+ er klar til bruk. Andre tjenester logger du inn på med din egen konto. Vil du caste fra mobilen? Velg HDMI 2 for Chromecast.",
-          de: "Wählen Sie eine App auf dem Home-Bildschirm. Apple TV+ ist sofort nutzbar. Bei anderen Diensten melden Sie sich mit Ihrem eigenen Konto an. Vom Handy streamen? HDMI 2 für Chromecast wählen.",
-          fr: "Choisissez une application sur l’écran d’accueil. Apple TV+ est prêt à l’emploi. Pour les autres services, connectez-vous avec votre propre compte. Envie de caster depuis votre téléphone ? Choisissez HDMI 2 pour le Chromecast.",
-          zh: "在主屏幕上选择应用。Apple TV+ 可直接使用。其他服务请用您自己的账号登录。想从手机投屏？请选择 HDMI 2 使用 Chromecast。",
+          en: "Choose an app on the home screen and start watching. Everything is already set up, so there is no need to log in. Want to cast from your phone? Choose HDMI 2 for Chromecast.",
+          no: "Velg en app på hjemskjermen og begynn å se. Alt er allerede satt opp, så du trenger ikke logge inn. Vil du caste fra mobilen? Velg HDMI 2 for Chromecast.",
+          de: "Wählen Sie eine App auf dem Home-Bildschirm und legen Sie los. Alles ist eingerichtet, Sie müssen sich nicht anmelden. Vom Handy streamen? HDMI 2 für Chromecast wählen.",
+          fr: "Choisissez une application sur l’écran d’accueil et regardez. Tout est déjà configuré, inutile de vous connecter. Envie de caster depuis votre téléphone ? Choisissez HDMI 2 pour le Chromecast.",
+          zh: "在主屏幕上选择应用即可观看。一切都已设置好，无需登录。想从手机投屏？请选择 HDMI 2 使用 Chromecast。",
         },
       },
       {

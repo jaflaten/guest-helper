@@ -52,20 +52,32 @@ export const arrival: StepPage = {
       },
     },
     {
-      title: { en: "The key box", no: "Nøkkelboksen", de: "Die Schlüsselbox", fr: "La boîte à clés", zh: "钥匙盒" },
+      title: { en: "Your door and the key box", no: "Døren og nøkkelboksen" },
       body: {
-        en: "The key box is just to the right of the front door. Open it with the code on your stay page (the link in your booking message). Please put the key back in the box when you leave.",
-        no: "Nøkkelboksen henger rett til høyre for inngangsdøren. Åpne den med koden på oppholdssiden din (lenken i bookingmeldingen). Legg nøkkelen tilbake i boksen når du reiser.",
+        en: "Your entrance is the white door with a window, right by your parking spot. The key box is on the red wall just to the right of the door, below the outdoor lamp.",
+        no: "Inngangen din er den hvite døren med vindu, rett ved parkeringsplassen. Nøkkelboksen henger på den røde veggen rett til høyre for døren, under utelampen.",
       },
-      photo: { alt: { en: "Key box" }, placeholder: "[Photo: key box]" },
+      photo: {
+        src: "/photos/arrival-door.jpg",
+        alt: {
+          en: "The white front door, with the black key box on the red wall to the right",
+          no: "Den hvite inngangsdøren, med den svarte nøkkelboksen på den røde veggen til høyre",
+        },
+      },
     },
     {
-      title: { en: "The door", no: "Døren", de: "Die Tür", fr: "La porte", zh: "入户门" },
+      title: { en: "Open the key box", no: "Åpne nøkkelboksen" },
       body: {
-        en: "Your entrance is the door right by your parking spot, under the small red roof.",
-        no: "Inngangen din er døren rett ved parkeringsplassen, under det lille røde taket.",
+        en: "Slide the small cover down to show the number wheels. Turn the wheels to your code (it’s on your stay page), then pull the box open. When you leave, put the key back, close the box and turn the wheels so the code no longer shows.",
+        no: "Skyv det lille dekselet ned så tallhjulene vises. Drei hjulene til koden din (den står på oppholdssiden din), og dra boksen opp. Når du reiser, legg nøkkelen tilbake, lukk boksen og drei hjulene så koden ikke lenger vises.",
       },
-      photo: { alt: { en: "Front door" }, placeholder: "[Photo: front door]" },
+      photo: {
+        src: "/photos/arrival-keybox.jpg",
+        alt: {
+          en: "The key box with the cover slid down, showing the number wheels",
+          no: "Nøkkelboksen med dekselet skjøvet ned, så tallhjulene vises",
+        },
+      },
     },
   ],
 };
