@@ -6,7 +6,7 @@ import { Icon } from "@/components/Icon";
 import { PhotoBox } from "@/components/PhotoBox";
 import { Search } from "@/components/Search";
 import { ContactCard } from "@/components/ContactCard";
-import { StayShortcut } from "@/components/StayLink";
+import { StayShortcut, WifiPassword } from "@/components/StayLink";
 import { notFound } from "next/navigation";
 
 const tints = ["#e2d3bf", "#d3dfda", "#e6d8cc", "#ddd5e0", "#d6dde4"];
@@ -53,7 +53,7 @@ export default async function Home({ params }: PageProps<"/[lang]">) {
           <p className="-mt-1.5 break-words text-xs leading-snug opacity-90">
             {site.wifi.network}
             <br />
-            {d.wifiPasswordNote}
+            <WifiPassword note={d.wifiPasswordNote} label={d.wifiPassword} />
           </p>
         </div>
         <QuickCard href={`/${lang}/checkout`} icon="check" title={d.checkout} sub={d.checkoutSub} iconClass="bg-clay-soft text-clay" />

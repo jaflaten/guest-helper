@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Icon } from "./Icon";
+import { wifiPasswordForStay } from "@/lib/wifi";
 
 const KEY = "guest-stay";
 type Saved = { token: string; depart: string };
@@ -60,5 +61,34 @@ export function StayShortcut({ lang, title, sub }: { lang: string; title: string
       </span>
       <Icon name="chevronRight" size={16} className="text-[#9a8c80]" />
     </Link>
+  );
+}
+
+/**
+ * Home page Wi-Fi card: shows the password if the guest opened their personal stay link on this phone
+ * and the stay is under way; otherwise the usual "password is in your booking message" note.
+ */
+export function WifiPassword({ note, label }: { note: string; label: string }) {
+  const [password, setPassword] = useState<string | null>(null);
+
+  useEffect(() => {
+    const token = savedStayToken();
+    if (!token) return;
+    let cancelled = false;
+    wifiPasswordForStay(token)
+      .then((p) => {
+        if (!cancelled) setPassword(p);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  if (!password) return <>{note}</>;
+  return (
+    <>
+      {label}: <span className="select-all font-mono text-[13px] font-semibold">{password}</span>
+    </>
   );
 }
