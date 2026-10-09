@@ -36,6 +36,10 @@ export async function createStayLink(_prev: LinkResult, form: FormData): Promise
   const message = fill(tpl.body, {
     greeting: name ? fill(tpl.hiName, { name }) : tpl.hi,
     link,
+    guide: host ?? "guest.jaflaten.com",
+    code,
+    wifiName: site.wifi.network,
+    wifiPassword: process.env.WIFI_PASSWORD || "(ask us)",
     checkIn: site.stay.checkIn,
     checkOut: site.stay.checkOut,
     date: formatDate(arrive, lang),

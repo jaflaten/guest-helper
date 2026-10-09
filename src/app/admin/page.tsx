@@ -23,9 +23,9 @@ export default async function AdminPage({ searchParams }: PageProps<"/admin">) {
     <main className="flex flex-col gap-5">
       <h1 className="font-serif text-3xl">Guest links</h1>
       <p className="text-[15px] leading-relaxed text-ink-soft">
-        Pick a booking, choose the guest&apos;s language and copy the message. The guest sees their door code and the
-        Wi-Fi password from check-in time on arrival day until departure. Nothing is stored: the booking lives inside the
-        link.
+        Pick a booking, choose the guest&apos;s language and copy the message. The message itself contains the key-box
+        code and the Wi-Fi password, so send it on arrival day. The link shows them too, from check-in time until
+        departure. Nothing is stored: the booking lives inside the link.
       </p>
 
       {missing.length > 0 && (
